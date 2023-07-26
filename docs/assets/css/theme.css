@@ -753,11 +753,11 @@ body .docsify-pagination-container {
   padding-right: calc( 10px + (16 - 10) * (100vw - 400px) / (800 - 400) );
   border-width: 0;
   border-radius: 16px;
-  background: #eaf5fb;
+  background: #eaebfb; /* Set color to purple */
 }
 
 #docsifythisurlbuilder h2 {
-  color: #2462ae;
+  color: #2442ae; /* Set color to purple */
 }
 
 #docsifythisurlbuilder input[type=text], input[type=url], input[type=color] {
@@ -796,7 +796,7 @@ span #docsifythisurlfield {
   margin-top: 4px;
   padding: 10px 20px 10px 20px;
   line-height: 1.2rem;
-  background-color: #0361cd;
+  background-color: #0224cd; /* Set color to purple */
   text-decoration: none;
   font-weight: 600; 
   border-radius: .25rem;
@@ -811,7 +811,7 @@ span #docsifythisurlfield {
   margin-top: 4px;
   padding: 10px 20px 10px 20px;
   line-height: 1.2rem;
-  background-color: #0b97ef;
+  background-color: #0b48ef; /* Set color to purple */
   text-decoration: none;
   font-weight: 600;
   border-radius: .25rem;
@@ -839,7 +839,7 @@ span #docsifythisurlfield {
 }
 
 #docsifythisurlbuilder [type=radio]:checked+img {
-  outline: 3px solid #0261cd;
+  outline: 3px solid #0224cd; /* Set color to purple */
   position: relative;
 }
 
@@ -975,6 +975,11 @@ span #docsifythisurlfield {
 
 }
 
+html {
+  visibility: visible;
+  opacity: 1;
+}
+
 /* Dark mode colours for use with light + dark themes */
 
 @media (prefers-color-scheme: dark) {
@@ -990,7 +995,7 @@ span #docsifythisurlfield {
   }
   
   #docsifythis #docsifythisurlbuilder h2 {
-    color: #4bc3f4;
+    color: #768aec; /* Set color to purple */
   }
   
   #docsifythis p a, #docsifythis li a, #docsifythis h4 a {
@@ -998,7 +1003,7 @@ span #docsifythisurlfield {
   }
 
   #docsifythisurlbuilder {
-      background: #1f4b66;
+      background: #3d4a7c; /* Set color to purple */
   }
 
   #docsifythisurlfield{
@@ -1013,16 +1018,16 @@ span #docsifythisurlfield {
 
   .docsifythisurlbuilderprimarybutton {
       color: black;
-      background-color: #4bc3f4;
+      background-color: #817eed; /* Set color to purple */
   }
 
   .docsifythisurlbuildersecondarybutton {
       color: black;
-      background-color: #a2e8fc;
+      background-color: #a2b7fc; /* Set color to purple */
   }
 
   #docsifythisurlbuilder [type=radio]:checked + img {
-      outline: 3px solid #4bc3f4;
+      outline: 3px solid #8c9cf5; /* Set color to purple */
       position: relative;
   }
 
