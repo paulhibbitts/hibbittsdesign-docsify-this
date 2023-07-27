@@ -90,3 +90,24 @@ body .markdown-section {
 #docsifythisurlbuilder [type=radio]:checked+img {
     outline: 3px solid #0224cd; /* Set color to purple */
 }
+
+
+@media (prefers-color-scheme: dark) {
+
+    #docsifythis #docsifythisurlbuilder h2 {
+        color: #768aec; /* Set color to purple */
+    }
+      
+    #docsifythisurlbuilder {
+        background: #3d4a7c; /* Set color to purple */
+    }
+
+    .docsifythisurlbuilderprimarybutton {
+        background-color: #817eed; /* Set color to purple */
+    }
+
+    #docsifythisurlbuilder [type=radio]:checked + img {
+        outline: 3px solid #8c9cf5; /* Set color to purple */
+    }
+    
+}
