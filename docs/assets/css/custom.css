@@ -78,3 +78,15 @@ body .markdown-section {
 #docsifythisurlbuilder {
     background: #eaebfb; /* Set color to purple */
 }
+
+#docsifythisurlbuilder h2 {
+    color: #2442ae; /* Set color to purple */
+}
+
+.docsifythisurlbuilderprimarybutton {
+    background-color: #0224cd; /* Set color to purple */
+}
+
+#docsifythisurlbuilder [type=radio]:checked+img {
+    outline: 3px solid #0224cd; /* Set color to purple */
+}
