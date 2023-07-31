@@ -976,6 +976,20 @@
               selectText();
               window.scrollTo(x, y);
 
+              // Get the checkbox element
+              const checkbox = document.getElementById('editCheck');
+
+              // Add an event listener to the checkbox
+              checkbox.addEventListener('change', () => {
+                if (checkbox.checked) {
+                  const docsifythisurlfield = document.getElementById('docsifythisurlfield');
+                  if ( !(docsifythisurlfield.value.includes("github.com")) || (docsifythisurlfield.value.includes("codeberg.org")) ) {
+                    alert("Including a 'Edit this Page' link is only supported with GitHub or Codeberg files when using the Web Page Builder.");
+                    document.getElementById("editCheck").checked = false;
+                  }
+                }
+              });
+
             }
           });
 
