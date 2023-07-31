@@ -3,7 +3,7 @@
 <div class="docsifythisheader">
 <div style="margin-bottom:6px; margin-right:-6px; text-align:right;"><a class="navpill" href="https://docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/publishing-with-docsify-this/main&sidebar=true&browser-tab-title=Markdown%20Publishing%20with%20Docsify-This&edit-link=https://github.com/hibbitts-design/publishing-with-docsify-this/blob/main/README.md&edit-link-text=Suggest%20an%20Edit%20for%20this%20Page&maxLevel=3&coverpage=_coverpage.md&dark-mode=true#/" target="_blank"><i class="fas fa-book fa-fw"></i>Publishing with Docsify-This Guide</a><a class="navpill" href="https://github.com/hibbitts-design/docsify-this" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a></div>
   <div class="logoandtext">
-    <img src='https://raw.githubusercontent.com/paulhibbitts/test-docsify-this/main/docs/images/icon.svg' />
+    <img src='https://raw.githubusercontent.com/paulhibbitts/test-docsify-this/main/docs/images/icon.svg' alt='Docsify Logo' />
     <h1>Docsify&#8288;&#8211;&#8288;This</h1>
   </div>
 </div>
@@ -27,20 +27,20 @@ Page layout:
 <div style="display: flex; margin-top: -3px;">
 
 <label>
-  <input type="radio" name="pagestyle" id="stylecontentonly" checked>
-  <img style="padding: 2px;" src="images/contentonly.png" alt="Page Content Only" title="Page Content Only" >
+  <input type="radio" name="pagestyle" id="stylecontentonly" aria-label="Page Content Only" checked>
+  <img style="padding: 2px;" src="images/contentonly.png" alt="Page Content Only">
   <figcaption id="caption">Content Only</figcaption>
 </label>
 
 <label>
-  <input type="radio" name="pagestyle" id="styletoc">
-  <img style="padding: 2px;" src="images/toc.png" alt="Page with Table of Contents" title="Page with Table of Contents">
+  <input type="radio" name="pagestyle" id="styletoc" aria-label="Page with Table of Contents">
+  <img style="padding: 2px;" src="images/toc.png" alt="Page with Table of Contents">
   <figcaption id="caption">Table of Contents</figcaption>
 </label>
 
 <label>
-  <input type="radio" name="pagestyle" id="stylesidebar" >
-  <img style="padding: 2px;" src="images/sidebar.png" alt="Page with Docsify Sidebar (collapsible)" title="Page with Docsify Sidebar (collapsible)">
+  <input type="radio" name="pagestyle" id="stylesidebar" aria-label="Page with Docsify Sidebar (collapsible)">
+  <img style="padding: 2px;" src="images/sidebar.png" alt="Page with Docsify Sidebar (collapsible)">
   <figcaption id="caption">Docsify Sidebar</figcaption>
 </label>
 
