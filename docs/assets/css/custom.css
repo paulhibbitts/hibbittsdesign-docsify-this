@@ -95,11 +95,11 @@ body .markdown-section {
 @media (prefers-color-scheme: dark) {
 
     #docsifythis #docsifythisurlbuilder h2 {
-        color: #768aec; /* Set color to purple */
+        color: #8798ee; /* Set color to purple */
     }
       
     #docsifythisurlbuilder {
-        background: #3d4a7c; /* Set color to purple */
+        background: #36416d; /* Set color to purple */
     }
 
     .docsifythisurlbuilderprimarybutton {
