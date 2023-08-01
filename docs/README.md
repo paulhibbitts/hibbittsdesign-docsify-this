@@ -222,7 +222,7 @@ While all you need to get going with Docsify-This is a basic Markdown file, here
 
 <div class="docsifythiscolumn65" >
 
-<h4><a href="Docsify-This One Page Article Template">Docsify-This One Page Article Templates</a></h4>
+<h4><a href="https://github.com/hibbitts-design/docsify-this-one-page-article">Docsify-This One Page Article Templates</a></h4>
 
 One Page Article [home.md](https://github.com/hibbitts-design/docsify-this-one-page-article/blob/main/home.md) file displayed by Docsify-This as a:  
 * [Standalone Page](https://paulhibbitts.github.io/test-docsify-this?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-one-page-article/main&homepage=home.md "Single Page Docsify Open Course Starter Kit - Standalone Page")  
@@ -772,6 +772,17 @@ https://docsify-this.net?basePath=https://raw.githubusercontent.com/paulhibbitts
 #### Providing a Page Table of Contents within a Smaller Destination Platform Screen Area
 If you want to include a Page Table of Contents with embedded Docsify-This content, but the destination platform screen area is not very wide, you might want to try the optional `toc-narrow` display option. For example, to use a narrower Table of Contents area that includes a smaller screen breakpoint:
 https://docsify-this.net?basePath=https://raw.githubusercontent.com/paulhibbitts/cmpt-363/main/docs/222&homepage=week-01.md&toc-narrow=true  
+
+#### Displaying a Site Title in a Custom Sidebar
+To display a site title in a custom sidebar you can add a H1 header level (including a tag to not include it with Docsify generated header navigation) above the page list in the Sidebar Markdown file (i.e. `_sidebar.md`), for example:  
+
+```
+# Your Site Title Here <!-- {docsify-ignore} -->
+
+- [Page One](page-one)
+- [Page Two](page-two)
+- [Page Three](page-three)
+```
 
 #### Including Code Blocks
 Using [Prismjs](https://prismjs.com/) code blocks with syntax highlighting is supported for the languages [included with Docsify](https://docsify.js.org/#/language-highlight?id=language-highlighting) and as well Bash, Go, Java, Kotlin, PHP, Python and Swift. To embed a code block use the Markdown standard of triple backticks and start the block with the name of the language, for example to embed a block of Javascript code with syntax highlight the following would be used:  
