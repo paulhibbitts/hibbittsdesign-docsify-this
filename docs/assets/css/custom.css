@@ -76,45 +76,45 @@ body .markdown-section {
 */
 
 #docsifythisurlbuilder {
-    background: #f2f4fD; /* Set color to purple */
+    background: #ecf4fe; /* Set to original color */
 }
 
 #docsifythisurlbuilder h2 {
-    color: #2442ae; /* Set color to purple */
+    color: #2442ae; /* Set to original color */
 }
 
 .docsifythisurlbuilderprimarybutton {
-    background-color: #0224cd; /* Set color to purple */
+    background-color: #0361cd; /* Set to original color */
 }
 
 #docsifythisurlbuilder [type=radio]:checked+img {
-    outline: 3px solid #0224cd; /* Set color to purple */
+    outline: 3px solid #0261cd; /* Set to original color */
 }
 
 #docsifythisurlbuilder #editCheck, .markdown-section #editLinkTopCheck, .markdown-section #narrowToC, .markdown-section #toch1, .markdown-section #toch2, .markdown-section #toch3, .markdown-section #hideCredits, .markdown-section #hypothesisenable {
-  accent-color: #0224cd; /* Set color to purple */
+  accent-color: #0361cd; /* Set to original color */
 }
 
 @media (prefers-color-scheme: dark) {
 
     #docsifythis #docsifythisurlbuilder h2 {
-        color: #8798ee; /* Set color to purple */
+        color: #4bc3f4; /* Set to original color */
     }
       
     #docsifythisurlbuilder {
-        background: #36416d; /* Set color to purple */
+        background: #1f4b66; /* Set color to purple */
     }
 
     .docsifythisurlbuilderprimarybutton {
-        background-color: #817eed; /* Set color to purple */
+        background-color: #4bc3f4; /* Set to original color */
     }
 
     #docsifythisurlbuilder [type=radio]:checked + img {
-        outline: 3px solid #817eed; /* Set color to purple */
+        outline: 3px solid #4bc3f4; /* Set to original color */
     }
     
     #docsifythisurlbuilder #editCheck, .markdown-section #editLinkTopCheck, .markdown-section #narrowToC, .markdown-section #toch1, .markdown-section #toch2, .markdown-section #toch3, .markdown-section #hideCredits, .markdown-section #hypothesisenable {
-        accent-color: #817eed; /* Set color to purple */
+        accent-color: #4bc3f4; /* Set to original color */
     }
 
 }
