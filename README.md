@@ -266,6 +266,7 @@ The following URL parameters are available but not included in the Web Page Buil
 * [loadFavicon](#loadFavicon)
 * [loadFooter](#loadFooter)
 * [loadNavbar](#loadNavbar)
+* [loadSidebar](#loadSidebar)
 * [page-title](#page-title)
 * [submaxLevel](#subMaxLevel)
 * [zoom-images](#zoom-images)
