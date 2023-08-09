@@ -881,7 +881,7 @@ span #docsifythisurlfield {
 }
 
 #docsifythisurlbuilder hr {
-  border: 1px solid #bbd4ea;
+  border: 1px solid #c5d1fd;
   margin-top: .6em;
   margin-bottom: .6em;
 }
@@ -1028,6 +1028,10 @@ span #docsifythisurlfield {
 
   #docsifythisurlbuilder #editCheck, .markdown-section #editLinkTopCheck, .markdown-section #narrowToC, .markdown-section #toch1, .markdown-section #toch2, .markdown-section #toch3, .markdown-section #hideCredits, .markdown-section #hypothesisenable {
     accent-color: #817eed;
+  }
+
+  #docsifythisurlbuilder hr {
+    border: 1px solid #5161a4;
   }
 
   #docsifythisurlbuildershowhidelink a:link, #docsifythisurlbuildershowhidelink a:visited, #docsifythisurlbuildershowhidelink a:hover, #docsifythisurlbuildershowhidelink a:active {
