@@ -117,4 +117,8 @@ body .markdown-section {
         accent-color: #4bc3f4; /* Set to original color */
     }
 
+    #docsifythisurlbuilder hr {
+        border: 1px solid #bbd4ea; /* Set to original color */
+    }
+
 }
