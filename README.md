@@ -388,6 +388,7 @@ The following style prefixes are available with Docsify-This:
 
 ### Supported Markdown CSS Classes
 
+* [accordion](#accordion)
 * [badge](#badge)
 * [banner-image](#banner-image)
 * [banner-tall-image](#banner-tall-image)
@@ -405,6 +406,28 @@ The following style prefixes are available with Docsify-This:
 * [video-container-16by9](#video-container-16by9)
 
 The following CSS classes are available when authoring your own Markdown content.  
+
+#### accordion
+
+```html
+<div class="accordion">
+
+<details>
+  <summary>Topic One</summary>
+  
+  Topic one details here.
+  
+</details>
+
+<details>
+  <summary>Topic Two</summary>
+  
+  Topic two details here.
+  
+</details>
+
+</div>
+```
 
 #### badge
 
@@ -447,7 +470,7 @@ Cropped to height of 350px on large screens, 175px on small screens.
 #### embedly-card
 For linked article previews, embedded slides/videos, etc.  
 
-```markdown
+```html
 <a class="embedly-card" data-card-controls="0" data-card-align="left" href="https://blog.prototypr.io/defining-usability-e7bf42e8abd0">Defining usability</a>
 ```
 
