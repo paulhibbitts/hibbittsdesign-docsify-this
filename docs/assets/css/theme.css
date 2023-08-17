@@ -337,8 +337,8 @@
 }
 
 .markdown-section .badge {
-  color: #fff;
-  background-color: #6c757d;
+  color: var(--base-background-color);
+  background-color: color-mix(in srgb, var(--base-color) 70%, transparent);
   display: inline-block;
   padding: .25em .4em .25em .4em;
   font-family: -apple-system, "Segoe UI", "Helvetica Neue", sans-serif;
@@ -355,7 +355,7 @@
 }
 
 .markdown-section .badge a {
-  color: white!important;
+  color: var(--base-background-color)!important;
   text-decoration: none !important;
 }
 
@@ -370,11 +370,11 @@
 
 .markdown-section #a, .markdown-section #b, .markdown-section #c, .markdown-section #d, .markdown-section #e, .markdown-section #f, .markdown-section #g, .markdown-section #h, .markdown-section #i, .markdown-section #j, .markdown-section #k, .markdown-section #l, .markdown-section #m, .markdown-section #n, .markdown-section #o, .markdown-section #p, .markdown-section #q, .markdown-section #r, .markdown-section #s, .markdown-section #t, .markdown-section #u, .markdown-section #v, .markdown-section #w, .markdown-section #x, .markdown-section #y, .markdown-section #z {
   width: 2em;
-  color: white;
+  color: var(--base-background-color);
   font-weight: 700;
   margin-top: 1.00rem;
   padding-left: 0.25rem;
-  background: #666666;
+  background: color-mix(in srgb, var(--base-color) 70%, transparent);
 }
 
 .markdown-section .accordion {
@@ -991,12 +991,6 @@ span #docsifythisurlfield {
 /* Dark mode colours for use with light + dark themes */
 
 @media (prefers-color-scheme: dark) {
-
-  #docsifythis .navpill {
-    color: #FFFFFF!important;
-    border: 1px solid #6a6a6a;
-    background-color: #6a6a6a;
-  }
 
   #docsifythis .docsifythisheader .logoandtext  h1 {
     color: #A6A6A6;

@@ -1,6 +1,16 @@
 # Changelog
 
-## [1.7.2] - XX/XX/2023
+## [1.7.3] - XX/XX/2023
+
+**Improved:**
+* Updated ReadMe
+* Use light/dark theme display for navpills on Docsify-This app page
+* Use light/dark theme display for topic indexes
+
+**Bugfix:**
+* Update Sidebar chevron with custom link colour
+
+## [1.7.2] - 08/15/2023
 
 **Improved:**
 * Added 'youtube-nocookie.com' to domains made responsive through the automatic addition of the CSS Markdown class `video-container-16by9`
@@ -9,7 +19,7 @@
 * Improved accessibility of app logo and text of Publishing with Docsify-This Guide
 * Web Page Builder colour scheme changed
 * Support light/dark theme display for navpills
-* Minor Web Page Builder spacing improvements
+* Minor Web Page Builder spacing and style improvements
 
 ## [1.7.1] - 07/27/2023
 
