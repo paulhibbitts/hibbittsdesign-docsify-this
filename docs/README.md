@@ -1,14 +1,14 @@
 <div id="docsifythis">
 
 <div class="docsifythisheader">
-<div style="margin-bottom:6px; margin-right:-6px; text-align:right;"><a class="navpill" href="https://docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/publishing-with-docsify-this/main&sidebar=true&browser-tab-title=Markdown%20Publishing%20with%20Docsify-This&edit-link=https://github.com/hibbitts-design/publishing-with-docsify-this/blob/main/README.md&edit-link-text=Suggest%20an%20Edit%20for%20this%20Page&maxLevel=3&coverpage=_coverpage.md&dark-mode=true#/" target="_blank"><i class="fas fa-book fa-fw"></i>Publishing with Docsify-This Guide</a><a class="navpill" href="https://github.com/hibbitts-design/docsify-this" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a></div>
+<div style="margin-bottom:6px; margin-right:-6px; text-align:right;"><a class="navpill" href="https://paulhibbitts.github.io/test-docsify-this?basePath=https://raw.githubusercontent.com/hibbitts-design/publishing-with-docsify-this/main&sidebar=true&browser-tab-title=Markdown%20Publishing%20with%20Docsify-This&edit-link=https://github.com/hibbitts-design/publishing-with-docsify-this/blob/main/README.md&edit-link-text=Suggest%20an%20Edit%20for%20this%20Page&maxLevel=3&coverpage=_coverpage.md&dark-mode=true" target="_blank"><i class="fas fa-book fa-fw"></i>Publishing with Docsify-This Guide</a><a class="navpill" href="https://github.com/hibbitts-design/docsify-this" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a></div>
   <div class="logoandtext">
     <img src='https://raw.githubusercontent.com/paulhibbitts/test-docsify-this/main/docs/images/icon.svg' alt='Docsify Logo' />
     <h1>Docsify&#8288;&#8211;&#8288;This</h1>
   </div>
 </div>
 
-<h1><strong>Instantly Turn Online Markdown Files into Web Pages</strong></h1>
+<h1>Instantly Turn Online Markdown Files into Web Pages</h1>
 
 This open-source web app, built with the magical documentation site generator [Docsify](https://docsify.js.org), provides a quick way to publish one or more online Markdown files as standalone web pages without needing to set up your own website. Try it out below!
 
@@ -48,47 +48,49 @@ Page layout:
 
 <div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="editCheck" unchecked><label for="editCheck">Include 'Edit this Page' link with public GitHub or Codeberg files (default location is bottom of page)</label></div>
 
-<div id="docsifythisurlbuildershowhidelink"><a name='toggleDivlink' href='#' onclick='toggleDiv(this); return false;'>Show More Page Appearance Options &raquo;</a></div>
+<div id="docsifythisurlbuildershowhidelink";><a name='toggleDivlink' href='#' onclick='toggleDiv(this); return false;'>Show More Page Appearance Options &raquo;</a></div>
 
 <div id="docsifythisurlbuilderoptionsDiv" style='display: none'>
+
+<div id="pageappearanceoptionsheader"><h3>Page Appearance Options</h3></div>
 
 <hr>
 
 <div class="docsifythisurlbuilderoptionsline"><label>Title on Browser Tab:</label><br><input type="text" maxlength="60" value="Published by Docsify-This" id="browserTabTitle" name="browserTabTitle"></div>
 
 <div class='stackedlabeldropdown'>
-    <label for="select1">Page font family:</label>
-    <select class="docsifythisurlbuilderoptionsline" id="fontfamily" name="fontfamily">
-      <option value="default">Source Sans Pro</option>
-      <option disabled="disabled">----</option>
-      <option value="Arial,sans-serif">Arial, sans-serif</option>
-      <option value="Helvetica,sans-serif">Helvetica, sans-serif</option>
-      <option value="Helvetica%20Neue,Helvetica,Arial,sans-serif">Helvetica Neue, sans-serif</option>
-      <option value="Lato%20Extended,Lato,Helvetica%20Neue,Helvetica,Arial,sans-serif">Lato, sans-serif</option>
-      <option value="Open%20Sans,sans-serif">Open Sans, sans-serif</option>
-      <option value="Tahoma,sans-serif">Tahoma, sans-serif</option>
-      <option value="Verdana,sans-serif">Verdana, sans-serif</option>
-      <option value="Georgia,serif">Georgia, serif</option>
-      <option value="Merriweather,Georgia,serif">Merriweather, serif</option>
-      <option value="Times%20New%20Roman,serif">Times New Roman, serif</option>
-      <option value="Courier,monospace">Courier, monospace</option>
-    </select>
+  <label for="select1">Page font family:</label>
+  <select class="docsifythisurlbuilderoptionsline" id="fontfamily" name="fontfamily">
+    <option value="default">Source Sans Pro</option>
+    <option disabled="disabled">----</option>
+    <option value="Arial,sans-serif">Arial, sans-serif</option>
+    <option value="Helvetica,sans-serif">Helvetica, sans-serif</option>
+    <option value="Helvetica%20Neue,Helvetica,Arial,sans-serif">Helvetica Neue, sans-serif</option>
+    <option value="Lato%20Extended,Lato,Helvetica%20Neue,Helvetica,Arial,sans-serif">Lato, sans-serif</option>
+    <option value="Open%20Sans,sans-serif">Open Sans, sans-serif</option>
+    <option value="Tahoma,sans-serif">Tahoma, sans-serif</option>
+    <option value="Verdana,sans-serif">Verdana, sans-serif</option>
+  <option value="Georgia,serif">Georgia, serif</option>
+  <option value="Merriweather,Georgia,serif">Merriweather, serif</option>
+  <option value="Times%20New%20Roman,serif">Times New Roman, serif</option>
+  <option value="Courier,monospace">Courier, monospace</option>
+  </select>
 </div>
 
 <div class='stackedlabeldropdown'>
-    <label for="select2">Font size:</label>
-    <select class="docsifythisurlbuilderoptionsline" id="fontsize" name="fontsize">
-      <option value="1.125">18px (1.125rem)</option>
-      <option disabled="disabled">----</option>
-      <option value=".875">14px (.875rem)</option>
-      <option value="1">16px (1rem)</option>
-      <option value="1.25">20px (1.25rem)</option>
-    </select>
+  <label for="select2">Font size:</label>
+  <select class="docsifythisurlbuilderoptionsline" id="fontsize" name="fontsize">
+    <option value="1.125">18px (1.125rem)</option>
+    <option disabled="disabled">----</option>
+    <option value=".875">14px (.875rem)</option>
+    <option value="1">16px (1rem)</option>
+    <option value="1.25">20px (1.25rem)</option>
+  </select>
 </div>
         
 <div class='stackedlabeldropdown'>
-    <label for="select3">Line height:</label>
-    <select class="docsifythisurlbuilderoptionsline" id="lineheight" name="lineheight" style="width: 60px;">
+  <label for="select3">Line height:</label>
+  <select class="docsifythisurlbuilderoptionsline" id="lineheight" name="lineheight" style="width: 60px;">
     <option value="1.4">1.4</option>
     <option disabled="disabled">----</option>
     <option value="1.2">1.2</option>
@@ -98,7 +100,7 @@ Page layout:
   </select>
 </div>
 
-<div class="docsifythisurlbuilderoptionsline"><label type="color">Page link color:</label><br><input type="text" maxlength="7" size="7" value="#0374B5" id="linkcolor" style="text-transform:uppercase" oninput="validateColorAndUpdatePreview()" data-coloris><span id="linkcolorpreview"></span></div>
+<div class="docsifythisurlbuilderoptionsline"><label type="color">Page link color:</label><br><input type="text" maxlength="7" size="7" value="#0374B5" id="linkcolor" style="text-transform:uppercase" oninput="validateColorAndUpdatePreview('linkcolor', 'linkcolorpreview');" data-coloris><span id="linkcolorpreview"></span></div>
 
 <div class="docsifythisurlbuilderoptionsline"><label>Text of 'Edit this Page' link:</label><br><input type="text" maxlength="60" value="Edit this Page" id="editLinkText" name="editLinkText"></div>
 
@@ -123,7 +125,61 @@ Page layout:
 
 <div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="hypothesisenable" unchecked><label for="hypothesisenable">Enable page annotation with Hypothes.is, an open source web annotation tool</label></div>
 
-<input class="docsifythisurlbuilderprimarybutton" style="border:none;margin-top: 10px;" type="button" id="btn_1" value="Publish as a Standalone Web Page" onclick="openURLs(document.getElementById('docsifythisurlfield').value)"/>
+<input class="docsifythisurlbuilderprimarybutton" style="border:none;margin-top: 10px;" type="button" id="btn_2" value="Publish as a Standalone Web Page" onclick="openURLs(document.getElementById('docsifythisurlfield').value)"/>
+
+<div id="docsifythisurlbuilderoptionsDiv2" style='display: none'>
+
+<h3>Page Title and Headings</h3>
+
+<hr>
+
+<div class="docsifythisurlbuilderoptionsline"><label>Page title (append to top of page):</label><br><input type="text" maxlength="80" value="" id="pageTitle" name="pageTitle"></div>
+
+<div class='clearfix'>
+  <div class='stackedlabeldropdown' style='margin-bottom:4px;'>
+    <label for="select3">Page headers font weight:</label>
+    <select class="docsifythisurlbuilderoptionsline" id="headerweight" name="headerweight">
+      <option value="400">Normal (400)</option>
+      <option value="600">Semi Bold (600)</option>
+      <option value="800">Bold (800)</option>
+    </select>
+  </div>
+</div>
+
+<h3>Page Images</h3>
+
+<hr>
+
+<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="zoomimages" unchecked><label for="zoomimages">Enable zoom images (tapping on images to enlarge them)</label></div>
+
+<h3>Docsify Custom Files</h3>
+
+<hr>
+
+<div class="docsifythisurlbuilderoptionsline"><label for="customdocsifyfilesheadings">Load and display additional Docsify custom files (must be located at root level of remote files):</label></div>
+<div class="docsifythisurlbuilderoptionsindentedline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="loadfavicon"  unchecked><label for="loadfavicon">Favicon (<code>favicon.png</code>)</label></div>
+<div class="docsifythisurlbuilderoptionsindentedline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="loadcoverpage" unchecked><label for="loadcoverpage">Coverpage (<code>_coverpage.md</code>)</label></div>
+<div class="docsifythisurlbuilderoptionsindentedline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="loadcustomsidebar"  unchecked><label for="loadcustomsidebar">Sidebar (<code>_sidebar.md</code>)</label></div>
+<div class="docsifythisurlbuilderoptionsindentedline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="loadcustomnavbar" unchecked><label for="loadcustomnavbar">Navbar (<code>_navbar.md</code>)<Sidebar/label></div>
+<div class="docsifythisurlbuilderoptionsindentedline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="loadcustomfooter" unchecked><label for="loadcustomfooter">Footer (<code>_footer.md</code>)</label></div>
+
+<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="enableSidebarsearch" unchecked><label for="enableSidebarsearch">Enable Docsify Search plugin in custom Sidebar</label></div>
+
+<h3>Coverpage and Dark Theme Colors</h3>
+
+<hr>
+
+<div class="docsifythisurlbuilderoptionsline"><label type="color">Coverpage color:</label><br><input type="text" maxlength="7" size="7" value="#6C8A9A" id="coverpagecolor" style="text-transform:uppercase" oninput="validateColorAndUpdatePreview('coverpagecolor', 'coverpagecolorpreview');" data-coloris><span id="coverpagecolorpreview"></span></div>
+
+<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="enableDarkmode" unchecked><label for="enableDarkmode">Enable automatic switching of light/dark theme based on system OS-level preference</label></div>
+
+<div class="docsifythisurlbuilderoptionsline" style="margin-left: 10px;"><label type="color">Page link color for dark theme:</label><br><input type="text" maxlength="7" size="7" value="#0374B5" id="linkcolordarkmode" style="text-transform:uppercase" oninput="validateColorAndUpdatePreview('linkcolordarkmode', 'linkcolordarkmodepreview');" data-coloris><span id="linkcolordarkmodepreview"></span></div>
+
+<div class="docsifythisurlbuilderoptionsline" style="margin-left: 10px;"><label type="color">Coverpage color for dark theme:</label><br><input type="text" maxlength="7" size="7" value="#262D30" id="coverpagecolordarkmode" style="text-transform:uppercase" oninput="validateColorAndUpdatePreview('coverpagecolordarkmode', 'coverpagecolordarkmodepreview');" data-coloris><span id="coverpagecolordarkmodepreview"></span></div>
+
+<input class="docsifythisurlbuilderprimarybutton" style="border:none;margin-top: 10px;" type="button" id="btn_3" value="Publish as a Standalone Web Page" onclick="openURLs(document.getElementById('docsifythisurlfield').value)"/>
+
+</div>
 
 <div id="docsifythisurlbuilderrestoredefaultsbutton"><input style="color: #323232; margin-top:12px;" type="button" id="btn_4" value="Reset to Defaults" onclick="restoreAllDefaults()"/></div>
 
@@ -334,7 +390,7 @@ View an example Canvas LMS site using Docsify-This content at https://canvas.sfu
 
 [A Collection of GitHub Markdown files](https://github.com/paulhibbitts/cmpt-363-222-pages) used as course content [within an SFU CMPT-363 Canvas LMS site](https://canvas.sfu.ca/courses/69678).  
 
-[A Collection of GitHub Markdown files with inline CSS](https://github.com/paulhibbitts/docsify-this-cmpt-363-222-site) used as a [standalone multiple page SFU CMPT-363 course site with SFU visual branding and the Docsify Search plugin enabled](https://docsify-this.net/?basePath=https://raw.githubusercontent.com/paulhibbitts/docsify-this-cmpt-363-222-site/main&homepage=home.md&loadNavbar=_navbar.md&sidebar=true&loadSidebar=_sidebar.md&loadFavicon=favicon.png&dark-mode=true&browser-tab-title=CMPT-363-222&search=true#/course-welcome) and an example [single Markdown file with default visual styling for embeddeding](https://docsify-this.net/?basePath=https://raw.githubusercontent.com/paulhibbitts/docsify-this-cmpt-363-222-site/main&homepage=home.md&hide-credits=true).
+[A Collection of GitHub Markdown files with inline CSS](https://github.com/paulhibbitts/docsify-this-cmpt-363-222-site) used as a [standalone multiple page SFU CMPT-363 course site with SFU visual branding and the Docsify Search plugin enabled](https://docsify-this.net/?basePath=https://raw.githubusercontent.com/paulhibbitts/docsify-this-cmpt-363-222-site/main&homepage=home.md&loadNavbar=_navbar.md&sidebar=true&loadSidebar=_sidebar.md&loadFavicon=favicon.png&dark-mode=true&browser-tab-title=CMPT-363-222&search=true#/course-welcome) and an example [single Markdown file with default visual styling for embeddeding](https://docsify-this.net/?basePath=https://raw.githubusercontent.com/paulhibbitts/docsify-this-cmpt-363-222-site/main&homepage=home.md&hide-credits=true#/course-welcome).
 
 [GitHub Markdown Content Demo file](https://github.com/hibbitts-design/docsify-this-markdown-content-demo/blob/main/README.md), displayed by Docsify-This as a [Standalone Page with 'View raw Markdown' link](https://docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-markdown-content-demo/main&edit-link=https://raw.githubusercontent.com/hibbitts-design/docsify-this-markdown-content-demo/main/README.md&edit-link-text=View%20raw%20Markdown).  
 
@@ -428,7 +484,7 @@ https://docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-des
 
 #### Additional URL Parameters
 
-The following URL parameters are available but not included in the Web Page Builder.
+The following URL parameters are available for use in Docsify-This URLs, and are also included in the [Advanced Web Page Builder](https://docsify-this.net?advanced=true).
 
 * [coverpage](/?id=coverpage)
 * [coverpage-color](/?id=coverpage-color)
