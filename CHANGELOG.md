@@ -17,7 +17,6 @@
 * Add missing zoom-image URL parameter passing
 * Fix handling of empty Title on Browser Tab field
 
-
 ## [1.7.2] - 08/15/2023
 
 **Improved:**
