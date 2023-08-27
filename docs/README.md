@@ -177,6 +177,12 @@ Page layout:
 
 <div class="docsifythisurlbuilderoptionsline" style="margin-left: 10px;"><label type="color">Coverpage color for dark theme:</label><br><input type="text" maxlength="7" size="7" value="#262D30" id="coverpagecolordarkmode" style="text-transform:uppercase" oninput="validateColorAndUpdatePreview('coverpagecolordarkmode', 'coverpagecolordarkmodepreview');" data-coloris><span id="coverpagecolordarkmodepreview"></span></div>
 
+<h3>GitHub File Editor</h3>
+
+<hr>
+
+<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="usegithubdotdev" unchecked><label for="usegithubdotdev">Use the GitHub.dev web-based editor (Beta) for files hosted on GitHub.com</label></div>
+
 <input class="docsifythisurlbuilderprimarybutton" style="border:none;margin-top: 10px;" type="button" id="btn_3" value="Publish as a Standalone Web Page" onclick="openURLs(document.getElementById('docsifythisurlfield').value)"/>
 
 </div>
@@ -946,6 +952,9 @@ https://paulhibbitts.github.io/test-docsify-this?show-page-options=true
 https://paulhibbitts.github.io/test-docsify-this?advanced=true
 
 ```
+
+#### Use of New Web Editor GitHub.dev (Beta)
+Once a published Docsify-This URL is created with an Edit this Page link using GitHub.com content, the URL for the `edit-link` can be changed from `github.com` to `github.dev` to use the GitHub.dev web-based editor currently in Beta. This feature is also supported with multiple page sites.
 
 ---
 
