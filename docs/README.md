@@ -1,7 +1,7 @@
 <div id="docsifythis">
 
 <div class="docsifythisheader">
-<div style="margin-bottom:6px; margin-right:-6px; text-align:right;"><a class="navpill" href="https://paulhibbitts.github.io/test-docsify-this?basePath=https://raw.githubusercontent.com/hibbitts-design/publishing-with-docsify-this/main&sidebar=true&browser-tab-title=Markdown%20Publishing%20with%20Docsify-This&edit-link=https://github.com/hibbitts-design/publishing-with-docsify-this/blob/main/README.md&edit-link-text=Suggest%20an%20Edit%20for%20this%20Page&maxLevel=3&coverpage=_coverpage.md&dark-mode=true" target="_blank"><i class="fas fa-book fa-fw"></i>Publishing with Docsify-This Guide</a><a class="navpill" href="https://discord.gg/docsify" target="_blank"><i class="fab fa-discord fa-fw"></i>Chat on the Docsify Discord</a><a class="navpill" href="https://github.com/hibbitts-design/docsify-this" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a></div>
+<div style="margin-bottom:6px; margin-right:-6px; text-align:right;"><a class="navpill" href="https://paulhibbitts.github.io/test-docsify-this?basePath=https://raw.githubusercontent.com/hibbitts-design/publishing-with-docsify-this/main&sidebar=true&browser-tab-title=Markdown%20Publishing%20with%20Docsify-This&edit-link=https://github.com/hibbitts-design/publishing-with-docsify-this/blob/main/README.md&edit-link-text=Suggest%20an%20Edit%20for%20this%20Page&maxLevel=3&coverpage=_coverpage.md&dark-mode=true" target="_blank"><i class="fas fa-book fa-fw"></i>Publishing with Docsify-This Guide</a><a class="navpill" href="https://discord.gg/docsify" target="_blank"><i class="fab fa-discord fa-fw"></i>Docsify Discord Chat</a><a class="navpill" href="https://github.com/hibbitts-design/docsify-this" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a></div>
   <div class="logoandtext">
     <img src='https://raw.githubusercontent.com/paulhibbitts/test-docsify-this/main/docs/images/icon.svg' alt='Docsify Logo' />
     <h1>Docsify&#8288;&#8211;&#8288;This</h1>
@@ -163,7 +163,13 @@ Page layout:
 <div class="docsifythisurlbuilderoptionsindentedline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="loadcustomnavbar" unchecked><label for="loadcustomnavbar">Navbar (<code>_navbar.md</code>)<Sidebar/label></div>
 <div class="docsifythisurlbuilderoptionsindentedline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="loadcustomfooter" unchecked><label for="loadcustomfooter">Footer (<code>_footer.md</code>)</label></div>
 
-<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="enableSidebarsearch" unchecked><label for="enableSidebarsearch">Enable Docsify Search plugin in custom Sidebar</label></div>
+<h3>Custom Docsify Sidebar Options</h3>
+
+<hr>
+
+<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="enableSidebarsearch" unchecked><label for="enableSidebarsearch">Enable Docsify Search plugin in custom Docsify Sidebar</label></div>
+
+<div class="docsifythisurlbuilderoptionsline"><label>Automatic Page Table of Contents header levels in custom Docsify Sidebar (0 for none):</label><br><input type="number" size="1" value="2" min="0" max="6" id="subMaxLevel" name="subMaxLevel"></div>
 
 <h3>Coverpage and Dark Theme Colors</h3>
 
