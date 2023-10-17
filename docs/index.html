@@ -1320,12 +1320,23 @@
             alert('Only the domain(s) ' + allowedDomains + ' permitted for a Markdown source file URL.');
             throw new Error('Only the domain ' + allowedDomains + ' permitted for a Markdown source file URL.');
           } else {
-            window.$docsify[key] = value;
+            window.$docsify[key] = convertToBoolean(value);
           }
         } else {
-          window.$docsify[key] = value;
+          window.$docsify[key] = convertToBoolean(value);
         }
       });
+    }
+
+    // Convert to Boolean if true or false, otherwise return original value
+    function convertToBoolean(value) {
+      if (value === 'true') {
+        return true;
+      } else if (value === 'false') {
+        return false;
+      } else {
+        return value;
+      }
     }
 
     // If switch of light/dark theme mode
