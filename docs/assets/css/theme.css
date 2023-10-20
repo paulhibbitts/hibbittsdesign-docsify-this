@@ -798,6 +798,11 @@ span #docsifythisurlfield {
   max-width: 370px;
 }
 
+#siteName {
+  width: 100%;
+  max-width: 370px;
+}
+
 .docsifythisurlbuilderprimarybutton {
   cursor: pointer;
   color: white;
@@ -870,7 +875,7 @@ span #docsifythisurlfield {
   line-height: 1.2rem;
 }
 
-#docsifythisurlbuilder #editCheck, .markdown-section #editLinkTopCheck, .markdown-section #narrowToC, .markdown-section #toch1, .markdown-section #toch2, .markdown-section #toch3, .markdown-section #hideCredits, .markdown-section #hypothesisenable, .markdown-section #hypothesisenable, .markdown-section #hypothesisenable, .markdown-section #loadfavicon, .markdown-section #loadcoverpage, .markdown-section #loadcustomsidebar, .markdown-section #loadcustomnavbar, .markdown-section #loadcustomfooter, .markdown-section #enableSidebarsearch, .markdown-section #zoomimages, .markdown-section #enableDarkmode {
+#docsifythisurlbuilder #editCheck, .markdown-section #editLinkTopCheck, .markdown-section #narrowToC, .markdown-section #toch1, .markdown-section #toch2, .markdown-section #toch3, .markdown-section #hideCredits, .markdown-section #hypothesisenable, .markdown-section #hypothesisenable, .markdown-section #hypothesisenable, .markdown-section #loadfavicon, .markdown-section #loadcoverpage, .markdown-section #loadcustomsidebar, .markdown-section #loadcustomnavbar, .markdown-section #loadcustomfooter, .markdown-section #enableSidebarsearch, .markdown-section #zoomimages, .markdown-section #enableDarkmode, .markdown-section #pagination {
   accent-color: #0324cd; /* Original color #0361cd */
 }
 
@@ -1014,15 +1019,6 @@ span #docsifythisurlfield {
   display: none;
 }
 
-.sidebar h1 {
-  pointer-events: none;
-  margin-top: 0;
-  margin-left: -18px;
-  font-size: 1.40rem;
-  font-weight: normal;
-  text-align: center;
-}
-
 @media only screen and (max-width: 480px) {
 
   #docsifythis .docsifythisheader .logoandtext h1 {
@@ -1085,7 +1081,7 @@ span #docsifythisurlfield {
       position: relative;
   }
 
-  #docsifythisurlbuilder #editCheck, .markdown-section #editLinkTopCheck, .markdown-section #narrowToC, .markdown-section #toch1, .markdown-section #toch2, .markdown-section #toch3, .markdown-section #hideCredits, .markdown-section #hypothesisenable, .markdown-section #hypothesisenable, .markdown-section #hypothesisenable, .markdown-section #loadfavicon, .markdown-section #loadcoverpage, .markdown-section #loadcustomsidebar, .markdown-section #loadcustomnavbar, .markdown-section #loadcustomfooter, .markdown-section #enableSidebarsearch, .markdown-section #zoomimages, .markdown-section #enableDarkmode {
+  #docsifythisurlbuilder #editCheck, .markdown-section #editLinkTopCheck, .markdown-section #narrowToC, .markdown-section #toch1, .markdown-section #toch2, .markdown-section #toch3, .markdown-section #hideCredits, .markdown-section #hypothesisenable, .markdown-section #hypothesisenable, .markdown-section #hypothesisenable, .markdown-section #loadfavicon, .markdown-section #loadcoverpage, .markdown-section #loadcustomsidebar, .markdown-section #loadcustomnavbar, .markdown-section #loadcustomfooter, .markdown-section #enableSidebarsearch, .markdown-section #zoomimages, .markdown-section #enableDarkmode, .markdown-section #pagination {
     accent-color: #817eed;
   }
 
