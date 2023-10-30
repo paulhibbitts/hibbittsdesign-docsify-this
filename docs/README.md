@@ -940,7 +940,7 @@ Here is an additional example, using the HedgeDoc file https://demo.hedgedoc.org
 You can support HedgeDoc URLs (e.g. https://demo.hedgedoc.org/ip4SRxZYTEKa6JHr62XTiA) in the Web Page Builder of your own instance of Docsify-This by locating the line `var hedgedocInstances = '';` within the `index.html` file and include your HedgeDoc instances separated by commas, for example `var hedgedocInstances = 'demo.hedgedoc.org';`. Try out a demo instance of Docsify-This with support for demo.hedgedoc.org files at https://hibbitts-design.github.io/hedgedoc-docsify-this.  
 
 #### Changing the Default Values of the Docsify-This Web Page Builder
-You can change the default values of the Docsify-This Web Page Builder via URL parameters - this is especially useful when doing online sessions or workshops on Docsify-This. In addition to Docsify-This URL parameters, the following Web Page Builder URL parameters are available:
+You can change the default values of the Docsify-This Web Page Builder via URL parameters - this is especially useful when doing Docsify-This online sessions/workshops as well as Docsify-This users helping each other out. In addition to Docsify-This URL parameters, the following Web Page Builder URL parameters are available:  
 
 ##### url-field
 ```html
@@ -968,6 +968,9 @@ https://docsify-this.net/?show-page-options=true
 https://docsify-this.net/?advanced=true
 
 ```
+
+For example, the following URL will display the Advanced Web Page Builder, with the Markdown file URL set to `https://github.com/hibbitts-design/docsify-this-multiple-page-course-site/blob/main/home.md`, the site name 'CPT-363' along with a custom Docsify Sidebar and Navbar to be included: https://docsify-this.net/?advanced=true&url-field=https://github.com/hibbitts-design/docsify-this-multiple-page-course-site/blob/main/home.md&sidebar=true&loadSidebar=true&loadNavbar=true&name=CPT-363
+
 
 #### Use of New Web Editor GitHub.dev
 To use the new GitHub.dev Web editor (currently in Beta) for 'Edit this Page' links, change `github.com` to `github.dev` for GitHub.com files entered into the Web Page Builder Markdown File URL field.
