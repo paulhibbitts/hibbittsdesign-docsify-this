@@ -2,6 +2,10 @@
 
 ## [1.8.2] - XX/XX/2023
 
+**Improved:**
+* Support for URL parameter aliases
+* Updated ReadMe
+
 **Bugfix:**
 * Ensure custom Docsify Sidebar is present when setting site name
 
