@@ -211,6 +211,7 @@ Page layout:
 * [Supported Markdown CSS Classes](/?id=supported-markdown-css-classes)
 * [Custom Markdown CSS Classes](/?id=custom-markdown-css-classes)
 * [Tips and Techniques](/?id=tips-and-techniques)
+* [Editing Docsify-This Markdown Files on your Desktop](/?id=editing-docsify-this-markdown-files-on-your-desktop)
 * [Improving Markdown Previews in Text Editors](/?id=improving-markdown-previews-in-text-editors)
 * [Looking for Even More Customization and Control?](/?id=looking-for-even-more-customization-and-control)
 * [Troubleshooting](/?id=troubleshooting)
@@ -998,9 +999,24 @@ To use the new GitHub.dev Web editor (currently in Beta) for 'Edit this Page' li
 
 ---
 
+### Editing Docsify-This Markdown Files on your Desktop
+
+When using Docsify-This to display Markdown files located on Git-based services such as GitHub or Codeberg you can download (clone) files to your desktop for local editing and then upload (push) changes back to the online files.
+
+For example, to edit GitHub Markdown files on your desktop you would do the following:
+
+1. Tap **Code** on your GitHub Markdown files repository (upper-right green button)
+2. Choose **Open Desktop** and follow the prompts, installing [GitHub Desktop](https://desktop.github.com/) if not already present
+3. You will now be able to edit the Docsify-This Markdown files using the desktop text editor of your choice such as [Microsoft Visual Studio](https://code.visualstudio.com/), [Pulsar](https://pulsar-edit.dev/) (was Atom.io), [Typora](https://typora.io/) etc.
+4. Use GitHub Desktop to push any changes to your repository.  
+
+[Learn more about getting started with GitHub Desktop](https://docs.github.com/en/desktop/overview/getting-started-with-github-desktop).
+
+---
+
 ### Improving Markdown Previews in Text Editors
 
-Some text editors, such as [Microsoft Visual Studio](https://code.visualstudio.com/) (including the online [GitHub.dev Web editor](https://docs.github.com/en/codespaces/the-githubdev-web-based-editor), have the ability to link your own CSS so Markdown previews are more visually accurate. If your editor supports this ability, the below CSS files can be used.
+Some text editors, such as [Microsoft Visual Studio](https://code.visualstudio.com/) (including the online [GitHub.dev Web editor](https://docs.github.com/en/codespaces/the-githubdev-web-based-editor)), have the ability to link your own CSS so Markdown previews are more visually accurate. If your editor supports this ability, the below CSS files can be used.
 
 Docsify-This (based on the Docsify Open Publishing Starter Kit) CSS:  
 https://docsify-this.net/assets/css/editor.css
@@ -1012,7 +1028,7 @@ https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css
 
 ### Looking for Even More Customization and Control?
 
-Docsify-This is intended as a quick way to display one or more remotely located Markdown files. To further customize the rendering of remote files, fork/clone your own instance of [Docsify-This](https://github.com/hibbitts-design/docsify-this) on GitHub and enable GitHub Pages with the folder `/docs`.  
+Docsify-This is intended as a quick way to display one or more remotely located Markdown files. To further customize the rendering of remote files and have the posibility to have an instance of Docsify-This running on a custom domain, fork/clone your own instance of [Docsify-This](https://github.com/hibbitts-design/docsify-this) on GitHub and enable GitHub Pages with the folder `/docs`.  
 
 If you want to run Docsify-This on your own Websever, create a destination folder on your server and then copy the files within the Docsify-This folder `/docs` to your newly created server folder. 
 
