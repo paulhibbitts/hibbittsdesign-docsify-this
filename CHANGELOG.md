@@ -5,6 +5,7 @@
 **New:**
 * Support for the docsify-tabs plugin (with thanks and appreciation to @jhildenbiddle for the plugin and thanks to @harlows for requesting this feature which made me discover it was unintentionally not already included)
 * Added CSS Markdown class `reverse-columns`
+* Updated Docsify-This Multiple Page Site Template
 * Added example Docsify-This template (Markdown Starter Portfolio Template) 
 
 **Improved:**
@@ -15,7 +16,6 @@
 * Improved contrast for unselected Tabs
 * Updated Docsify-This Web Page Builder button and field styles
 * Slightly adjusted Docsify-This Web Page Builder color scheme
-* Updated ReadMe
 * Updated screenshots
 
 **Bugfix:**
