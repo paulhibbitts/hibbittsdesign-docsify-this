@@ -444,6 +444,8 @@ The following style prefixes are available with Docsify-This:
 * [banner-tall-image](#banner-tall-image)
 * [button](#button)
 * [button](#button-rounded)
+* [button](#button-secondary)
+* [button](#button-secondary-rounded)
 * [embedly-card](#embedly-card)
 * [header-image-fade](#header-image-fade)
 * [header-image-full-width](#header-image-full-width)
@@ -530,6 +532,34 @@ Cropped to height of 350px on large screens, 175px on small screens.
 
 ```html
 <a class="button-rounded" href="https://creativecommons.org/wp-content/uploads/2019/02/ccheart_black.svg_.zip" target="_blank"><i class="fa fa-download fa-fw"></i>Download</a>
+```
+
+#### button-secondary
+
+```markdown
+[Required Reading Quiz due Jun 4th](https://canvas.sfu.ca/courses/44038/quizzes/166553 ':class=button-secondary')
+```
+
+```markdown
+[:fa fa-download fa-fw:Download](https://creativecommons.org/wp-content/uploads/2019/02/ccheart_black.svg_.zip ':class=button')
+```
+
+```html
+<a class="button" href="https://creativecommons.org/wp-content/uploads/2019/02/ccheart_black.svg_.zip" target="_blank"><i class="fa fa-download fa-fw"></i>Download</a>
+```
+
+#### button-secondary-rounded
+
+```markdown
+[Required Reading Quiz due Jun 4th](https://canvas.sfu.ca/courses/44038/quizzes/166553 ':class=button-secondary-rounded')
+```
+
+```markdown
+[:fa fa-download fa-fw:Download](https://creativecommons.org/wp-content/uploads/2019/02/ccheart_black.svg_.zip ':class=button-secondary-rounded')
+```
+
+```html
+<a class="button--secondaryrounded" href="https://creativecommons.org/wp-content/uploads/2019/02/ccheart_black.svg_.zip" target="_blank"><i class="fa fa-download fa-fw"></i>Download</a>
 ```
 
 #### embedly-card
