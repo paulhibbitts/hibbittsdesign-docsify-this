@@ -443,9 +443,9 @@ The following style prefixes are available with Docsify-This:
 * [banner-image](#banner-image)
 * [banner-tall-image](#banner-tall-image)
 * [button](#button)
-* [button](#button-rounded)
-* [button](#button-secondary)
-* [button](#button-secondary-rounded)
+* [button-rounded](#button-rounded)
+* [button-secondary](#button-secondary)
+* [button-secondary-rounded](#button-secondary-rounded)
 * [embedly-card](#embedly-card)
 * [header-image-fade](#header-image-fade)
 * [header-image-full-width](#header-image-full-width)
@@ -545,7 +545,7 @@ Cropped to height of 350px on large screens, 175px on small screens.
 ```
 
 ```html
-<a class="button" href="https://creativecommons.org/wp-content/uploads/2019/02/ccheart_black.svg_.zip" target="_blank"><i class="fa fa-download fa-fw"></i>Download</a>
+<a class="button-secondary" href="https://creativecommons.org/wp-content/uploads/2019/02/ccheart_black.svg_.zip" target="_blank"><i class="fa fa-download fa-fw"></i>Download</a>
 ```
 
 #### button-secondary-rounded
@@ -559,7 +559,7 @@ Cropped to height of 350px on large screens, 175px on small screens.
 ```
 
 ```html
-<a class="button--secondaryrounded" href="https://creativecommons.org/wp-content/uploads/2019/02/ccheart_black.svg_.zip" target="_blank"><i class="fa fa-download fa-fw"></i>Download</a>
+<a class="button-secondary-rounded" href="https://creativecommons.org/wp-content/uploads/2019/02/ccheart_black.svg_.zip" target="_blank"><i class="fa fa-download fa-fw"></i>Download</a>
 ```
 
 #### embedly-card
