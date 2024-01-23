@@ -879,6 +879,13 @@ Suggested width of 1200px to 2000px.
 ![Photo of Mountain](images/mountain.jpg ':class=header-image-fade')
 ```
 
+#### header-image-fade-full-width
+Suggested width of 1200px to 2000px, and display of Table of Contents is not available.  
+
+```markdown
+![Photo of Mountain](images/mountain.jpg ':class=header-image-fade-full-width')
+```
+
 #### header-image-full-width
 Suggested size of 1200px to 2000px width and 400px to 600px height, and display of Table of Contents is not available.  
 
@@ -957,6 +964,23 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
 </div>
 <div class="column">
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+</div>
+</div>
+```
+
+#### row/column with right-aligned second column
+
+```html
+<div class="row">
+<div class="column">
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+</div>
+<div class="column-right">
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 

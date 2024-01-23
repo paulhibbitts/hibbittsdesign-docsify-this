@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.9.2] - XX/XX/2024
+
+**New:**
+* Added CSS Markdown class for right-aligned columns `column-right`
+* Added CSS Markdown class for full width background gradient header image (`header-image-fade-full-width`)
+
+**Improved:**
+* Updated ReadMe
+
 ## [1.9.1] - 01/18/2024❄️
 
 **New:**
