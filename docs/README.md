@@ -102,6 +102,15 @@ Page layout:
 
 <div class="docsifythisurlbuilderoptionsline">Page link color:<br><input style="border-radius: 7px;border-color: #8e8f9d" aria-label="Page link color" type="text" maxlength="7" size="7" value="#0374B5" id="linkcolor" style="text-transform:uppercase" oninput="validateColorAndUpdatePreview('linkcolor', 'linkcolorpreview');" data-coloris><span id="linkcolorpreview"></span></div>
 
+<div class="docsifythisurlbuilderoptionsline"><div class='stackedlabeldropdown' style='margin-bottom:4px;border-radius: 7px;border-color: #8e8f9d'>
+  <label for="headerweight">Page headers font weight:</label>
+  <select style="border-radius: 7px;border-color: #8e8f9d" class="docsifythisurlbuilderoptionsline" id="headerweight" name="headerweight">
+    <option value="400">Normal (400)</option>
+    <option value="600">Semi Bold (600)</option>
+    <option value="800">Bold (800)</option>
+  </select>
+</div></div>
+
 <div class="docsifythisurlbuilderoptionsline">Text of 'Edit this Page' link:<br><input style="border-radius: 7px;border-color: #8e8f9d" aria-label="Text of 'Edit this Page' link" type="text" maxlength="60" value="Edit this Page" id="editLinkText" name="editLinkText"></div>
 
 <div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="editLinkTopCheck" unchecked><label for="editLinkTopCheck">Set location of the 'Edit this Page' link to top of page</label></div>
@@ -132,23 +141,6 @@ Page layout:
 <div class="docsifythisurlbuilderoptionsline" style="margin-top: 42px;margin-bottom: -27px;"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="advancedwebpagebuilder" onclick='toggleDiv2(this)' unchecked><label for="advancedwebpagebuilder">Advanced Web Page Builder Options</label></div>
 
 <div id="docsifythisurlbuilderoptionsDiv2" style='margin-top:40px;display: none'>
-
-<h3>Page Title and Headings</h3>
-
-<hr>
-
-<div class="docsifythisurlbuilderoptionsline">Page title (append to top of page):<br><input style="border-radius: 7px;border-color: #8e8f9d" aria-label="Page title (append to top of page)" type="text" maxlength="80" value="" id="pageTitle" name="pageTitle"></div>
-
-<div class='clearfix'>
-  <div class='stackedlabeldropdown' style='margin-bottom:4px;border-radius: 7px;border-color: #8e8f9d'>
-    <label for="headerweight">Page headers font weight:</label>
-    <select style="border-radius: 7px;border-color: #8e8f9d" class="docsifythisurlbuilderoptionsline" id="headerweight" name="headerweight">
-      <option value="400">Normal (400)</option>
-      <option value="600">Semi Bold (600)</option>
-      <option value="800">Bold (800)</option>
-    </select>
-  </div>
-</div>
 
 <h3>Docsify Custom Files</h3>
 
@@ -492,6 +484,7 @@ A simple [Markdown Student Portfolio Starter Template](https://github.com/hibbit
 * [edit-link-top](/?id=edit-link-top)
 * [font-family](/?id=font-family)
 * [font-size](/?id=font-size)
+* [header-weight](/?id=header-weight)
 * [hide-credits](/?id=hide-credits)
 * [hypothesis](/?id=hypothesis)
 * [line-height](/?id=line-height)
@@ -526,6 +519,10 @@ https://docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-des
 ##### font-size
 Set a custom font size for your standalone pages with the optional **font-size** parameter, for example:  
 https://docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-course-starter-kit/main/docs&homepage=resources.md&font-size=1. This parameter can be particularly valuable when trying to better match the visual presentation of embedded content with your destination platform. Please note the font size is set in [REM units](https://www.freecodecamp.org/news/what-is-rem-in-css/).  
+
+##### header-weight
+Set a custom header weight (default is 400 - regular) for your standalone pages with the optional **header-weight** parameter, for example:  
+https://docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-course-starter-kit/main/docs&homepage=resources.md&header-weight=600. 
 
 ##### hide-credits
 Hide the credits usually shown at the bottom of every displayed Docsify-This page with the optional **hide-credits** parameter, for example:  
@@ -569,13 +566,12 @@ https://docsify-this.net?basePath=https://raw.githubusercontent.com/paulhibbitts
 
 #### Additional URL Parameters
 
-The following URL parameters are available for use in Docsify-This URLs, and are also included in the [Advanced Web Page Builder](https://docsify-this.net?advanced=true).
+The following URL parameters are available for use in Docsify-This URLs, and are also included in the [Advanced Web Page Builder](https://paulhibbitts.github.io/test-docsify-this/?advanced=true) (except for **page-title**).
 
 * [coverpage](/?id=coverpage)
 * [coverpage-color](/?id=coverpage-color)
 * [coverpage-color-dark-mode](/?id=coverpage-color-dark-mode)
 * [dark-mode](/?id=dark-mode)
-* [header-weight](/?id=header-weight)
 * [link-color-dark-mode](/?id=link-color-dark-mode)
 * [loadFavicon](/?id=loadFavicon)
 * [loadFooter](/?id=loadFooter)
@@ -603,10 +599,6 @@ https://docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-des
 ##### dark-mode
 Automatically switch light/dark theme based on system OS-level preference, for example:  
 https://docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-publishing-starter-kit/main/docs&homepage=introduction.md&dark-mode=true
-
-##### header-weight
-Set a custom header weight (default is 400 - regular) for your standalone pages with the optional **header-weight** parameter, for example:  
-https://docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-course-starter-kit/main/docs&homepage=resources.md&header-weight=600. 
 
 ##### link-color-dark-mode
 Set a custom color for all links in dark mode, defined using the standard hexadecimal format _without the '#' symbol_ with the optional **link-color-dark-mode** parameter, for example:  
@@ -638,7 +630,7 @@ https://docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-de
 
 ##### page-title
 Set a custom page title at the top of your standalone pages with the optional **page-title** parameter, for example:  
-https://docsify-this.net?basePath=https://raw.githubusercontent.com/paulhibbitts/demo-grav-open-matter-course-hub/master/pages/04.resources&homepage=page.md&page-title=Resources Please note to use titles with spaces they must be [encoded](https://meyerweb.com/eric/tools/dencoder/), so "My Page" would be "My%20Page".  
+https://docsify-this.net?basePath=https://raw.githubusercontent.com/paulhibbitts/demo-grav-open-matter-course-hub/master/pages/04.resources&homepage=page.md&page-title=Resources Please note to use titles with spaces they must be [encoded](https://meyerweb.com/eric/tools/dencoder/), so "My Page" would be "My%20Page". Not included in the Advanced Web Page Builder.  
 
 ##### pagination
 Display Pagination buttons in page content area (Docsify custom Sidebar required) with the optional **pagination** parameter, for example:  

@@ -247,6 +247,7 @@ A simple [Markdown Student Portfolio Starter Template](https://github.com/hibbit
 * [edit-link-top](#edit-link-top)
 * [font-family](#font-family)
 * [font-size](/#font-size)
+* [header-weight](#header-weight)
 * [hide-credits](#hide-credits)
 * [hypothesis](#hypothesis)
 * [line-height](#line-height)
@@ -281,6 +282,10 @@ https://docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-des
 ##### font-size
 Set a custom font size for your standalone pages with the optional **font-size** parameter, for example:  
 https://docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-course-starter-kit/main/docs&homepage=resources.md&font-size=1. This parameter can be particularly valuable when trying to better match the visual presentation of embedded content with your destination platform. Please note the font size is set in [REM units](https://www.freecodecamp.org/news/what-is-rem-in-css/).  
+
+##### header-weight
+Set a custom header weight (default is 400 - regular) for your standalone pages with the optional **header-weight** parameter, for example:  
+https://docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-course-starter-kit/main/docs&homepage=resources.md&header-weight=600. 
 
 ##### hide-credits
 Hide the credits usually shown at the bottom of every displayed Docsify-This page with the optional **hide-credits** parameter, for example:  
@@ -324,13 +329,12 @@ https://docsify-this.net?basePath=https://raw.githubusercontent.com/paulhibbitts
 
 #### Additional URL Parameters
 
-The following URL parameters are available for use in Docsify-This URLs, and are also included in the [Advanced Web Page Builder](https://docsify-this.net?advanced=true).
+The following URL parameters are available for use in Docsify-This URLs, and are also included in the [Advanced Web Page Builder](https://docsify-this.net?advanced=true) (except for **page-title**).
 
 * [coverpage](#coverpage)
 * [coverpage-color](#coverpage-color)
 * [coverpage-color-dark-mode](#coverpage-color-dark-mode)
 * [dark-mode](#dark-mode)
-* [header-weight](#header-weight)
 * [link-color-dark-mode](#link-color-dark-mode)
 * [loadFavicon](#loadFavicon)
 * [loadFooter](#loadFooter)
@@ -358,10 +362,6 @@ https://docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-des
 ##### dark-mode
 Automatically switch light/dark theme based on system OS-level preference, for example:  
 https://docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-publishing-starter-kit/main/docs&homepage=introduction.md&dark-mode=true
-
-##### header-weight
-Set a custom header weight (default is 400 - regular) for your standalone pages with the optional **header-weight** parameter, for example:  
-https://docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-course-starter-kit/main/docs&homepage=resources.md&header-weight=600. 
 
 ##### link-color-dark-mode
 Set a custom color for all links in dark mode, defined using the standard hexadecimal format _without the '#' symbol_ with the optional **link-color-dark-mode** parameter, for example:  
@@ -393,7 +393,7 @@ https://docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-de
 
 ##### page-title
 Set a custom page title at the top of your standalone pages with the optional **page-title** parameter, for example:  
-https://docsify-this.net?basePath=https://raw.githubusercontent.com/paulhibbitts/demo-grav-open-matter-course-hub/master/pages/04.resources&homepage=page.md&page-title=Resources Please note to use titles with spaces they must be [encoded](https://meyerweb.com/eric/tools/dencoder/), so "My Page" would be "My%20Page".  
+https://docsify-this.net?basePath=https://raw.githubusercontent.com/paulhibbitts/demo-grav-open-matter-course-hub/master/pages/04.resources&homepage=page.md&page-title=Resources Please note to use titles with spaces they must be [encoded](https://meyerweb.com/eric/tools/dencoder/), so "My Page" would be "My%20Page". Not included in the Advanced Web Page Builder.  
 
 ##### pagination
 Display Pagination buttons in page content area (Docsify custom Sidebar required) with the optional **pagination** parameter, for example:  
