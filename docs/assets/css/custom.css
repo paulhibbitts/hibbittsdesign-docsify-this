@@ -95,6 +95,10 @@ body .markdown-section {
   accent-color: #0361cd; /* Set to original color */
 }
 
+#docsifythisurlbuildershowhidelink a:link, #docsifythisurlbuildershowhidelink a:visited, #docsifythisurlbuildershowhidelink a:hover, #docsifythisurlbuildershowhidelink a:active,   #docsifythisurlbuildershowhidelink2 a:link, #docsifythisurlbuildershowhidelink2 a:visited, #docsifythisurlbuildershowhidelink2 a:hover, #docsifythisurlbuildershowhidelink2 a:active {
+    color: #0361cd;
+  }
+
 @media (prefers-color-scheme: dark) {
 
     #docsifythis #docsifythisurlbuilder h2 {
@@ -119,6 +123,10 @@ body .markdown-section {
 
     #docsifythisurlbuilder hr {
         border: 1px solid #bbd4ea; /* Set to original color */
+    }
+
+    #docsifythisurlbuildershowhidelink a:link, #docsifythisurlbuildershowhidelink a:visited, #docsifythisurlbuildershowhidelink a:hover, #docsifythisurlbuildershowhidelink a:active,   #docsifythisurlbuildershowhidelink2 a:link, #docsifythisurlbuildershowhidelink2 a:visited, #docsifythisurlbuildershowhidelink2 a:hover, #docsifythisurlbuildershowhidelink2 a:active {
+        color: #4bc3f4; /* Original color #4bc3f4 */
     }
 
 }
