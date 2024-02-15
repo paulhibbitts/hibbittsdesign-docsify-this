@@ -811,6 +811,30 @@
       headTitle.appendChild(appleTouchIcon);
     }
 
+    // Ensure the link for displayed site name is correct after scroll to id element
+    // Function to check and set the href attribute
+    function checkAndSetHref() {
+        const appNameLink = document.querySelector('a.app-name-link');
+        if (appNameLink && appNameLink.getAttribute('href') !== '#/') {
+            appNameLink.setAttribute('href', '#/');
+        }
+    }
+    // Set up a MutationObserver to monitor the entire body for added nodes or attribute changes
+    // This assumes that the 'a.app-name-link' might be added dynamically or its attributes changed
+    const observer = new MutationObserver((mutationsList, observer) => {
+        // Call checkAndSetHref to ensure the href is as expected
+        checkAndSetHref();
+    });
+    // Assuming the body exists when this script runs, start observing
+    observer.observe(document.body, {
+        childList: true, // observe direct children being added or removed
+        subtree: true, // observe all descendants
+        attributes: true, // observe attributes changes
+        attributeFilter: ['href'] // filter to only observe changes to 'href' attributes
+    });
+    // Initial check in case the element exists at script execution time
+    checkAndSetHref();
+
     // Docsify
     window.$docsify = {
       // GENERAL SETTINGS
