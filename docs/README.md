@@ -317,7 +317,7 @@ To use these templates you would generally do the following (template specific i
 
 4. Go to https://docsify-this.net and paste the copied URL into the **Markdown File URL** field
 
-5. Select the page options you want (e.g. Docsify Sidebar) and tap the **View as Standalone Page** button to view your Markdown file as a web page for sharing or embedding  
+5. Select the page options you want (e.g. Docsify Sidebar) and tap the **Publish as a Standalone Web Page** button to view your Markdown file as a web page for sharing or embedding  
 
 Now that the template files are located on your own GitHub account, modify their content to fit your needs.  
 
@@ -1237,6 +1237,8 @@ https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css
 ### Looking for Even More Customization and Control?
 
 Docsify-This is intended as a quick way to display one or more remotely located Markdown files. To further customize the rendering of remote files and have the posibility to have an instance of Docsify-This running on a custom domain, fork/clone your own instance of [Docsify-This](https://github.com/hibbitts-design/docsify-this) on GitHub and enable GitHub Pages with the folder `/docs`.  
+
+You can also have an instance of Docsify-This run on [Codeberg](https://codeberg.org/) by uploading the files in the Docsify-This `/docs` folder into a newly created Codeberg repository and then enabling [Codeberg Pages](https://docs.codeberg.org/codeberg-pages/). An example Docsify-This instance running on Codeberg is available at https://codeberg.org/paulhibbitts/docsify-this-app, which uses a Branch renamed to `pages`.  
 
 If you want to run Docsify-This on your own Websever, create a destination folder on your server and then copy the files within the Docsify-This folder `/docs` to your newly created server folder. 
 
