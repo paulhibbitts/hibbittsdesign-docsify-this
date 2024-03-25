@@ -7,9 +7,11 @@
 * Updated to use Coloris v0.22.0
 * Updated to use docsify-tabs plugin 1.6.2
 * Support display of site name with standard Docsify Sidebar
+* Streamline handling of local URLs to handle 'Edit this Page' links and use of hypothesis
+* Streamline hook.doneEach script
 
 **Bugfix:**
-* Remove extra <br> elements when credits are visible
+* Remove extra `<br>` elements when credits are visible
 
 ## [1.9.3] - 02/22/2024
 
