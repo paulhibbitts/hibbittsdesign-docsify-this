@@ -477,6 +477,10 @@
   word-break: break-all!important;
 }
 
+.markdown-section a {
+  overflow-wrap: anywhere;
+}
+
 .markdown-section .fa-fw {
   text-align: left;
 }
@@ -507,6 +511,11 @@
 
 .markdown-section .responsive-container iframe {
   max-width: 100%;
+}
+
+.markdown-section .image {
+  max-width: 100%;
+  height: auto
 }
 
 .markdown-section .banner-image {
