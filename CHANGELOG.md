@@ -4,7 +4,7 @@
 
 **New:**
 * New Open Graph image for social media
-* Support of optional edit-link-emoji parameter for custom emoji 'Edit this Page' link (not available in the Web Page Builder)
+* Support of optional `edit-link-emoji` URL parameter for custom emoji 'Edit this Page' link (not available in the Web Page Builder)
 
 **Improved:**
 * Updated ReadMe
@@ -16,6 +16,7 @@
 * Do not overwrite existing target attribute in Markdown links
 * Properly pass URL parameter values when configuring the default values of the Docsify-This Web Page Builder
 * Added CSS to automatically wrap code blocks that overflow
+* Added CSS to better vertically align 'Edit this Page' emoji and text
 
 ## [1.9.5] - 04/29/2024🏒
 
