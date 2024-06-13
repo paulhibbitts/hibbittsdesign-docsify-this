@@ -852,7 +852,7 @@
       // coverpage      : 'coverpage.md',
       loadSidebar: !(getURLParameterByName(['standalone', 'embedded']) || standalone || getURLParameterByName('basePath')),
       loadNavbar: !(getURLParameterByName(['standalone', 'embedded']) || !(getURLParameterByName('navbar')) || standalone || !navbar || false),
-      externalLinkTarget: (getURLParameterByName(['standalone', 'embedded'], '_top', '_blank')),
+      externalLinkTarget: '_top',
       loadFooter: (getURLParameterByName('footer') || footer || false),
       ext: getFileExtension(getURLParameterByName('homepage', null, null, window.location.href, true)),
       executeScript: true,
@@ -974,13 +974,6 @@
                     }
 
                     link.setAttribute('href', newURL);
-                  }
-                } else {
-                  // Set '_top' as external link targets except for docsify-this.net and GitHub Docsify-This repository
-                  if (link.href !== "https://docsify-this.net/" && link.href !== "https://github.com/hibbitts-design/docsify-open-publishing-starter-kit") {
-                    if (!link.hasAttribute('target')) {
-                      link.setAttribute('target', '_top');
-                    }
                   }
                 }
               }

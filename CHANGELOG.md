@@ -5,6 +5,10 @@
 **Improved:**
 * Updated Open Graph image for social media
 * Updated ReadMe
+* Adjusted bottom margin for summary elements
+
+**Bugfix:**
+* Change default external link config from '_blank' to '_top'
 
 ## [1.9.6] - 06/03/2024
 
