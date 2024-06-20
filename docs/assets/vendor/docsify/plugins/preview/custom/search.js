@@ -213,6 +213,63 @@
     return keyword;
   }
 
+  // Function to convert string to title case and replace hyphens with spaces
+  // This code was developed with the assistance of ChatGPT, an AI language model by OpenAI
+  function convertToTitle(str) {
+    return str
+      .split('-') // Split the string by hyphens
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()) // Capitalize the first letter and lower case the rest
+      .join(' '); // Join the words with spaces
+  }
+  
+  // Function to strip common Markdown markup
+  // This code was developed with the assistance of ChatGPT, an AI language model by OpenAI
+  function stripCommonMarkdown(markdown) {
+    // Regular expressions for common Markdown elements
+    const regexes = [
+      { pattern: /(\*\*|__)(.*?)\1/g, replacement: '$2' }, // Bold: **text** or __text__
+      { pattern: /(\*|_)(.*?)\1/g, replacement: '$2' },   // Italic: *text* or _text_
+      { pattern: /[-+*]\s+(.*?)/g, replacement: '$1' },   // Unordered lists: - item, + item, * item
+      { pattern: /\d+\.\s+(.*?)/g, replacement: '$1' },   // Ordered lists: 1. item
+    ];
+  
+    // Apply all regular expressions to the input text
+    let plainText = markdown;
+    regexes.forEach(({ pattern, replacement }) => {
+      plainText = plainText.replace(pattern, replacement);
+    });
+  
+    // Trim leading/trailing whitespace and return
+    return plainText.trim();
+  }
+
+  // Function to replace Markdown links with their titles, excluding Markdown images
+  // This code was developed with the assistance of ChatGPT, an AI language model by OpenAI
+  function replaceMarkdownLinksWithTitles(content) {
+    // Regular expression to match Markdown link syntax and capture the title and URL
+    // Excludes image links which start with '!'
+    const markdownLinkRegex = /(\!\[.*?\])|(\[([^\]]+)\]\(([^)]+)\))/g;
+    
+    return content.replace(markdownLinkRegex, (match, image, link, title, url) => {
+        // If it's an image link, return the full match (no replacement)
+        if (image) {
+            return match;
+        }
+        // If it's a normal link, replace it with the title
+        return title;
+    });
+  }
+
+  // Function to strip all HTML tags from a string
+  // This code was developed with the assistance of ChatGPT, an AI language model by OpenAI
+  function stripHtmlTags(content) {
+    // Regular expression to match HTML tags
+    const htmlTagRegex = /<[^>]*>/g;
+
+    // Replace all HTML tags with an empty string
+    return content.replace(htmlTagRegex, '');
+  }
+
   /**
    * @param {String} query Search query
    * @returns {Array} Array of results
@@ -239,8 +296,10 @@
       let handlePostTitle = '';
       let handlePostContent = '';
       const postTitle = post.title && post.title.trim();
-      const postContent = post.body && post.body.trim();
+      const postContent = stripHtmlTags(stripCommonMarkdown(replaceMarkdownLinksWithTitles(post.body && post.body.trim())));
       const postUrl = post.slug || '';
+      const postPageSlug = postUrl.split('/')[1].split('?')[0].replace('0', '');
+      const postPageTitle = convertToTitle(postPageSlug);
 
       // Skip posts that contain iframes, Font Awesome icons, embedly cards, or Markdown images
       // console.log(postContent);
@@ -303,10 +362,12 @@
           }
         });
 
+        // This code was developed with the assistance of ChatGPT, an AI language model by OpenAI
+        // Only prepend postPageTitle when not empty
         if (matchesScore > 0) {
           const matchingPost = {
             title: handlePostTitle,
-            content: postContent ? resultStr : '',
+            content: (postPageTitle ? `<strong>${postPageTitle}</strong><br>` : '') + postContent,
             url: postUrl,
             score: matchesScore,
           };
