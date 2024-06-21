@@ -349,18 +349,36 @@
               end = postContent.length;
             }
 
-            const matchContent =
-              handlePostContent &&
-              '...' +
-                handlePostContent
-                  .substring(start, end)
-                  .replace(
-                    regEx,
-                    word => /* html */ `<em class="search-keyword">${word}</em>`
-                  ) +
-                '...';
-
-            resultStr += matchContent;
+            // This code was developed with the assistance of ChatGPT, an AI language model by OpenAI
+            const matchContent = handlePostContent && (() => {
+              // Extract the substring where the match will be applied
+              const contentSegment = handlePostContent.substring(start, end);
+              
+              // Find the first occurrence of the word using the regular expression
+              const match = contentSegment.match(regEx);
+              
+              if (match) {
+                // Get the position of the first match
+                const matchIndex = contentSegment.indexOf(match[0]);
+                
+                // Split the content segment into before, match, and after parts
+                const beforeMatch = contentSegment.substring(0, matchIndex);
+                const firstMatch = contentSegment.substring(matchIndex, matchIndex + match[0].length);
+                const afterMatch = contentSegment.substring(matchIndex + match[0].length);
+                
+                // Return the reassembled string with the first match wrapped in <em> tags
+                return '...' + 
+                  beforeMatch + 
+                  `<em class="search-keyword">${firstMatch}</em>` + 
+                  afterMatch + 
+                  '...';
+              }
+            
+              // If no match is found, return the original segment surrounded by ellipses
+              return '...' + contentSegment + '...';
+            })();
+            
+            resultStr += matchContent;   
           }
         });
 
@@ -371,14 +389,16 @@
             title: handlePostTitle,
             content: (
               // Convert both postPageTitle and handlePostTitle to lowercase for case-insensitive comparison
-              postPageTitle && postPageTitle.toLowerCase() !== handlePostTitle.toLowerCase() 
+              postPageTitle && 
+              postPageTitle.toLowerCase() !== handlePostTitle.toLowerCase() &&
+              postPageTitle.toLowerCase() !== 'readme' // Exclude 'ReadMe' from being prepended
                 ? `<strong>${postPageTitle}</strong><br>` 
                 : ''
             ) + (postContent ? resultStr : ''),
             url: postUrl,
             score: matchesScore,
           };
-
+        
           matchingResults.push(matchingPost);
         }
       }
@@ -387,6 +407,7 @@
     return matchingResults.sort((r1, r2) => r2.score - r1.score);
   }
 
+  // This code was developed with the assistance of ChatGPT, an AI language model by OpenAI
   function init$1(config, vm) {
     const isAuto = config.paths === 'auto';
     const paths = isAuto ? getAllPaths(vm.router) : config.paths;
