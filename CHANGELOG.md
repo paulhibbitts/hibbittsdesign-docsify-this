@@ -3,6 +3,11 @@
 ## [1.9.7] - XX/XX/2024
 
 **Improved:**
+* Improve accessibility of Font Awesome icons when used for decorative elements (automatic addition of `aria-hidden` attribute)
+
+## [1.9.7] - 06/21/2024🏒
+
+**Improved:**
 * Updated Open Graph image for social media
 * Updated ReadMe
 * Adjusted bottom margin for summary elements
