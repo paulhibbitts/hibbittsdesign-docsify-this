@@ -15,8 +15,6 @@ jobs:
         username: paulhibb
         password: ${{ secrets.FTP_PASSWORD }}
         protocol: ftps
-        port: 21
+        port: 22
         server-dir: docsify-this.hibbittsdesign.org/
         timeout: 120000
-        lfs: true
-        fetch-depth : 100
