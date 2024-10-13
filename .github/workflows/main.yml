@@ -18,3 +18,5 @@ jobs:
         port: 21
         server-dir: docsify-this.hibbittsdesign.org/
         timeout: 120000
+        lfs: true
+        fetch-depth : 100
