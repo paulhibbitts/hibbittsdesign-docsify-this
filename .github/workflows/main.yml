@@ -17,3 +17,4 @@ jobs:
         protocol: ftps
         port: 22
         server-dir: docsify-this.hibbittsdesign.org/
+        timeout: 60000
