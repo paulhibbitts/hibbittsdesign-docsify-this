@@ -17,5 +17,4 @@ jobs:
         password: ${{ secrets.DEPLOY_FTP_PASSWORD }}
         protocol: ftps
         port: 21
-        server-dir: docsify-this.hibbittsdesign.org/
-        timeout: 240000
+        timeout: 60000
