@@ -18,4 +18,4 @@ jobs:
         protocol: ftps
         port: 21
         server-dir: docsify-this.hibbittsdesign.org/
-        timeout: 120000
+        timeout: 240000
