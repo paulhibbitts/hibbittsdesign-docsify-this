@@ -13,9 +13,8 @@ jobs:
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
         server: ftp.paulhibbitts.net
-        username: paulhibb
-        password: ${{ secrets.FTP_PASSWORD }}
+        username: deployftp@paulhibbitts.net
+        password: ${{ secrets.DEPLOY_FTP_PASSWORD }}
         protocol: ftps
-        port: 22
+        port: 21
         server-dir: docsify-this.hibbittsdesign.org/
-        timeout: 60000
