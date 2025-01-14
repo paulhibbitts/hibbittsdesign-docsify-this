@@ -679,8 +679,7 @@ The following CSS classes are available when authoring your own Markdown content
 
 ```html
 <span class="badge" style="--badge-bg-color: #0164db;">
-  Tue Jun 12th 11:59pm PDT</span
->
+  Tue Jun 12th 11:59pm PDT</span>
 ```
 
 ```html
@@ -688,15 +687,13 @@ The following CSS classes are available when authoring your own Markdown content
   class="badge"
   style="--badge-bg-color: #e7c500; --badge-text-color: #000;"
 >
-  Tue Jun 12th 11:59pm PDT</span
->
+  Tue Jun 12th 11:59pm PDT</span>
 ```
 
 ```html
 <span class="badge">
   [Tue May 16 2:30pm
-  PT](https://www.timeanddate.com/worldclock/fixedtime.html?msg=CMPT-363+Blackboard+Mini-lectures+and+Activities&iso=20220516T1430&p1=256&ah=1&am=50)</span
->
+  PT](https://www.timeanddate.com/worldclock/fixedtime.html?msg=CMPT-363+Blackboard+Mini-lectures+and+Activities&iso=20220516T1430&p1=256&ah=1&am=50)</span>
 ```
 
 ##### banner-image
@@ -730,8 +727,7 @@ Cropped to height of 350px on large screens, 175px on small screens.
   class="button"
   href="https://creativecommons.org/wp-content/uploads/2019/02/ccheart_black.svg_.zip"
   target="_blank"
-  ><i class="fa fa-download fa-fw"></i>Download</a
->
+  ><i class="fa fa-download fa-fw"></i>Download</a>
 ```
 
 ##### button-rounded
@@ -749,8 +745,7 @@ Cropped to height of 350px on large screens, 175px on small screens.
   class="button-rounded"
   href="https://creativecommons.org/wp-content/uploads/2019/02/ccheart_black.svg_.zip"
   target="_blank"
-  ><i class="fa fa-download fa-fw"></i>Download</a
->
+  ><i class="fa fa-download fa-fw"></i>Download</a>
 ```
 
 ##### button-secondary
@@ -768,8 +763,7 @@ Cropped to height of 350px on large screens, 175px on small screens.
   class="button-secondary"
   href="https://creativecommons.org/wp-content/uploads/2019/02/ccheart_black.svg_.zip"
   target="_blank"
-  ><i class="fa fa-download fa-fw"></i>Download</a
->
+  ><i class="fa fa-download fa-fw"></i>Download</a>
 ```
 
 ##### button-secondary-rounded
@@ -787,8 +781,7 @@ Cropped to height of 350px on large screens, 175px on small screens.
   class="button-secondary-rounded"
   href="https://creativecommons.org/wp-content/uploads/2019/02/ccheart_black.svg_.zip"
   target="_blank"
-  ><i class="fa fa-download fa-fw"></i>Download</a
->
+  ><i class="fa fa-download fa-fw"></i>Download</a>
 ```
 
 ##### embedly-card
@@ -801,8 +794,7 @@ For linked article previews, embedded slides/videos, etc.
   data-card-controls="0"
   data-card-align="left"
   href="https://blog.prototypr.io/defining-usability-e7bf42e8abd0"
-  >Defining usability</a
->
+  >Defining usability</a>
 ```
 
 ##### header-image-fade
@@ -869,8 +861,7 @@ Scale images with border to %.
 
 ```html
 <a class="navpill" href="https://github.com" target="_blank"
-  ><i class="fab fa-github fa-fw"></i>GitHub</a
->
+  ><i class="fab fa-github fa-fw"></i>GitHub</a>
 ```
 
 ##### responsive
@@ -1380,8 +1371,7 @@ Would be changed to:
   data-card-align="left"
   data-card-width="100%"
   href="https://docs.google.com/presentation/d/1BLaaOTsGxDmNcAhg6pdx3hl9IvI8NErg8Oe5ceh83fw/edit?usp=sharing"
-  >Grav and Docsify Slides Placeholder</a
->
+  >Grav and Docsify Slides Placeholder</a>
 ```
 
 ##### Docsify Sidebar is not Displaying Header Levels
