@@ -161,11 +161,21 @@
         const { str, config } = getAndRemoveConfig(token.text);
 
         const text = getAndRemoveDocisfyIgnoreConfig(token.text).content;
-
+    
+        // Extract title from Markdown link
+        const match = text.match(/\[(.*?)\]\((.*?)\)/); 
+        let title = match ? match[1] : text;
+    
+        // Sanitize title for ID
+        title = title.replace(/\//g, '') // Remove slashes
+           .replace(/\?/g, '') // Remove question marks
+           .replace(/[^a-zA-Z0-9-]/g, '-') // Replace other non-alphanumeric
+           .toLowerCase();
+    
         if (config.id) {
           slug = router.toURL(path, { id: slugify(config.id) });
         } else {
-          slug = router.toURL(path, { id: slugify(escapeHtml(text)) });
+          slug = router.toURL(path, { id: slugify(title) }); 
         }
 
         if (str) {
@@ -326,6 +336,10 @@
           handlePostTitle = postTitle
             ? escapeHtml(ignoreDiacriticalMarks(postTitle))
             : postTitle;
+          
+          // Remove Markdown link syntax from title
+          handlePostTitle = handlePostTitle.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '$1').trim();
+
           handlePostContent = postContent
             ? escapeHtml(ignoreDiacriticalMarks(postContent))
             : postContent;
@@ -599,7 +613,7 @@
   text-align: center;
 }
 
-.app-name.hide, .sidebar-nav.hide {
+.sidebar-nav.hide {
   display: none;
 }`;
 
@@ -636,7 +650,6 @@
     const $clearBtn = Docsify.dom.find($search, '.clear-button');
     const $sidebarNav = Docsify.dom.find('.sidebar-nav');
     const $status = Docsify.dom.find('div.search .results-status');
-    const $appName = Docsify.dom.find('.app-name');
 
     if (!value) {
       $panel.classList.remove('show');
@@ -646,7 +659,6 @@
 
       if (options.hideOtherSidebarContent) {
         $sidebarNav && $sidebarNav.classList.remove('hide');
-        $appName && $appName.classList.remove('hide');
       }
 
       return;
