@@ -235,6 +235,7 @@ Learn more about each of the basic Docsify-This URL parameters below, and discov
 - [line-height](#line-height)
 - [link-color](#link-color)
 - [maxLevel](#maxLevel)
+- [searchbox](#searchbox)
 - [sidebar](/#sidebar)
 - [toc](#toc)
 - [toc-headings](#toc-headings)
@@ -306,6 +307,11 @@ https://docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-des
 Set the maximum header level of the Docsify sidebar with the optional **maxLevel** Docsify parameter, for example:  
 https://docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-publishing-starter-kit/main/docs&homepage=introduction.md&sidebar=true&maxLevel=3
 
+##### searchbox
+
+Enable the Docsify Search plugin (which currently includes matches for text and markup) on multiple page sites including a custom Sidebar with the optional **searchbox** Docsify parameter, for example:  
+https://docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-multiple-page-course-site/main&homepage=home.md&sidebar=true&loadSidebar=_sidebar.md&loadNavbar=_navbar.md&searchbox=true
+
 ##### sidebar
 
 Display a Docsify sidebar with the optional **sidebar** parameter, for example:  
@@ -360,7 +366,6 @@ The following additional URL parameters are available for use in Docsify-This UR
 - [name](#name)
 - [page-title](#page-title)
 - [pagination](#pagination)
-- [searchbox](#searchbox)
 - [submaxLevel](#subMaxLevel)
 - [svg-icons](#svg-icons)
 
@@ -483,11 +488,6 @@ https://docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-des
 
 Display Pagination buttons in page content area (Docsify custom Sidebar required) with the optional **pagination** parameter, for example:  
 https://docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-multiple-page-course-site/main&homepage=home.md&sidebar=true&loadSidebar=_sidebar.md&loadNavbar=_navbar.md&searchbox=true&pagination=true
-
-##### searchbox
-
-Enable the Docsify Search plugin (which currently includes matches for text and markup) on multiple page sites including a custom Sidebar with the optional **searchbox** Docsify parameter, for example:  
-https://docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-multiple-page-course-site/main&homepage=home.md&sidebar=true&loadSidebar=_sidebar.md&loadNavbar=_navbar.md&searchbox=true
 
 ##### subMaxLevel
 
