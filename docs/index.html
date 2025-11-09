@@ -59,6 +59,14 @@
   <script src="assets/vendor/coloris/coloris.min.js"></script>
 
   <style>
+
+    /* Override Sidebar initial visibility via CSS for delayed Markdown page load */
+    #__sidebar:not(.loaded),
+    .sidebar-toggle:not(.loaded) {
+      visibility: hidden;
+      opacity: 0;
+    }
+
     :root {
       --base-font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
 
@@ -313,15 +321,15 @@
             URLparms = URLparms + `&edit-link-text=` + editlinktext;
           }
 
-          const cb2 = document.querySelector('#editLinkTopCheck');
+          const cb21 = document.querySelector('#editLinkTopCheck');
           if (cb1.checked && cb2.checked) {
             if (gitlinkPageURL) {
               var URLparms = URLparms + `&edit-link-top=true`;
             }
           }
 
-          const cb21 = document.querySelector('#pageCopyButton');
-          if (cb21.checked) {
+          const cb22 = document.querySelector('#pageCopyButton');
+          if (cb22.checked) {
             if (!url.includes('page-copy-button=')) {
               var URLparms = URLparms + `&page-copy-button=true`;
             }
@@ -1486,6 +1494,14 @@
           // Invoked on each page load after new HTML has been appended to the DOM
           hook.doneEach(function () {
             if (window.$docsify['basePath']) {
+
+              // Restore Sidebar visibility (no DOMContentLoaded needed)
+              const sidebar = document.getElementById('__sidebar');
+              const toggle = document.querySelector('.sidebar-toggle');
+              
+              if (sidebar) sidebar.classList.add('loaded');
+              if (toggle) toggle.classList.add('loaded');
+
               const docHead = document.head;
               const docBody = document.body;
 
@@ -1667,7 +1683,7 @@
                       } else {
                         scrollTop = targetElement.offsetTop - topMargin;
                       }
-                      
+
                       // Ensure we don't scroll above the top of the page
                       scrollTop = Math.max(0, scrollTop);
                       
