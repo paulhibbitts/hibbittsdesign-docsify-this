@@ -1,6 +1,12 @@
 # Changelog
 
-## [1.10.8] - 11/XX/2025
+## [1.10.9] - XX/XX/2025
+
+**Improved:**
+* Hide empty rows in responsive tables
+* Left align rows in responsive tables
+
+## [1.10.8] - 11/24/2025
 
 **New:**
 * Added value and unit fields for max width in Web Page Builder (in addition to URL parameter `max-width`)
