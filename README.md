@@ -1,31 +1,80 @@
+<div align="center">
+  
+<div style="display:none;">
+
 | 🛑 | **This is a demo-only repository. View the main project repository at https://github.com/hibbitts-design/docsify-this.** |
 |---|:--|
 
-[![Docsify](https://img.shields.io/npm/v/docsify?label=docsify)](https://docsify.js.org/)
-[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/hibbitts-design/docsify-this/blob/main/LICENSE)
-<a href="https://discord.gg/docsify">
-<img src="https://img.shields.io/badge/chat-on%20discord-7289DA.svg" alt="Docsify Discord Chat" />
-</a>
-
-## Instantly Turn Markdown Text Files into Styled Web Pages
-
-This open-source web app built with [Docsify](https://docsify.js.org), a magical documentation site generator capable of flexible content display, makes [Markdown](https://en.wikipedia.org/wiki/Markdown) publishing as simple as providing a file link - publish and style pages or entire sites for reading, embedding, or presenting, without requiring webserver setup or modifying source files.  
-
-<div style="display: none;">
-
-_**Check out what Docsify-This can do by [viewing this ReadMe file as a web page with an optional Sidebar that includes headings up to 4 levels!](https://docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this/main&homepage=README.md&edit-link=https://github.com/hibbitts-design/docsify-this/blob/main/README.md&sidebar=true&browser-tab-title=Docsify-This%20ReadMe&edit-link-text=Suggest%20an%20Edit%20on%20GitHub&maxLevel=4&header-weight=600&zoom-images=true&dark-mode=auto)**_
+<img src="https://docsify.js.org/_media/icon.svg" width="64">
 
 </div>
 
-<picture>
-  <source srcset="https://raw.githubusercontent.com/paulhibbitts/github-repo-images/master/docsify-this-v1-11-0-web-page-builder-dark.png" media="(prefers-color-scheme: dark)">
-  <img src="https://raw.githubusercontent.com/paulhibbitts/github-repo-images/master/docsify-this-v1-11-0-web-page-builder.png" alt="Docsify-This">
-</picture>
-<p>
-  <em>Figure 1. <a href="https://docsify-this.net">Docsify-This.net</a> Web Page Builder.</em>
-</p>
+<div style="text-align: left !important;">
 
-### Quickstart ⚡
+# Docsify-This
+
+<p><em>Instantly publish Markdown files as styled web pages – no setup or hosting required.</em></p>
+
+</div>
+
+<div style="display:none;">
+
+[![Docsify Discord Chat](https://img.shields.io/discord/713647066802421792.svg?logo=discord&colorB=7289DA&label=Docsify%20Discord%20Chat)](https://discord.gg/docsify) [![GitHub Stars](https://img.shields.io/github/stars/hibbitts-design/docsify-this?style=flat-square&logo=github&logoColor=white&label=Stars)](https://github.com/hibbitts-design/docsify-this) [![Latest Release](https://img.shields.io/github/v/release/hibbitts-design/docsify-this?style=flat-square&label=Release)](https://github.com/hibbitts-design/docsify-this/releases/latest) [![License](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](https://github.com/hibbitts-design/docsify-this/blob/main/LICENSE)
+
+<p><a href="https://docsify-this.net">Try Docsify-This.net</a></p>
+
+<p>A free, open-source web app built on <a href="https://docsify.js.org">Docsify</a> – publish any public Markdown file as a styled web page in seconds, with no account, server, or configuration required. Named a finalist in the Open Infrastructure category for the <a href="https://www.oeglobal.org/2024/09/04/finalists-2024-oeawards/">2024 Open Education Awards for Excellence</a>.</p>
+
+> *"I'm blown away just by the fact you put a URL into Docsify-This and then you get a URL back for a web page… done!"*
+> — J. Groom, Co-founder, [Reclaim Hosting](https://reclaimhosting.com)
+
+<table style="border-collapse: collapse;">
+  <tr style="background: none !important;">
+    <td width="49%" style="border: none; padding-bottom: 0;">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/hibbitts-design/docsify-this/refs/heads/main/screenshots/screenshot-1-dark.png">
+        <img alt="Docsify-This Web Page Builder interface" src="https://raw.githubusercontent.com/hibbitts-design/docsify-this/refs/heads/main/screenshots/screenshot-1.png" width="100%">
+      </picture>
+    </td>
+    <td width="49%" style="border: none; padding-bottom: 0;">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/hibbitts-design/docsify-this/refs/heads/main/screenshots/screenshot-2-dark.png">
+        <img alt="Example page published with Docsify-This" src="https://raw.githubusercontent.com/hibbitts-design/docsify-this/refs/heads/main/screenshots/screenshot-2.png" width="100%">
+      </picture>
+    </td>
+  </tr>
+  <tr style="background: none !important;">
+    <td align="center" style="border: none; padding-top: 4px;">Docsify-This – Web Page Builder</td>
+    <td align="center" style="border: none; padding-top: 4px;">Docsify-This – Published page example</td>
+  </tr>
+  <tr style="display:none;"><td colspan="2" style="border: none;">&nbsp;</td></tr>
+  <tr style="background: none !important;">
+    <td width="49%" style="border: none; padding-bottom: 0;">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/hibbitts-design/docsify-this/refs/heads/main/screenshots/screenshot-3-dark.png">
+        <img alt="Web Page Builder page appearance options" src="https://raw.githubusercontent.com/hibbitts-design/docsify-this/refs/heads/main/screenshots/screenshot-3.png" width="100%">
+      </picture>
+    </td>
+    <td width="49%" style="border: none; padding-bottom: 0;">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/hibbitts-design/docsify-this/refs/heads/main/screenshots/screenshot-4-dark.png">
+        <img alt="Web Page Builder advanced options" src="https://raw.githubusercontent.com/hibbitts-design/docsify-this/refs/heads/main/screenshots/screenshot-4.png" width="100%">
+      </picture>
+    </td>
+  </tr>
+  <tr style="background: none !important;">
+    <td align="center" style="border: none; padding-top: 4px;">Web Page Builder – Page appearance options</td>
+    <td align="center" style="border: none; padding-top: 4px;">Web Page Builder – Advanced options</td>
+  </tr>
+</table>
+
+Content stays in the Markdown files you already have, wherever they are hosted. Publish as standalone pages or embed into Canvas, Moodle, WordPress, or almost any platform – one source, many destinations.
+
+</div>
+  
+</div>
+
+## Quickstart ⚡
 
 1. **Have a Markdown file online?** GitHub, Codeberg, or any public Markdown file works
 1. Visit the location of your file and **copy the URL from your browser's address bar**
@@ -47,9 +96,9 @@ https://github.com/hibbitts-design/markdown/blob/main/ReadMe.md
 > 
 > **Wanting more complete coverage?** Check out the [Markdown Publishing with Docsify-This](https://preview.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/publishing-with-docsify-this/main&sidebar=true&searchbox=true&edit-link=https://github.com/hibbitts-design/publishing-with-docsify-this/blob/main/README.md&maxLevel=3&browser-tab-title=Markdown%20Publishing%20with%20Docsify-This&header-weight=600&dark-mode=auto&code-copy=true#/) guide for step-by-step instructions and more advanced workflows.
 
-## Everything You Need to Know about Docsify-This
+</div>
 
-<div style="display: none;">
+## Everything You Need to Know about Docsify-This
 
 <h3><a href="#1-introduction-and-overview-1">1. Introduction and Overview</a></h3>
 <ul>
