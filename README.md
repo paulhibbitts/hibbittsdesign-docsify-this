@@ -19,14 +19,14 @@
 
 <div style="display:none;">
 
-[![Docsify Discord Chat](https://img.shields.io/discord/713647066802421792.svg?logo=discord&colorB=7289DA&label=Docsify%20Discord%20Chat)](https://discord.gg/docsify) [![GitHub Stars](https://img.shields.io/github/stars/hibbitts-design/docsify-this?style=flat-square&logo=github&logoColor=white&label=Stars)](https://github.com/hibbitts-design/docsify-this) [![Latest Release](https://img.shields.io/github/v/release/hibbitts-design/docsify-this?style=flat-square&label=Release)](https://github.com/hibbitts-design/docsify-this/releases/latest) [![License](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](https://github.com/hibbitts-design/docsify-this/blob/main/LICENSE)
+[![Docsify Discord Chat](https://img.shields.io/discord/713647066802421792.svg?logo=discord&colorB=7289DA&label=Docsify%20Discord%20Chat)](https://discord.gg/docsify) [![Latest Release](https://img.shields.io/github/v/release/hibbitts-design/docsify-this?style=flat-square&label=Release)](https://github.com/hibbitts-design/docsify-this/releases/latest) [![GitHub Stars](https://img.shields.io/github/stars/hibbitts-design/docsify-this?style=flat-square&logo=github&logoColor=white&label=Stars)](https://github.com/hibbitts-design/docsify-this) [![License](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](https://github.com/hibbitts-design/docsify-this/blob/main/LICENSE)
 
 <p><a href="https://docsify-this.net">Try Docsify-This.net</a></p>
 
 <p>A free, open-source web app built on <a href="https://docsify.js.org">Docsify</a> – publish any public Markdown file as a styled web page in seconds, with no account, server, or configuration required. Named a finalist in the Open Infrastructure category for the <a href="https://www.oeglobal.org/2024/09/04/finalists-2024-oeawards/">2024 Open Education Awards for Excellence</a>.</p>
 
 > *"I'm blown away just by the fact you put a URL into Docsify-This and then you get a URL back for a web page… done!"*
-> — J. Groom, Co-founder, [Reclaim Hosting](https://reclaimhosting.com)
+> – J. Groom, Co-founder, [Reclaim Hosting](https://reclaimhosting.com)
 
 <table style="border-collapse: collapse;">
   <tr style="background: none !important;">
