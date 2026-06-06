@@ -1,16 +1,13 @@
 // docsify-spotlight.js
 // Docsify plugin: Section Spotlight Mode
-// Activate by adding &spotlight=true to any Docsify-This URL.
+// Activate by adding &spotlight=true to any Docsify-This URL
 // Configure which headings are spotlight-aware with &spotlight-headings=h2,h3
 
 (function() {
     'use strict';
 
-    // Only run if the URL explicitly requests spotlight mode
     if (!location.search.includes('spotlight=true')) return;
 
-    // --- HEADING CONFIGURATION ---
-    // Parse spotlight-headings from URL, fallback to h2,h3
     function getSpotlightHeadings() {
         const match = location.search.match(/[?&]spotlight-headings=([^&]+)/);
         if (match) {
@@ -118,27 +115,33 @@
     });
 
     // --- INSTANT NAVIGATION ---
+    // Passive handler: scrolls to target and applies spotlight without
+    // interfering with Docsify's router or URL management.
     window.addEventListener('click', (e) => {
-        const link = e.target.closest('a[href^="#"]');
+        const link = e.target.closest('a');
         if (!link) return;
 
         const href = link.getAttribute('href');
         if (!href) return;
 
-        let hash = href.replace(/^#/, '');
-        const match = hash.match(/[?&]id=([^&]+)/);
-        const id = match ? decodeURIComponent(match[1]) : hash.replace(/^\//, '').split(/[?&]/)[0];
+        let id = null;
+        if (href.startsWith('#')) {
+            let hash = href.replace(/^#/, '');
+            const match = hash.match(/[?&]id=([^&]+)/);
+            id = match ? decodeURIComponent(match[1]) : hash.replace(/^\//, '').split(/[?&]/)[0];
+        } else if (href.includes('?id=') || href.includes('&id=')) {
+            const match = href.match(/[?&]id=([^&]+)/);
+            if (match) id = decodeURIComponent(match[1]);
+        }
+
         if (!id) return;
 
         const target = document.getElementById(id);
         if (!target || !HEADING_TAGS.includes(target.tagName.toLowerCase())) return;
         if (!hasAnchorLink(target)) return;
 
-        e.preventDefault();
-        e.stopPropagation();
-
+        // Let Docsify handle the URL and routing; we only scroll and spotlight
         window.scrollTo(0, target.offsetTop - PADDING);
-        history.replaceState(null, null, href);
         applySpotlight();
     }, true);
 
@@ -172,10 +175,24 @@
         return list;
     }
 
-    function findActive(headings, scrollPos) {
-        for (let i = headings.length - 1; i >= 0; i--) {
-            if (headings[i].offsetTop <= scrollPos) return headings[i];
+    function findActive(headings) {
+        const viewportTop = window.scrollY + 2;
+        const viewportCenter = window.scrollY + (window.innerHeight * 0.25);
+
+        for (let i = 0; i < headings.length; i++) {
+            const h = headings[i];
+            const hBottom = h.offsetTop + h.offsetHeight;
+            if (h.offsetTop <= viewportTop + 50 && hBottom > viewportTop) {
+                return h;
+            }
         }
+
+        for (let i = headings.length - 1; i >= 0; i--) {
+            if (headings[i].offsetTop <= viewportCenter) {
+                return headings[i];
+            }
+        }
+
         return null;
     }
 
@@ -227,17 +244,10 @@
         const allHeadings = [...document.querySelectorAll(HEADING_SELECTOR)].filter(hasAnchorLink);
         if (allHeadings.length === 0) return;
 
-        const scrollPos = window.scrollY + window.innerHeight * 0.25;
-
-        let active = getHashHeading();
-        const scrollActive = findActive(allHeadings, scrollPos);
-
-        if (active && scrollActive && active !== scrollActive) {
-            active = null;
-        }
+        let active = findActive(allHeadings);
 
         if (!active) {
-            active = scrollActive;
+            active = getHashHeading();
         }
 
         if (!active) return;
@@ -257,9 +267,7 @@
             parentHeading = getParentHeading(active);
         }
 
-        let firstChild = null;
-        const child = getFirstChildHeading(active);
-        if (child) firstChild = child;
+        let firstChild = getFirstChildHeading(active);
 
         sections.forEach(section => {
             const isActive = section.heading === active ||
@@ -286,7 +294,7 @@
 
     // --- HASHCHANGE HANDLER ---
     window.addEventListener('hashchange', () => {
-        setTimeout(applySpotlight, 50);
+        setTimeout(applySpotlight, 150);
     });
 
     // --- DARK MODE ---
