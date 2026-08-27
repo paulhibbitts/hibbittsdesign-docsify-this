@@ -1,5 +1,7 @@
+// Modified with the assistance of Claude Code (claude.ai)
+
 var defaultOptions = {
-  headings: 'h2',
+  headings: 'h1, h2',
   scope: '.markdown-section',
 
   // To make work
@@ -16,12 +18,19 @@ var tocHeading = function(Title) {
 
 var aTag = function(src) {
   var a = document.createElement('a');
-  var content = src.firstChild.innerHTML;
+
+  // Headings that are themselves a markdown link (e.g. "## [Week 1](page.md)")
+  // render as two sibling <a> tags, since Docsify's own auto-generated
+  // anchor (class="anchor") can't nest another <a> inside it. Prefer that
+  // real link over the self-anchor, which would otherwise contribute only
+  // whatever precedes it (e.g. a leading icon) with a same-page href.
+  var link = src.querySelector('a:not(.anchor)') || src.firstChild;
+  var content = link.innerHTML;
 
   // Use this to clip text w/ HTML in it.
   // https://github.com/arendjr/text-clipper
   a.innerHTML = content;
-  a.href = src.firstChild.href;
+  a.href = link.href;
   a.onclick = tocClick
 
   // In order to remove this gotta fix the styles.
@@ -49,7 +58,7 @@ var createList = function(wrapper, count) {
 	      document.createElement('ul')
 	    );
     }
-    if (count) {
+    if (count && wrapper) {
       wrapper = wrapper.appendChild(
         document.createElement('li')
       );
@@ -80,6 +89,9 @@ var getLevel = function(header) {
 
 var jumpBack = function(currentWrapper, offset) {
   while (offset--) {
+    if (!currentWrapper.parentElement) {
+      break;
+    }
     currentWrapper = currentWrapper.parentElement;
   }
 
@@ -90,7 +102,10 @@ var buildTOC = function(options) {
   var ret = document.createElement('ul');
   var wrapper = ret;
   var lastLi = null;
-  var selector = options.scope + ' ' + options.headings
+  var selector = options.headings
+    .split(',')
+    .map(function(h) { return options.scope + ' ' + h.trim(); })
+    .join(',');
   var headers = getHeaders(selector).filter(h => h.id);
 
   headers.reduce(function(prev, curr, index) {
@@ -115,6 +130,21 @@ var buildTOC = function(options) {
   return ret;
 };
 
+// Tracks the navbar's actual rendered height (0 when Docsify collapses it
+// out of view at narrow widths) so CSS can clear it without reserving
+// space for a navbar that isn't actually on screen.
+var updateNavbarHeightVar = function () {
+  var appNav = document.querySelector('.app-nav');
+  var height = appNav ? appNav.getBoundingClientRect().height : 0;
+  document.documentElement.style.setProperty('--toc-navbar-height', height + 'px');
+};
+
+// Deferred to the next tick: right after mount/render the navbar may not
+// have finished laying out under the current viewport's responsive state yet.
+var scheduleNavbarHeightUpdate = function () {
+  setTimeout(updateNavbarHeightVar, 0);
+};
+
 // Docsify plugin functions
 function plugin(hook, vm) {
   var userOptions = vm.config.toc;
@@ -123,12 +153,17 @@ function plugin(hook, vm) {
     var content = window.Docsify.dom.find(".content");
     if (content) {
       var nav = window.Docsify.dom.create("aside", "");
-      window.Docsify.dom.toggleClass(nav, "add", "nav");
+      nav.classList.add("nav");
       window.Docsify.dom.before(content, nav);
     }
+
+    scheduleNavbarHeightUpdate();
+    window.addEventListener('resize', scheduleNavbarHeightUpdate);
   });
 
   hook.doneEach(function () {
+    scheduleNavbarHeightUpdate();
+
     var nav = document.querySelectorAll('.nav')[0]
     var t = Array.from(document.querySelectorAll('.nav'))
 
@@ -149,11 +184,32 @@ function plugin(hook, vm) {
 		title.innerHTML = userOptions.title;
 		title.setAttribute('class', 'title');
 
+		// Mobile-only accordion toggle; hidden and inert on desktop via CSS.
+		// No [type] attribute on purpose: some themes style any button carrying
+		// one like a pill button, which can clobber this flat bar look.
+		var toggle = document.createElement('button');
+		toggle.setAttribute('class', 'page_toc-toggle');
+		toggle.setAttribute('aria-expanded', 'false');
+		toggle.setAttribute('aria-controls', 'page_toc-panel');
+		toggle.innerHTML = userOptions.title || 'On this page';
+
+		var panel = document.createElement('div');
+		panel.id = 'page_toc-panel';
+		panel.setAttribute('class', 'page_toc-panel');
+		panel.appendChild(toc);
+
 		var container = document.createElement('div');
 		container.setAttribute('class', 'page_toc');
 
+		toggle.onclick = function (e) {
+		  e.preventDefault(); // guard against accidental form submit; no [type] attr to key off of
+		  var isOpen = container.classList.toggle('open');
+		  toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+		};
+
 		container.appendChild(title);
-		container.appendChild(toc);
+		container.appendChild(toggle);
+		container.appendChild(panel);
 
     // Existing TOC
     var tocChild = document.querySelectorAll('.nav .page_toc');
@@ -167,13 +223,20 @@ function plugin(hook, vm) {
 }
 
 // Docsify plugin options
-// console.log(defaultOptions);
-var myOptions = defaultOptions ;
+window.$docsify['toc'] = Object.assign(defaultOptions, window.$docsify['toc']);
+
+// toc-headings URL param always wins, even over a site's own explicit
+// toc.headings config, so it works as a genuine override (matching how
+// toc/toc-narrow/standalone etc. already behave elsewhere in docsify-this).
 tocheadings = getURLParameterByName(['toc-headings','tocHeadings'], null, null, window.location.href, true);
-if (tocheadings) {
-  // console.log(tocheadings);
-  // console.log(defaultOptions.headings);
-  defaultOptions.headings = tocheadings;
+if (typeof tocheadings === 'string' && tocheadings) {
+  window.$docsify['toc'].headings = tocheadings;
 }
-window.$docsify['toc'] = Object.assign(myOptions, window.$docsify['toc']);
+
+// toc-title URL param always wins, same override behavior as toc-headings above.
+tocTitle = getURLParameterByName(['toc-title','tocTitle'], null, null, window.location.href, true);
+if (typeof tocTitle === 'string' && tocTitle) {
+  window.$docsify['toc'].title = tocTitle;
+}
+
 window.$docsify.plugins = [].concat(plugin, window.$docsify.plugins);
