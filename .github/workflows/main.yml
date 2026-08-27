@@ -1,5 +1,6 @@
 on:
   push:
+    branches: [main]
   workflow_dispatch:
 name: 🚀 Deploy website on push
 jobs:
@@ -8,16 +9,16 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-    - name: 🚚 Get latest code
-      uses: actions/checkout@v6
+      - name: 🚚 Checkout
+        uses: actions/checkout@v6
 
-    - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@v4.4.0
-      with:
-        server: ftp.paulhibbitts.net
-        username: deployftp@paulhibbitts.net
-        password: ${{ secrets.DEPLOY_FTP_PASSWORD }}
-        protocol: ftps-legacy
-        port: 990
-        timeout: 300000
-        log-level: verbose
+      - name: 📂 Deploy via SSH
+        uses: easingthemes/ssh-deploy@v5.1.0
+        with:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          REMOTE_HOST: ftp.paulhibbitts.net
+          REMOTE_USER: paulhibb
+          REMOTE_PORT: 22
+          SOURCE: "docs/"
+          TARGET: "/home/paulhibb/docsify-this.hibbittsdesign.org/"
+          EXCLUDE: ".git/, .github/, .DS_Store"
