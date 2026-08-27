@@ -1138,3 +1138,60 @@ input[type="number"]:focus {
   box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.2),
     0 1px 0 0 rgba(255, 255, 255, 0.05);
 }
+
+/* ===========================================================================
+   Web Page Builder — HibbittsDesign.org brand colour scheme
+   Retints the builder UI (and only the builder) to a vibrant azure derived
+   from the site brand blue #387DC9, by re-scoping the --dt-* accent tokens
+   plus the few hard-coded accent colours. Kept together for easy tuning.
+   All accent-on-white / white-on-accent pairs meet WCAG AA (>= 4.5:1).
+   =========================================================================== */
+
+#docsifythisurlbuilder {
+  /* Links, checkboxes, radio outlines, section badges, h2 tint */
+  --dt-link-color: #1a75d0;
+  /* Fallback flat accent (primary button gets an explicit gradient below) */
+  --dt-accent-color: #1a75d0;
+}
+
+/* Primary button — vibrant azure gradient with a matching colour glow */
+#docsifythisurlbuilder .docsifythisurlbuilderprimarybutton {
+  background-color: #1a5fb8;
+  background-image: linear-gradient(135deg, #2273cc 0%, #1a5fb8 100%);
+  box-shadow: 0 1px 2px 0 rgba(26, 117, 208, 0.25),
+    0 6px 16px -4px rgba(26, 117, 208, 0.4),
+    0 0 0 1px rgba(255, 255, 255, 0.14) inset;
+}
+
+#docsifythisurlbuilder .docsifythisurlbuilderprimarybutton:hover {
+  box-shadow: 0 12px 26px -6px rgba(26, 117, 208, 0.5),
+    0 4px 8px -2px rgba(26, 117, 208, 0.3);
+}
+
+/* Secondary button — replace baked-in indigo with the azure accent */
+#docsifythisurlbuilder .docsifythisurlbuildersecondarybutton {
+  background-color: rgba(26, 117, 208, 0.06);
+  border-color: rgba(26, 117, 208, 0.28);
+}
+
+#docsifythisurlbuilder .docsifythisurlbuildersecondarybutton:hover {
+  background-color: rgba(26, 117, 208, 0.12);
+  border-color: rgba(26, 117, 208, 0.4);
+}
+
+/* Text selection inside the builder */
+#docsifythisurlbuilder ::selection {
+  background-color: rgba(26, 117, 208, 0.2);
+}
+
+#docsifythisurlbuilder ::-moz-selection {
+  background-color: rgba(26, 117, 208, 0.2);
+}
+
+@media (prefers-color-scheme: dark) {
+  #docsifythisurlbuilder {
+    /* Brighter azure so links pop against the near-black card */
+    --dt-link-color: #5eb0f5;
+    --dt-accent-color: #5eb0f5;
+  }
+}
