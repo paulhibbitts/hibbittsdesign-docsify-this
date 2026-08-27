@@ -17,6 +17,7 @@ jobs:
         server: ftp.paulhibbitts.net
         username: deployftp@paulhibbitts.net
         password: ${{ secrets.DEPLOY_FTP_PASSWORD }}
-        protocol: ftps
-        port: 21
-        timeout: 60000
+        protocol: ftps-legacy
+        port: 990
+        timeout: 300000
+        log-level: verbose
