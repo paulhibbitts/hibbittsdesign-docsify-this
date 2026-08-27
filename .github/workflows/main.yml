@@ -7,14 +7,14 @@ jobs:
     timeout-minutes: 5
     steps:
     - name: 🚚 Get latest code
-      uses: actions/checkout@v3
-
+      uses: actions/checkout@v6
+    
     - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      uses: SamKirkland/FTP-Deploy-Action@v4.4.0
       with:
-        server: ftp.paulhibbitts.net
-        username: deployftp@paulhibbitts.net
-        password: ${{ secrets.DEPLOY_FTP_PASSWORD }}
+        server: ftp.samkirkland.com
+        username: myFtpUserName
+        password: ${{ secrets.ftp_password }}
         protocol: ftps
         port: 21
         timeout: 60000
