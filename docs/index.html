@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <title>Docsify-This | Instantly Publish Markdown Files as Web Pages</title>
   <meta name="description"
-    content="Docsify-This makes it easy to start turning online Markdown files into shareable web pages, embeddable content, and presentation-friendly displays. Great for documentation, course materials, technical writing, and lightweight publishing. Open-source and setup-free — just write, share, and future-proof your content.">
+    content="Docsify-This turns online Markdown files, including README files on GitHub or Codeberg, into clean, readable web pages you can share, embed, or present. No setup or server needed, and your source files stay unchanged. Open-source and great for documentation, course materials, and lightweight publishing.">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- <link rel="icon" href="assets/favicon/favicon.png"> -->
@@ -41,19 +41,19 @@
   <!-- Stylesheets -->
 
   <!-- Core Theme -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/hibbitts-design/docsify@dist/themes/core.min.css" />
-  <!-- <link rel="stylesheet" href="assets/vendor/docsify/themes/core.min.css" /> -->
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/hibbitts-design/docsify@dist/themes/core.min.css" /> -->
+  <link rel="stylesheet" href="assets/vendor/docsify/themes/core.min.css" />
 
   <!-- Core Dark (add-on) -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/hibbitts-design/docsify@dist/themes/addons/core-dark.min.css"
-    data-sheet="dark-mode" disabled />
-  <!-- <link rel="stylesheet" href="assets/vendor/docsify/themes/addons/core-dark.min.css" data-sheet="dark-mode" disabled /> -->
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/hibbitts-design/docsify@dist/themes/addons/core-dark.min.css"
+    data-sheet="dark-mode" disabled />  -->
+  <link rel="stylesheet" href="assets/vendor/docsify/themes/addons/core-dark.min.css" data-sheet="dark-mode" disabled />
 
   <!-- Core Dark (add-on) -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/hibbitts-design/docsify@dist/themes/addons/core-dark.min.css"
-    media="(prefers-color-scheme: dark)" data-sheet="dark-mode-auto" />
-  <!-- <link rel="stylesheet" href="assets/vendor/docsify/themes/addons/core-dark.min.css" media="(prefers-color-scheme: dark)"
-    data-sheet="dark-mode-auto" /> -->
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/hibbitts-design/docsify@dist/themes/addons/core-dark.min.css"
+    media="(prefers-color-scheme: dark)" data-sheet="dark-mode-auto" />  -->
+  <link rel="stylesheet" href="assets/vendor/docsify/themes/addons/core-dark.min.css" media="(prefers-color-scheme: dark)"
+    data-sheet="dark-mode-auto" />
 
   <link rel="stylesheet" href="assets/css/docsify-this-v2.css">
   <link rel="stylesheet" href="assets/css/print.css" media="print">
@@ -64,9 +64,7 @@
   <link rel="stylesheet" href="assets/vendor/coloris/coloris.min.css" />
   <script src="assets/vendor/coloris/coloris.min.js"></script>
 
-  <!-- Mermaid -->
-  <script src="https://cdn.jsdelivr.net/npm/mermaid@9.3.0/dist/mermaid.min.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.css">
+  <!-- Mermaid is loaded only on pages with ```mermaid code blocks – see mermaidScriptURL below -->
 
 </head>
 
@@ -78,6 +76,9 @@
 
     // Customize the text for your Edit this Page on GitHub link between the two quotes below
     var editLinkText = 'Edit this Page';
+
+    // The Mermaid script, loaded only on pages with ```mermaid code blocks (set to '' to show those blocks as code instead)
+    var mermaidScriptURL = 'https://cdn.jsdelivr.net/npm/mermaid@11.17.2/dist/mermaid.min.js';
 
     // Set standalone to true to permanently hide the Sidebar
     var standalone = (!(getURLParameterByName('sidebar', null, null, window.location.href, true) === 'true' && getURLParameterByName('basePath')));
@@ -585,6 +586,20 @@
             }
           }
 
+          const cb24 = document.querySelector('#collapsibleSidebarGroups');
+          if (cb24.checked) {
+            if (!url.includes('collapsibleSidebarGroups=')) {
+              var URLparms = URLparms + `&collapsibleSidebarGroups=true`;
+            }
+          }
+
+          const cb25 = document.querySelector('#collapseSidebarGroups');
+          if (cb25.checked) {
+            if (!url.includes('collapseSidebarGroups=')) {
+              var URLparms = URLparms + `&collapseSidebarGroups=true`;
+            }
+          }
+
           const cb18 = document.querySelector('#mergeNavbar');
           if (cb18.checked) {
             if (!url.includes('mergeNavbar=')) {
@@ -707,6 +722,14 @@
               }
             }
           }
+
+          // PATCH START: relative-paths workaround for a Docsify link issue (https://github.com/docsifyjs/docsify/issues/2430)
+          // Remove with the 'Links Within a Site' builder section (README.md) once fixed upstream
+          const cbRelativePaths = document.querySelector('#relativepaths');
+          if (cbRelativePaths && cbRelativePaths.checked && !url.includes('relative-paths=')) {
+            var URLparms = URLparms + `&relative-paths=true`;
+          }
+          // PATCH END
 
           // Code generated/assisted by Anthropic Claude AI
           // Respect an explicit basePath and/or homepage already present on the
@@ -898,6 +921,9 @@
       document.getElementById("spotlight").checked = false;
       document.getElementById("hideCredits").checked = false;
       document.getElementById("hypothesisenable").checked = false;
+      // PATCH START: relative-paths workaround (see 'Links Within a Site' builder section)
+      (document.getElementById("relativepaths") || {}).checked = false;
+      // PATCH END
       document.getElementById("docsifyV5coretheme").checked = false;
       document.getElementById("loadfavicon").checked = false;
       document.getElementById("loadcoverpage").checked = false;
@@ -915,7 +941,10 @@
       document.getElementById("linkhovercolorpreview").style.border = "4px solid transparent";
       document.getElementById("linkhovercolorpreview").style.backgroundColor = "transparent";
       document.getElementById("pagination").checked = false;
+      document.getElementById("searchresultsource").value = '';
       document.getElementById("mergeNavbar").checked = false;
+      document.getElementById("collapsibleSidebarGroups").checked = false;
+      document.getElementById("collapseSidebarGroups").checked = false;
       document.getElementById("headerweight").value = 600;
       document.getElementById("zoomimages").checked = false;
       document.getElementById("closesidebar").checked = false;
@@ -1038,6 +1067,17 @@
         }
       }
       return '';
+    }
+
+    function getGitHubSourceLink(basePath, filePath, isFolder) {
+      // For a folder, or a file that is not a page (e.g. .ipynb, .py, .pdf), returns its GitHub URL
+      // when the content is hosted on GitHub, so it can be viewed there, otherwise returns ''
+      if (/[?#]/.test(filePath)) return ''; // In-page anchor (e.g. ?id=search.resultsource or README?id=node.js), not a file
+      const ext = (filePath.match(/\.[a-z][a-z0-9]*$/i) || [''])[0].toLowerCase();
+      if (!isFolder && (!ext || getAllowedFileExtensions().split(',').includes(ext))) return '';
+      const repo = basePath.match(/^https:\/\/raw\.githubusercontent\.com\/([^/]+)\/([^/]+)\/(?:refs\/heads\/)?([^/]+)\/?(.*?)\/?$/);
+      if (!repo) return '';
+      return `https://github.com/${repo[1]}/${repo[2]}/${isFolder ? 'tree' : 'blob'}/${[repo[3], repo[4], filePath].filter(Boolean).join('/')}`;
     }
 
     function getAllowedFileExtensions() {
@@ -1210,8 +1250,36 @@
 
     // Docsify
 
+    // Mermaid: its script is loaded the first time a page has a ```mermaid code block, then reused
     let num = 0;
-    mermaid.initialize({ startOnLoad: false });
+    let mermaidLoading = null;
+
+    // True when the page is shown in dark mode: dark-mode=on (or true), or dark-mode=auto on a device set to dark
+    function isDarkMode() {
+      const mode = getURLParameterByName(['dark-mode', 'darkMode'], null, null, window.location.href, true) || darkmode;
+      if (mode === 'on' || mode === 'true' || mode === true) {
+        return true;
+      }
+      return mode === 'auto' && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    }
+
+    function loadMermaid() {
+      if (!mermaidLoading) {
+        mermaidLoading = new Promise(function (resolve, reject) {
+          const script = document.createElement('script');
+          script.src = mermaidScriptURL;
+          script.onload = function () {
+            // suppressErrorRendering stops Mermaid adding its own error graphic to the page for a diagram with a mistake.
+            // In dark mode, Mermaid's dark colour theme keeps lines and labels readable (as the Grav Mermaid plugin does)
+            mermaid.initialize({ startOnLoad: false, suppressErrorRendering: true, theme: isDarkMode() ? 'dark' : 'default' });
+            resolve();
+          };
+          script.onerror = reject;
+          document.head.appendChild(script);
+        });
+      }
+      return mermaidLoading;
+    }
 
     window.$docsify = {
       // GENERAL SETTINGS
@@ -1243,7 +1311,7 @@
       search: {
         maxAge: 86400000, // Expiration time, the default one day
         paths: 'auto',
-        placeholder: 'Type to search',
+        placeholder: getURLParameterByName('loadSidebar') ? 'Type to search' : 'Type to search page',
         noData: 'No matches found.',
         // Headline depth, 1 - 6
         depth: 6,
@@ -1253,6 +1321,13 @@
         insertBefore: (getURLParameterByName(['core-theme-styles', 'coreThemeStyles', 'docsify-core-theme']) || corethemestyles)
                   ? '.app-name'
           : '.sidebar-nav'
+      },
+
+      pagination: {
+        previousText: 'PREVIOUS',
+        nextText: 'NEXT',
+        crossChapter: true,
+        crossChapterText: false,
       },
 
       imgGrid: {
@@ -1311,16 +1386,14 @@
         ]
       },
 
+      // Render ```mermaid code blocks as diagrams (unless mermaidScriptURL above is empty)
       markdown: {
         renderer: {
           code({ text, lang }) {
-            if (lang === 'mermaid') {
-              return /* html */ `
-                <div class="mermaid">${mermaid.render(
-                'mermaid-svg-' + num++,
-                text,
-              )}</div>
-              `;
+            if (lang === 'mermaid' && mermaidScriptURL) {
+              // Output a hidden placeholder, the diagram is drawn in the doneEach hook below
+              const source = text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+              return /* html */ `<div class="mermaid" style="visibility: hidden">${source}</div>`;
             }
             return this.origin.code.apply(this, arguments);
           },
@@ -1332,6 +1405,41 @@
       plugins: [
 
         function (hook, vm) {
+
+          // Draw Mermaid diagrams once the Mermaid script and the Font Awesome icon font have loaded, so labels with
+          // icons are sized correctly. A diagram that can't be drawn (or if Mermaid can't load) shows its source text.
+          hook.doneEach(function () {
+            const diagrams = document.querySelectorAll('.markdown-section .mermaid:not([data-processed])');
+            if (!diagrams.length) {
+              return;
+            }
+            diagrams.forEach(function (diagram) {
+              diagram.setAttribute('data-processed', 'true');
+            });
+            const iconFont = document.fonts ? document.fonts.load('900 1em "Font Awesome 6 Free"') : Promise.resolve();
+            const timeout = new Promise(function (resolve) { setTimeout(resolve, 3000); });
+            const iconFontOrTimeout = Promise.race([iconFont, timeout]).catch(function () {});
+            Promise.all([loadMermaid(), iconFontOrTimeout]).then(function () {
+              diagrams.forEach(function (diagram) {
+                // mermaid.render() returns a promise with the drawn diagram (since Mermaid 10)
+                mermaid.render('mermaid-svg-' + num++, diagram.textContent)
+                  .then(function (result) {
+                    diagram.innerHTML = result.svg;
+                  })
+                  .catch(function (error) {
+                    console.error(error);
+                  })
+                  .finally(function () {
+                    diagram.style.visibility = '';
+                  });
+              });
+            }).catch(function (error) {
+              console.error('Mermaid could not be loaded', error);
+              diagrams.forEach(function (diagram) {
+                diagram.style.visibility = '';
+              });
+            });
+          });
 
           hook.afterEach(function (html, next) {
             // Invoked each time after the Markdown file is parsed.
@@ -1443,6 +1551,14 @@
                   let lastSegment = resolvedSegments.join('/');
                   // PATCH END
 
+                  // Link to a folder (trailing slash) or a non-page file (e.g. .ipynb, .py, .pdf) hosted on GitHub: open it on GitHub instead of as a Docsify page
+                  const sourceLink = getGitHubSourceLink(currentBasePath, lastSegment, href.endsWith('/') && lastSegment !== '');
+                  if (sourceLink) {
+                    link.setAttribute('href', sourceLink);
+                    link.setAttribute('target', getURLParameterByName(['external-link-target', 'externalLinkTarget'], null, null, window.location.href, true) || window.$docsify.externalLinkTarget);
+                    continue;
+                  }
+
                   // Check to make sure link is not Docsify id anchor link
                   if (!lastSegment.startsWith("?id")) {
                     let editThisPageLink = '';
@@ -1532,8 +1648,17 @@
                   let url = image.getAttribute('src');
                   if (!(url.includes('://') > 0 || url.startsWith('//'))) {
                     // URL is relative
+                    let imagePrefix = currentBasePath + '/';
+                    // PATCH START: relative-paths workaround for a Docsify link issue (https://github.com/docsifyjs/docsify/issues/2430)
+                    // Resolve relative HTML image paths from the current page's folder, matching how GitHub displays the file.
+                    // This uses useRelativePaths and currentPageDir from the PATCH block above. When those are removed, replace
+                    // this block with an always-on page-folder prefix (do not simply delete it, or HTML images on nested pages break again).
+                    if (useRelativePaths && currentPageDir && !url.startsWith('/')) {
+                      imagePrefix = currentBasePath + '/' + currentPageDir;
+                    }
+                    // PATCH END
                     url = url.replace(/^\/+/g, '');
-                    url = currentBasePath + '/' + url;
+                    url = imagePrefix + url;
                     image.setAttribute('src', url);
                     // console.log("changed src");
                   }
@@ -1574,7 +1699,16 @@
                     if (isGitHubOrCodeberg) {
                       publicRepoNote = " Also ensure your GitHub or Codeberg repository is public.";
                     }
-                    errorMessage = `Looks like the file **${file}** couldn't be found on the server. Please check if the **basePath** and **homepage** URL parameters are correct or if the file has been moved or deleted.${publicRepoNote}\n\nError code ${status}`;
+                    // PATCH START: relative-paths workaround hint for a Docsify link issue (https://github.com/docsifyjs/docsify/issues/2430)
+                    // Remove with the 'Links Within a Site' builder section (README.md) once fixed upstream
+                    let relativePathsNote = "";
+                    if (new URLSearchParams(window.location.search).get('relative-paths') === 'true') {
+                      relativePathsNote = "\n\nWith relative-paths on, all links need to be relative to each file's folder, not paths from the repository root.";
+                    } else if (/^\/[^\/]+$/.test(file)) {
+                      relativePathsNote = "\n\nIf this link is in a page inside a subfolder, try adding `&relative-paths=true` after the existing URL parameters (or choose the **Links Within a Site** option in the Web Page Builder under **Advanced Web Page Builder Options**).";
+                    }
+                    // PATCH END
+                    errorMessage = `Looks like the file **${file}** couldn't be found on the server. Please check if the **basePath** and **homepage** URL parameters are correct or if the file has been moved or deleted.${publicRepoNote}${relativePathsNote}\n\nError code ${status}`;
                     break;
                   case 500:
                     errorMessage = `The server encountered an internal error while trying to fetch **${file}**.\nError code ${status}`;
@@ -1596,10 +1730,14 @@
                     errorMessage = `An unexpected error occurred while requesting the file **${file}**.\nError code ${status}`;
                 }
 
+                // Contact line only on the hosted site, so self-hosted copies do not point visitors to the original maintainer
+                const stillStuckLine = location.hostname.includes("docsify-this.net") ? 'Still stuck? Feel free to <a href="/#/contact.md">get in touch</a>.' : '';
+
                 return [
                   `# Whoops!`,
                   errorMessage,
-                ].join('\n\n');
+                  stillStuckLine,
+                ].filter(Boolean).join('\n\n');
               }
 
               if (/githubusercontent\.com/.test(vm.route.file)) {
@@ -1637,28 +1775,50 @@
                 editlinkemoji = 'memo';
               }
 
-              var editHtml = '[:' + editlinkemoji + ':' + editLinkText + '](' + url + ' ":class=edit-link")\n'
+              // The text in [ ] becomes the link, with any text before or after it shown as plain text
+              // If there are no [ ], all of the text becomes the link
+              var editHtml
+              var editLinkParts = editLinkText.match(/^(.*?)\[([^\]]+)\](?!\()(.*)$/);
+              if (editLinkParts) {
+                editHtml = editLinkParts[1] + '[:' + editlinkemoji + ':' + editLinkParts[2] + '](' + url + ' ":class=edit-link")' + editLinkParts[3] + '\n'
+              } else {
+                editHtml = '[:' + editlinkemoji + ':' + editLinkText + '](' + url + ' ":class=edit-link")\n'
+              }
 
               var creditHtml = '\n\n' + '<div style="color: #777;">Published by <a href="https://docsify-this.net" target="_blank">Docsify-This</a> — Turn your online Markdown files into web pages, or even entire sites, in seconds.</div>'
+
+              // Place the Edit this Page link at the top of the page, but below a full-width header image if the page starts with one
+              // (right after the image, or after the title and subtitle when they overlay the image)
+              var placeEditLinkAtTop = function (html, editHtml) {
+                var pageLines = html.split('\n');
+                if (/^!\[.*header-(tall-)?image-(fade-)?full-width/.test(pageLines[0])) {
+                  var insertAt = 1; // right after the header image
+
+                  // With overlaid headings, go past the title (# ) and optional subtitle (## ) after the image
+                  if (pageLines[0].includes('-headings-overlay')) {
+                    var titleLine = pageLines.findIndex(function (line, i) { return i > 0 && line.trim() !== ''; });
+                    if (titleLine > 0 && pageLines[titleLine].startsWith('# ')) {
+                      var hasSubtitle = (pageLines[titleLine + 1] || '').startsWith('## ');
+                      insertAt = hasSubtitle ? titleLine + 2 : titleLine + 1;
+                    }
+                  }
+
+                  pageLines.splice(insertAt, 0, '', editHtml);
+                  return pageLines.join('\n')
+                }
+                return editHtml + '\n' + html
+              }
 
               if (!(getURLParameterByName(['standalone', 'embedded'])) && !(getURLParameterByName('hidegitlink', null, null, window.location.href, true) === 'true') && (!!gitLinkRepoURL)) {
                 if (!(getURLParameterByName(['hide-credits', 'hideCredits'], null, null, window.location.href, true) === 'true')) {
                   if (getURLParameterByName(['edit-link-top', 'editLinkTop'], null, null, window.location.href, true) === 'true') {
-                    if (!html.includes('full-width')) {
-                      return editHtml + '\n' + html + '<br />' + '\n\n' + '<hr>' + creditHtml
-                    } else {
-                      return html + '\n\n' + editHtml + '\n\n' + '<hr>' + creditHtml
-                    }
+                    return placeEditLinkAtTop(html, editHtml) + '<br />' + '\n\n' + '<hr>' + creditHtml
                   } else {
                     return html + '\n\n' + editHtml + '\n\n' + '<hr>' + creditHtml
                   }
                 } else {
                   if (getURLParameterByName(['edit-link-top', 'editLinkTop'], null, null, window.location.href, true) === 'true') {
-                    if (!html.includes('full-width')) {
-                      return editHtml + '\n' + html
-                    } else {
-                      return html + '<br />' + '\n\n' + editHtml
-                    }
+                    return placeEditLinkAtTop(html, editHtml)
                   } else {
                     return html + '<br />' + '\n\n' + editHtml
                   }
@@ -1666,11 +1826,7 @@
 
               } else if (getURLParameterByName(['standalone', 'embedded']) && !(getURLParameterByName('hidegitlink', null, null, window.location.href, true) === 'true') && (!!gitLinkRepoURL)) {
                 if (getURLParameterByName(['edit-link-top', 'editLinkTop'], null, null, window.location.href, true) === 'true') {
-                  if (!html.includes('full-width')) {
-                    return editHtml + '\n' + html
-                  } else {
-                    return html + '<br />' + '\n\n' + editHtml
-                  }
+                  return placeEditLinkAtTop(html, editHtml)
                 } else {
                   return html + '<br />' + '\n\n' + editHtml
                 }
@@ -2096,8 +2252,11 @@
               theDiv.style.display = "block";
               document.getElementById("advancedwebpagebuilder").style.display = "none";
               document.querySelector("label[for='advancedwebpagebuilder']").style.display = "none";
+              // Hide the toggle's wrapper too, and drop the advanced group's top margin, so the gap matches other sections
+              document.getElementById("advancedwebpagebuilder").closest(".toggle-wrapper").style.display = "none";
               var theDiv2 = document.getElementById("docsifythisurlbuilderoptionsDiv2");
               theDiv2.style.display = "block";
+              theDiv2.style.marginTop = "0";
             }
 
             if (getURLParameterByName('toc') === true) {
@@ -2229,6 +2388,16 @@
               document.getElementById("hypothesisenable").checked = true;
             }
 
+            // PATCH START: relative-paths workaround for a Docsify link issue (https://github.com/docsifyjs/docsify/issues/2430)
+            // Preload the 'Links Within a Site' option
+            if (getURLParameterByName('relative-paths', null, null, window.location.href, true) === 'true') {
+              const relativePathsCheckbox = document.getElementById("relativepaths");
+              if (relativePathsCheckbox) {
+                relativePathsCheckbox.checked = true;
+              }
+            }
+            // PATCH END
+
             if (getURLParameterByName(['core-theme-styles', 'coreThemeStyles', 'docsify-core-theme'], null, null, window.location.href, true) === 'true') {
               document.getElementById("docsifyV5coretheme").checked = true;
               disableEnableThemeStyleOptions();
@@ -2348,6 +2517,14 @@
             resultSource = getURLParameterByName('search.resultSource', null, null, window.location.href, true);
             if (resultSource) {
               document.getElementById('searchresultsource').value = resultSource;
+            }
+
+            if (getURLParameterByName('collapsibleSidebarGroups', null, null, window.location.href, true) === 'true') {
+              document.getElementById("collapsibleSidebarGroups").checked = true;
+            }
+
+            if (getURLParameterByName('collapseSidebarGroups', null, null, window.location.href, true) === 'true') {
+              document.getElementById("collapseSidebarGroups").checked = true;
             }
 
             if (getURLParameterByName('mergeNavbar', null, null, window.location.href, true) === 'true') {
@@ -2487,10 +2664,72 @@
 
   </script>
 
+  <script>
+    // PATCH START: digit-leading heading id crash (docsifyjs/docsify#1075, won't be fixed upstream)
+    // querySelector('#'+id) throws for ids starting with a digit (e.g. "1.0 Intro" -> "10-intro"),
+    // hanging the page. Docsify's heading renderer prefixes such ids with "_", but its own link
+    // builder doesn't -- so try the plain id first, then the "_"-prefixed form. Patched here (not
+    // in the vendored docsify.min.js) so that file stays an untouched, refreshable upstream copy.
+    // See the scroll-to-heading patch below -- same "?id=" deep-link code path, different bug.
+    (function () {
+      var nativeQuerySelector = Document.prototype.querySelector;
+      Document.prototype.querySelector = function (selector) {
+        try {
+          return nativeQuerySelector.call(this, selector);
+        } catch (err) {
+          if (typeof selector === "string" && /^#[0-9]/.test(selector)) {
+            var id = selector.slice(1);
+            return this.getElementById(id) || this.getElementById("_" + id);
+          }
+          throw err;
+        }
+      };
+    })();
+    // PATCH END
+
+    // PATCH START: reliable scroll-to-heading for "?id=" deep links
+    // Unrelated to the digit-leading-id crash patched above (this affects every heading, not just
+    // digit-leading ones): Docsify only scrolls if it just added the target's tabindex, but
+    // headings here already ship with tabindex="-1", so that never fires and the scroll silently
+    // never happens. Do it ourselves instead. Two triggers are needed: doneEach (a real route
+    // change, where content still needs to render -- so retry after a short delay) and hashchange
+    // on an unchanged route (clicking a same-page TOC/anchor link, e.g. one of DocToc's own --
+    // content is already there, so no render ever fires and doneEach alone would miss it).
+    (function () {
+      var lastRoute = null;
+      function currentRouteAndId() {
+        var hash = window.location.hash.replace(/^#/, "");
+        var parts = hash.split("?");
+        var query = parts[1] || "";
+        var match = query.match(/(?:^|&)id=([^&]+)/);
+        return { route: parts[0], id: match ? decodeURIComponent(match[1]) : null };
+      }
+      function scrollToId(id) {
+        if (!id) return;
+        var target = document.getElementById(id) || document.getElementById("_" + id);
+        if (target) target.scrollIntoView({ behavior: "instant", block: "start" });
+      }
+      window.$docsify = window.$docsify || {};
+      window.$docsify.plugins = (window.$docsify.plugins || []).concat(function (hook) {
+        hook.doneEach(function () {
+          var info = currentRouteAndId();
+          lastRoute = info.route;
+          setTimeout(function () { scrollToId(info.id); }, 150);
+          setTimeout(function () { scrollToId(info.id); }, 600);
+        });
+      });
+      window.addEventListener("hashchange", function () {
+        var info = currentRouteAndId();
+        if (info.route === lastRoute) scrollToId(info.id);
+      });
+    })();
+    // PATCH END
+  </script>
+
   <!-- Docsify v5 release -->
   <!-- <script src="//cdn.jsdelivr.net/npm/docsify@5"></script> -->
-  <script src="https://cdn.jsdelivr.net/gh/hibbitts-design/docsify@dist/docsify.min.js"></script>
-  <!-- <script src="assets/vendor/docsify/docsify.min.js"></script> -->
+  <!-- <script src="https://cdn.jsdelivr.net/gh/hibbitts-design/docsify@dist/docsify.min.js"></script> -->
+  <script src="assets/vendor/docsify/docsify.min.js"></script>
 
   <!-- Adjust Page Margins When Standalone or Embedded -->
   <script>
@@ -2590,7 +2829,8 @@
   <!-- Pagination Plugin -->
   <script>
     if (getURLParameterByName('pagination', null, null, window.location.href, true) === 'true') {
-      document.write('<script src="assets/vendor/docsify/plugins/docsify-pagination.min.js"><\/script>');
+      // document.write('<script src="assets/vendor/docsify/plugins/docsify-pagination.min.js"><\/script>');
+      document.write('<script src="assets/vendor/docsify/plugins/custom/docsify-pagination.min.js"><\/script>');
     }
   </script>
 
@@ -2640,8 +2880,8 @@
     }
   </script>
 
-  <!-- LaTeX Plugin -->
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS_CHTML"></script>
+  <!-- LaTeX Plugin (MathJax 3, the newest version docsify-latex supports; it loads extras such as \ce and \cancel when a page uses them) -->
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml.js"></script>
   <script src="assets/vendor/docsify/plugins/docsify-latex.js"></script>
 
   <!-- Optionally enable Hypothesis -->
@@ -2832,9 +3072,9 @@
   <script>
     if (!(window.$docsify['basePath'] === undefined)) {
       if (getURLParameterByName(['zoom-images', 'zoomImages'], null, null, window.location.href, true) === 'true') {
-        // document.write('<script src="https://cdn.jsdelivr.net/npm/docsify@rc/dist/plugins/zoom-image.min.js"><\/script>');
-        // document.write('<script src="assets/vendor/docsify/plugins/zoom-image.min.js"><\/script>');
-        document.write('<script src="https://cdn.jsdelivr.net/gh/hibbitts-design/docsify@dist/plugins/zoom-image.min.js"><\/script>');
+        // document.write('<script src="https://cdn.jsdelivr.net/npm/docsify@5/dist/plugins/zoom-image.min.js"><\/script>');
+        // document.write('<script src="https://cdn.jsdelivr.net/gh/hibbitts-design/docsify@dist/plugins/zoom-image.min.js"><\/script>');
+        document.write('<script src="assets/vendor/docsify/plugins/zoom-image.min.js"><\/script>');
       }
     }
   </script>
@@ -2843,23 +3083,33 @@
   <script>
     if (getURLParameterByName(['search', 'searchbox'], null, null, window.location.href, true) === 'true') {
 
-      // Docsify Search Plugin current release
-      // document.write('<script src="assets/vendor/docsify/plugins/custom/search.min.js"><\/script>');
-
-      // Docsify Search Plugin "develop" branch custom preview files
-      // document.write('<script src="assets/vendor/docsify/plugins/preview/custom/search.js"><\/script>');
-
-      // Docsify Search Plugin "develop" branch preview files
-      // document.write('<script src="assets/vendor/docsify/plugins/search.min.js"><\/script>');
-      // document.write('<script src="assets/vendor/docsify/plugins/custom/search.min.js"><\/script>');
-      document.write('<script src="https://cdn.jsdelivr.net/gh/hibbitts-design/docsify@dist/plugins/search.min.js"><\/script>');
+      // document.write('<script src="https://cdn.jsdelivr.net/npm/docsify@5/dist/plugins/search.min.js"><\/script>');
+      // document.write('<script src="https://cdn.jsdelivr.net/gh/hibbitts-design/docsify@dist/plugins/search.min.js"><\/script>');
+      document.write('<script src="assets/vendor/docsify/plugins/search.min.js"><\/script>');
+      document.write('<script>' +
+        // Without a custom sidebar the search plugin finds no page links to index, so it only
+        // indexes "/". Add a hidden link for the current page, ahead of the search plugin's own hook.
+        'window.$docsify.plugins.unshift(function (hook, vm) {' +
+          'hook.doneEach(function () {' +
+            'var nav = document.querySelector(".sidebar-nav");' +
+            'if (!nav || nav.querySelector("a:not(.section-link)")) return;' +
+            'var a = document.createElement("a");' +
+            'a.href = vm.router.toURL(vm.route.path);' +
+            'a.hidden = true;' +
+            'nav.appendChild(a);' +
+          '});' +
+        '});' +
+      '<\/script>');
     }
   </script>
 
   <!-- Frontmatter Plugin -->
-  <script src="https://cdn.jsdelivr.net/gh/hibbitts-design/docsify@dist/plugins/front-matter.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/docsify@5/dist/plugins/front-matter.min.js"></script> -->
+  <!-- <script src="https://cdn.jsdelivr.net/gh/hibbitts-design/docsify@dist/plugins/front-matter.min.js"></script> -->
+  <script src="assets/vendor/docsify/plugins/front-matter.min.js"></script>
 
   <!-- Image Grid Plugin -->
+  <!-- <script src="https://gllmar.github.io/docsify-img-grid/docsify-img-grid.js"></script> -->
   <script src="assets/vendor/docsify/plugins/custom/docsify-img-grid.js"></script>
 
   <!-- Image Captions Plugin -->
@@ -2899,6 +3149,27 @@
       document.write('<script src="assets/vendor/docsify/plugins/custom/spotlight.js"><\/script>');
     }
   </script>
+
+  <!-- Chatwoot script -->
+  <!-- 
+  <script>
+    if (!(getURLParameterByName(['hide-chat', 'hideChat'], null, null, window.location.href, true) === 'true') && (location.hostname.includes("docsify-this.net")) && (window.$docsify['basePath'] === undefined)) {
+      (function(d,t) {
+        var BASE_URL="https://app.chatwoot.com";
+        var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        g.src=BASE_URL+"/packs/js/sdk.js";
+        g.async = true;
+        s.parentNode.insertBefore(g,s);
+        g.onload=function(){
+          window.chatwootSDK.run({
+            websiteToken: 'fgiyGc34Psj1RAmWCQTiQaT6',
+            baseUrl: BASE_URL
+          })
+        }
+      })(document,"script");
+    }
+  </script>
+  -->
 
   <!-- Global site tag (gtag.js) - Google Analytics, only loaded for docsify-this.net homepage -->
 

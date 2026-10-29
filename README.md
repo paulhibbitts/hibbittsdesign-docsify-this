@@ -19,11 +19,11 @@
 
 <div style="display:none;">
 
-[![Docsify Discord Chat](https://img.shields.io/discord/713647066802421792.svg?logo=discord&colorB=7289DA&label=Docsify%20Discord%20Chat)](https://discord.gg/docsify) [![GitHub Stars](https://img.shields.io/github/stars/hibbitts-design/docsify-this?style=flat-square&logo=github&logoColor=white&label=Stars)](https://github.com/hibbitts-design/docsify-this) [![Latest Release](https://img.shields.io/github/v/release/hibbitts-design/docsify-this?style=flat-square&label=Release)](https://github.com/hibbitts-design/docsify-this/releases/latest) [![License](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](https://github.com/hibbitts-design/docsify-this/blob/main/LICENSE)
+[![Docsify Discord](https://img.shields.io/discord/713647066802421792.svg?logo=discord&colorB=7289DA&label=Docsify%20Discord%20Chat)](https://discord.gg/docsify) [![GitHub Stars](https://img.shields.io/github/stars/hibbitts-design/docsify-this?style=flat-square&logo=github&logoColor=white&label=Stars)](https://github.com/hibbitts-design/docsify-this) [![Latest Release](https://img.shields.io/github/v/release/hibbitts-design/docsify-this?style=flat-square&label=Release)](https://github.com/hibbitts-design/docsify-this/releases/latest) [![License](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](https://github.com/hibbitts-design/docsify-this/blob/main/LICENSE)
 
 <p><a href="https://docsify-this.net">Try Docsify-This.net</a></p>
 
-<p>A free, open-source web app built on <a href="https://docsify.js.org">Docsify</a> – publish any public Markdown file as a styled web page in seconds, with no account, server, or configuration required. Named a finalist in the Open Infrastructure category for the <a href="https://www.oeglobal.org/2024/09/04/finalists-2024-oeawards/">2024 Open Education Awards for Excellence</a>.</p>
+<p>A free, open-source web app built on <a href="https://docsify.js.org">Docsify</a> – publish any public Markdown file, including existing README files on GitHub or Codeberg, as a styled web page in seconds, with no account, server, or configuration required. Named a finalist in the Open Infrastructure category for the <a href="https://www.oeglobal.org/2024/09/04/finalists-2024-oeawards/">2024 Open Education Awards for Excellence</a>.</p>
 
 > *"I'm blown away just by the fact you put a URL into Docsify-This and then you get a URL back for a web page… done!"*
 > – J. Groom, Co-founder, [Reclaim Hosting](https://reclaimhosting.com)
@@ -91,7 +91,7 @@ Content stays in the Markdown files you already have, wherever they are hosted. 
 1. Tap on the link  **Show More Page Appearance Options »** and select from available choices
 1. Tap on the button **Publish as Web Page**
 
-No online Markdown file handy? **Copy and paste this example URL** - an overview of the Markdown syntax:
+No online Markdown file handy? **Copy and paste this example URL** – an overview of the Markdown syntax:
 
 ```text
 https://github.com/hibbitts-design/markdown/blob/main/ReadMe.md
@@ -104,6 +104,10 @@ https://github.com/hibbitts-design/markdown/blob/main/ReadMe.md
 > **New to Docsify-This?** Try our interactive [Leap into Open Publishing with Docsify-This](https://docsify-this.net/?basePath=https://raw.githubusercontent.com/paulhibbitts/published-markdown-files/main&homepage=leap-into-open-publishing-standalone-guide.md&edit-link=https://github.com/paulhibbitts/published-markdown-files/blob/main/leap-into-open-publishing-standalone-guide.md&edit-link-text=View%20Source%20Markdown%20File&edit-link-emoji=:page_facing_up:&browser-tab-title=Leap%20into%20Open%20Publishing&sidebar=true&maxLevel=2&font-family=Open%20Sans,sans-serif&header-weight=600&dark-mode=auto#/) guide with brief hands-on activities that can get you publishing styled web page in minutes!
 >
 > **Wanting more complete coverage?** Browse the full documentation below, or check out the [Markdown Publishing with Docsify-This](https://docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/publishing-with-docsify-this/main&sidebar=true&searchbox=true&edit-link=https://github.com/hibbitts-design/publishing-with-docsify-this/blob/main/README.md&maxLevel=3&browser-tab-title=Markdown%20Publishing%20with%20Docsify-This&header-weight=600&dark-mode=auto&code-copy=true#/) guide for step-by-step instructions and more advanced workflows.
+>
+> **Sharing or reading course notes on GitHub or Codeberg?** See [Creating GitHub Course Notes for Docsify-This](https://hibbittsdesign.org/creating-github-course-notes.html) if you're an instructor, or [Viewing an Instructor's GitHub Course Notes with Docsify-This](https://hibbittsdesign.org/viewing-github-course-notes.html) if you're a student.
+>
+> **Questions along the way?** Feel free to [get in touch](https://docsify-this.net/#/contact.md).
 
 </div>
 
@@ -162,7 +166,7 @@ https://github.com/hibbitts-design/markdown/blob/main/ReadMe.md
   <li><a href="#contact-and-support">Contact and Support</a></li>
 </ul>
 
-Have you tried out Docsify-This? Share your [feedback about Docsify-This](https://forms.gle/ViYu2ZdPmj6PeQ439)
+Have you tried out Docsify-This? Share your [experience with Docsify-This](https://forms.gle/ViYu2ZdPmj6PeQ439)
 
 ---
 
@@ -213,6 +217,8 @@ With Docsify-This you can:
 - Want to share the same content across multiple platforms (LMS, websites, social media, etc.)
 - Need to publish materials, courses, documentation, or projects quickly without technical setup
 - Want to present existing Markdown content for workshops, presentations, or online sessions
+- Want a cleaner, more readable view of existing README or Markdown files on GitHub or Codeberg, without changing the source files
+- Are a student whose instructor shares course notes on GitHub, and want a better way to read them, including on mobile
 - Prefer simple, low-maintenance publishing (set it and forget it, no webserver needed)
 - Value keeping content in portable Markdown files with platform independence
 - Value open education resource (OER) principles and open publishing workflows
@@ -496,6 +502,8 @@ The following additional URL parameters are available for use in Docsify-This UR
 **Supplemental URL Parameters (included in the Advanced Web Page Builder)**
 
 - [back-link](#back-link)
+- [collapseSidebarGroups](#collapseSidebarGroups)
+- [collapsibleSidebarGroups](#collapsibleSidebarGroups)
 - [coverpage](#coverpage)
 - [coverpage-color](#coverpage-color)
 - [coverpage-color-dark-mode](#coverpage-color-dark-mode)
@@ -534,6 +542,18 @@ The following additional URL parameters are available for use in Docsify-This UR
 Add a custom back link to other sites at the top of your web pages with the optional back-link parameter, for example:  
 https://docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-one-page-article/main&homepage=home.md&back-link=https://docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-one-page-course/main+homepage=home.md+sidebar=true  
 Please note that since & is used to separate URL parameters, any & characters within the back-link URL must be replaced with + characters.
+
+##### collapseSidebarGroups
+
+Initially collapse all top-level Sidebar groups (Docsify custom Sidebar required) with the optional **collapseSidebarGroups** Docsify parameter, for example:  
+https://docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-multiple-page-open-publishing-site/main&homepage=home.md&sidebar=true&loadSidebar=_sidebar.md&collapsibleSidebarGroups=true&collapseSidebarGroups=true  
+The **collapsibleSidebarGroups** parameter must also be included. Visitors can still expand and collapse each group, and their choices are remembered while moving between pages.
+
+##### collapsibleSidebarGroups
+
+Enable visitors to expand and collapse top-level Sidebar groups (Docsify custom Sidebar required) by selecting a group title (or using the Enter and Space keys) with the optional **collapsibleSidebarGroups** Docsify parameter, for example:  
+https://docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-multiple-page-open-publishing-site/main&homepage=home.md&sidebar=true&loadSidebar=_sidebar.md&collapsibleSidebarGroups=true  
+Groups are displayed expanded by default. To have them initially collapsed, also include the **collapseSidebarGroups** parameter.
 
 ##### coverpage
 
@@ -1720,7 +1740,7 @@ An overview to self-publishing with Markdown using the open source project Docsi
 #### Content Display Tips and Techniques
 
 - [Batch Styling with Markdown File URL Parameters](#batch-styling-with-markdown-file-url-parameters)
-- [Understanding Path Handling in Docsify-This](/?id=understanding-path-handling-in-docsify-this)
+- [Understanding Path Handling in Docsify-This](/?id=understanding-path-handling-in-docsify-this) <!-- PATCH: relative-paths workaround docs; remove this line with the "Understanding Path Handling" section once fixed upstream -->
 - [Matching Fonts with Your Destination Platform Content](#matching-fonts-with-your-destination-platform-content)
 - [Displaying Markdown Content During a Presentation](#displaying-markdown-content-during-a-presentation)
 - [Reducing Content Shift When Toggling the Sidebar](#reducing-content-shift-when-toggling-the-sidebar)
@@ -1753,11 +1773,14 @@ https://github.com/hibbitts-design/docsify-this-one-page-article/blob/main/home.
 
 This streamlined approach also enables authors to help other authors by sharing examples of Markdown file URLs to be styled based on provided URL parameters, all represented as shareable plain text.
 
+<!-- PATCH START: relative-paths workaround docs (Docsify link issue). Remove this heading and the next two paragraphs, plus the matching table-of-contents line above, once fixed upstream. Review the following sidebar/basePath paragraph at that time: it may still be needed and would need its own heading. -->
 ##### Understanding Path Handling in Docsify-This
 
 Docsify, the parent project of Docsify-This, currently handles paths inconsistently, which can cause links to break in nested directories. Until this issue is addressed, it is recommended to keep all content files at the root level and only nesting non-markdown assets. See [Docsify issue #1891](https://github.com/docsifyjs/docsify/issues/1891) for details.
 
-If nesting content files is required, add the URL parameter ?relative-paths=true to your Docsify-This URL. Use explicit relative path prefixes for all links — ./filename.md for same-directory links and ../ or ../../ for parent directories (e.g. ../readme.md, ../../readme.md). Note that this parameter is not compatible with full root-relative paths (e.g. level1/foo.md). This is an unlisted advanced parameter for this specific scenario.
+If nesting content files is required, add the URL parameter ?relative-paths=true to your Docsify-This URL. Write links relative to the current file's folder: `filename.md` or `./filename.md` for the same folder, `subfolder/filename.md` for a child folder, and `../filename.md` or `../../filename.md` for parent folders. A site can use either full (root-relative) paths or relative paths with this parameter, but not both, so paths from the repository root such as `level1/foo.md` are not supported from within a nested file. For GitHub and Codeberg files, relative HTML image paths are also resolved from each file's folder. In the Web Page Builder, choose **Links Within a Site** under **Advanced Web Page Builder Options**, or add `?relative-paths=true` to the Markdown File URL. This is a temporary workaround for an upstream Docsify issue ([#2430](https://github.com/docsifyjs/docsify/issues/2430)) and will be removed once it is fixed.
+
+<!-- PATCH END -->
 
 Similarly, if your homepage file is nested more deeply than its `_sidebar.md`/`_navbar.md` files, add explicit `basePath` and `homepage` parameters to the Markdown File URL field, restating `homepage` relative to that `basePath` — for example: `.../docs/section/page.md?basePath=.../docs&homepage=section/page.md&sidebar=true&loadSidebar=_sidebar.md`.
 
@@ -2054,6 +2077,7 @@ Docsify-This (as with Docsify itself) will only execute the first script include
 - Only this web page (containing the Web Page Builder) uses [Google Analytics in a GDPR manner](https://support.google.com/analytics/answer/9019185?hl=en#IP&zippy=%2Cin-this-article)
 - Web pages generated by remote Markdown files are not tracked in any manner by Google Analytics
 - The web service [H5P](https://h5p.org/privacy) is automatically loaded when displaying remote Markdown files
+- The [Contact page](https://docsify-this.net/#/contact.md) embeds a form from [Tally](https://tally.so/help/privacy-policy)
 - The open source JavaScript tools [Mermaid](https://mermaid.js.org/) and [MathJax](https://www.mathjax.org/) are automatically loaded via [jsDelivr](https://www.jsdelivr.com/terms) when displaying remote Markdown files
 - The web service [Hypothes.is](https://web.hypothes.is/privacy/) is only loaded if chosen when displaying remote Markdown files
 - The web service [Embed.ly](https://embed.ly/legal/privacy) is only loaded if [Embedly Card](https://embed.ly/cards) elements are present in remote Markdown files
@@ -2072,9 +2096,12 @@ Docsify-This (as with Docsify itself) will only execute the first script include
 - 👩🏻‍💻🧑🏻‍💻 Join the [Docsify Discord](https://discord.gg/docsify) and visit the **#Docsify-This** Channel
 - Add a ⭐️ [star on GitHub](https://github.com/hibbitts-design/docsify-this) to the Docsify-This project repository
 
-Have you tried out Docsify-This? Share your [feedback about Docsify-This](https://forms.gle/ViYu2ZdPmj6PeQ439)
+Have you tried out Docsify-This? Share your [experience with Docsify-This](https://forms.gle/ViYu2ZdPmj6PeQ439)
 
-By leveraging his extensive UX design expertise and systems-oriented approach, Paul helps teams and individuals utilize open content in a range of education and publication settings, especially in connection with his Markdown-based [Docsify](https://docsify.js.org/#/) and [Grav CMS](https://getgrav.org/) open-source projects. Professional services include user experience and workflow consulting, premium support subscriptions, workshops, and custom development. Sound of interest? Send a note to [paul@hibbittsdesign.org](mailto:paul@hibbittsdesign.org).
+> **Curious about using Markdown for open education, open publishing, or OER?**  
+> If you're deciding which tool fits, or working through a migration, questions are welcome. [Get in touch →](https://docsify-this.net/#/contact.md)
+
+By leveraging his extensive UX design expertise and systems-oriented approach, Paul helps teams and individuals utilize open content in a range of education and publication settings, especially in connection with his Markdown-based [Docsify](https://docsify.js.org/#/) and [Grav CMS](https://getgrav.org/) open-source projects. Professional services include user experience and workflow consulting, premium support subscriptions, workshops, and custom development. For team or organization support, feel free to send a note to [paul@hibbittsdesign.org](mailto:paul@hibbittsdesign.org).
 
 ---
 

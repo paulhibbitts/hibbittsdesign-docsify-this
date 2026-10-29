@@ -1,9 +1,47 @@
 # Changelog
 
-## [2.0.2] - XX/XX/2026
+## [2.2.0] - XX/XX/2026
+
+**New:**
+* Support for collapsible Sidebar groups
+
+**Improved:**
+* Add "Links Within a Site" Web Page Builder option
+* Updated ReadMe
+* Add relative-paths hint to the Markdown 404 page
+* Resolve HTML image paths from the page's folder when relative-paths is on
+* Add top margin to tables and Mermaid diagrams so they don't sit flush against preceding headings
+* Unify docsify-v5-core.css and responsive tables plugin across docsify-this and starter kits
+* Draw Mermaid diagrams after the icon font loads, and drop the unused Mermaid 7 stylesheet
+* Updated Mermaid to 11.17.2 (same as the Grav Mermaid plugin), loaded only on pages with diagrams
+* Updated MathJax from 2 to 3.2.2, adding chemistry (\ce) and other LaTeX extras
+* Draw Mermaid diagrams in Mermaid's dark theme when the page is in dark mode (as the Grav Mermaid plugin does)
+* Support [ ] link text in Edit this Page and fix its vertical alignment
+* Enable crossChapter and use a patched pagination plugin that skips external links
+* Show pagination page names when the sidebar is hidden, with smaller titles on phones
+* Give long navbars (6 or more links) room for their extra rows on phones
+* Support a top Edit this Page link below full-width header images instead of moving it to the bottom
+* Various minor Web Page Builder UI refinements
+
+**Bugfix:**
+* Fix Docsify hang on digit-leading heading ids
+* Reset the search result source option with Reset to Defaults
+
+## [2.1.0] - 09/21/2026🍂
+
+**New:**
+* Add Docsify-This contact page
+* Modify search indexing to support linked pages as you view them when no custom sidebar is used
+* Change search placeholder to "Type to search page" when no custom sidebar is used
+* Link folders and non-Markdown files to GitHub when content is hosted there
+* Example use of chat widget (via Chatwoot) on docsify-this.net (commented out), letting visitors ask questions or share feedback directly from the site. Restricted to the production domain and can be hidden via `?hide-chat=true` or `?hideChat=true` URL parameters.
 
 **Improved:**
 * Updated ReadMe
+* Added contact invitations and "experience" feedback wording
+
+**Bugfix:**
+* Dark-mode link color fix
 
 ## [2.0.1] - 08/27/2026
 

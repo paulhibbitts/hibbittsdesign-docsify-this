@@ -33,10 +33,10 @@ body {
 <div id="docsifythis">
 
 <div class="docsifythisheader">
-<div style="margin-bottom:6px; margin-right:-6px; text-align:right;"><a class="navpill" href="https://docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this/main&homepage=README.md&sidebar=true&font-family=system-ui,sans-serif&searchbox=true&browser-tab-title=Docsify-This%20ReadMe&edit-link-text=Suggest%20an%20Edit%20on%20GitHub&maxLevel=4&zoom-images=true&dark-mode=auto&code-copy=true&page-copy-button=true" target="_blank"><i class="fas fa-book-open fa-fw" style="margin-right:2px;"></i>Docsify-This ReadMe Docs</a><a class="navpill" href="https://discord.gg/docsify" target="_blank"><i class="fab fa-discord fa-fw" style="margin-right:2px;"></i>Docsify Discord Chat</a><a class="navpill" href="https://github.com/hibbitts-design/docsify-this" target="_blank"><i class="fab fa-github fa-fw" style="margin-right:2px;"></i>GitHub</a></div>
+<div style="margin-bottom:6px; margin-right:-6px; text-align:right;"><a class="navpill" href="https://docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this/main&homepage=README.md&sidebar=true&font-family=system-ui,sans-serif&searchbox=true&browser-tab-title=Docsify-This%20ReadMe&edit-link-text=Suggest%20an%20Edit%20on%20GitHub&maxLevel=4&zoom-images=true&dark-mode=auto&code-copy=true&page-copy-button=true" target="_blank"><i class="fas fa-book-open fa-fw" style="margin-right:2px;"></i>Docsify-This ReadMe Docs</a><a class="navpill" href="https://discord.gg/docsify" target="_blank"><i class="fab fa-discord fa-fw" style="margin-right:2px;"></i>Docsify Discord</a><a class="navpill" href="https://github.com/hibbitts-design/docsify-this" target="_blank"><i class="fab fa-github fa-fw" style="margin-right:2px;"></i>GitHub</a></div>
   <div class="logoandtext">
     <img src='https://raw.githubusercontent.com/paulhibbitts/test-docsify-this/main/docs/images/icon.svg' alt='Docsify Logo' />
-    <div class="title-with-version"><h1><span class="highlight">Docsify&#8288;&#8211;&#8288;This</span></h1><span class="version-tag">v2.0</span></div>
+    <div class="title-with-version"><h1><span class="highlight">Docsify&#8288;&#8211;&#8288;This</span></h1><span class="version-tag">v2.1</span></div>
   </div>
 </div>
 
@@ -59,9 +59,9 @@ body {
   </div>
 </div>
 
-<h1 style="margin-top:6px;"><span class="subhead">Instantly Turn Markdown Text Files into Styled Web&nbsp;Pages</span></h1>
+<h1 style="margin-top:6px;"><span class="subhead">Instantly Turn Markdown Files into Styled Web&nbsp;Pages</span></h1>
 
-This open-source web app built with [Docsify](https://docsify.js.org), a magical documentation site generator capable of flexible content display, makes [Markdown](https://en.wikipedia.org/wiki/Markdown) publishing as simple as providing a file link - publish and style pages or entire sites for reading, embedding, or presenting, without requiring webserver setup or modifying source files.  
+This open-source web app, built on [Docsify](https://docsify.js.org), makes [Markdown](https://en.wikipedia.org/wiki/Markdown) publishing as simple as providing a file link. Publish and style pages or entire sites, including existing README files on GitHub or Codeberg, for reading, embedding, or presenting, with no web server setup and no changes to your source files.  
 
 <div id="docsifythisurlbuilder">
 
@@ -128,9 +128,7 @@ Page layout:
 
 <section class="builder-section" style='margin-top: 10px'>
 
-### Page Style and Behavior
-
-<div class="docsifythisurlbuilderoptionsline">Title on Browser tab:<br><input aria-label="Title on Browser tab" type="text" maxlength="60" value="Published by Docsify-This" id="browserTabTitle" name="browserTabTitle"/></div>
+### Page Style
 
 <div class="pagefontsettings clearfix">
 
@@ -186,33 +184,19 @@ Page layout:
   >
 </div>
 
-</div>
-
-<div class="docsifythisurlbuilderoptionsline" style="margin-top:-10px;">Link color:<br><input aria-label="Page link color" type="text" maxlength="7" size="8" value="#0374B5" id="linkcolor" style="text-transform:uppercase" oninput="validateColorAndUpdatePreview('linkcolor', 'linkcolorpreview');" data-coloris><span id="linkcolorpreview"></span></div>
-
-<div class="clearfix">
-
-<div class="docsifythisurlbuilderoptionsline"><div class="stackedlabeldropdown" style='margin-bottom:8px;'>
-  <label for="headerweight">Headers font weight:</label>
+<div class="stackedlabeldropdown">
+  <label for="headerweight">Headings font weight:</label>
   <select class="docsifythisurlbuilderoptionsline" id="headerweight" name="headerweight">
     <option value="600">Semi Bold (600)</option>
     <option disabled="disabled">──</option>
     <option value="400">Normal (400)</option>
     <option value="700">Bold (700)</option>
   </select>
-</div></div>
+</div>
 
 </div>
 
-<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="hideCredits"/><label for="hideCredits">Remove the Docsify-This credit text from bottom of page</label></div>
-
-</section>
-
-<section class="builder-section">
-
-### Page Display Options
-
-<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="spotlight"/><label for="spotlight">Enable spotlight to focus on current heading (dims surrounding content)</label></div>
+<div class="docsifythisurlbuilderoptionsline" style="margin-top:-10px;">Link color:<br><input aria-label="Page link color" type="text" maxlength="7" size="8" value="#0374B5" id="linkcolor" style="text-transform:uppercase" oninput="validateColorAndUpdatePreview('linkcolor', 'linkcolorpreview');" data-coloris><span id="linkcolorpreview"></span></div>
 
 <div class="clearfix">
 
@@ -236,11 +220,23 @@ Page layout:
 
 </div>
 
+<div class="docsifythisurlbuilderoptionsline">Title on Browser tab:<br><input aria-label="Title on Browser tab" type="text" maxlength="60" value="Published by Docsify-This" id="browserTabTitle" name="browserTabTitle"/></div>
+
+<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="hideCredits"/><label for="hideCredits">Remove the Docsify-This credit text from bottom of page</label></div>
+
+</section>
+
+<section class="builder-section">
+
+### Page Features
+
 <div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="pageCopyButton"/><label for="pageCopyButton">Include Copy Page button for accessing Markdown content</label></div>
 
 <div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="zoomimages"><label for="zoomimages">Enable zoomable page images (tapping on images to enlarge them)</label></div>
 
 <div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="imageCaptions"><label for="imageCaptions">Show image alternative text as captions</label></div>
+
+<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="spotlight"/><label for="spotlight">Enable spotlight to focus on current heading (dims surrounding content)</label></div>
 
 </section>
 
@@ -265,7 +261,7 @@ Page layout:
 
 <div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="enableSidebarsearch"/><label for="enableSidebarsearch">Enable search box in Docsify Sidebar</label></div>
 
-<div class="docsifythisurlbuilderoptionsline" style="margin-top:7px;">Maximum Header depth (1-6) for Docsify Sidebar:<br><input aria-label="Maximum Header depth (1-6) for Docsify Sidebar" type="number" size="1" value="2" min="1" max="6" id="maxLevel" name="maxLevel"/></div>
+<div class="docsifythisurlbuilderoptionsline" style="margin-top:7px;">Heading levels shown in Sidebar (1-6):<br><input aria-label="Heading levels shown in Sidebar (1-6)" type="number" size="1" value="2" min="1" max="6" id="maxLevel" name="maxLevel"/></div>
 
 <div class="clearfix">
 
@@ -293,7 +289,7 @@ Page layout:
   <select class="docsifythisurlbuilderoptionsline" id="enableDarkmode" name="enableDarkmode">
     <option value="false">Off</option>
     <option disabled="disabled">──</option>
-    <option value="auto">Match System Setting</option>
+    <option value="auto">Match system setting</option>
     <option value="on">On</option>
   </select>
 </div></div>
@@ -359,17 +355,26 @@ Page layout:
 
 </section>
 
+<!-- PATCH START: relative-paths workaround for a Docsify link issue (https://github.com/docsifyjs/docsify/issues/2430). Remove this whole section, plus the matching PATCH blocks in index.html, once fixed upstream. -->
+<section class="builder-section">
+
+### Links Within a Site
+
+<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="relativepaths"/><label for="relativepaths">Enable relative links to other site files (all links need to be relative to each file's folder)</label></div>
+</section>
+<!-- PATCH END -->
+
 <section class="builder-section">
 
 ### Custom Page Options
 
 <div class="docsifythisurlbuilderoptionsline">Add '←Back' link URL (displayed at top of page):<br><input placeholder="https://example.com" aria-label="Add back link URL (displayed at top of page)" type="url" maxlength="200" value="" id="backLink" name="backLink"></div>
 
-<div class="docsifythisurlbuilderoptionsline">Add page title (as H1 header at top of page):<br><input aria-label="Add page title (as H1 header at top of page)" type="text" maxlength="200" value="" id="pageTitle" name="pageTitle"></div>
+<div class="docsifythisurlbuilderoptionsline">Add page title (as H1 heading at top of page):<br><input aria-label="Add page title (as H1 heading at top of page)" type="text" maxlength="200" value="" id="pageTitle" name="pageTitle"></div>
 
 <div class="docsifythisurlbuilderoptionsline">Text of 'Edit this Page' link:<br><input aria-label="Text of 'Edit this Page' link" type="text" maxlength="60" value="Edit this Page" id="editLinkText" name="editLinkText"/></div>
 
-<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="editLinkTopCheck"/><label for="editLinkTopCheck">Set location of the 'Edit this Page' link to top of page</label></div>
+<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="editLinkTopCheck"/><label for="editLinkTopCheck">Show 'Edit this Page' link at top of page</label></div>
 
 <div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="hypothesisenable"/><label for="hypothesisenable">Enable page annotation with Hypothes.is, an open source web annotation tool</label></div>
 
@@ -396,14 +401,15 @@ Page layout:
 
 <div class="docsifythisurlbuilderoptionsline">Website logo displayed in Sidebar (folder path and image filename):<br><input placeholder="/images/logo.png" aria-label="Website logo displayed in Sidebar" type="text" maxlength="80" value="" id="siteLogo" name="siteLogo"/></div>
 
-<div class="docsifythisurlbuilderoptionsline">Maximum Header depth of Sidebar for page table of contents (0 for none):<br><input aria-label="Maximum Header depth of Sidebar for page table of contents (0 for none)" type="number" size="1" value="2" min="0" max="6" id="subMaxLevel" name="subMaxLevel"/></div>
+<div class="docsifythisurlbuilderoptionsline">Page headings listed under each custom Sidebar link (0 for none):<br><input aria-label="Page headings listed under each custom Sidebar link (0 for none)" type="number" size="1" value="2" min="0" max="6" id="subMaxLevel" name="subMaxLevel"/></div>
 
-<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="pagination"/><label for="pagination">Enable pagination buttons in page content area (Docsify custom Sidebar required)</label></div>
+<div class="docsifythisurlbuilderoptionsline" style="margin-top: 0.25rem;"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="collapsibleSidebarGroups"/><label for="collapsibleSidebarGroups">Enable collapsible Sidebar groups</label></div>
+<div class="docsifythisurlbuilderoptionsindentedline" style="margin-top: 6px;"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="collapseSidebarGroups"/><label for="collapseSidebarGroups">Initially collapse all Sidebar groups (collapsible groups required)</label></div>
 
 <div class="clearfix">
 
 <div class="docsifythisurlbuilderoptionsline" style="margin-top:-2px;"><div class="stackedlabeldropdown" data-searchresultsource="true">
-  <label for="searchresultsource">Show below each search result:</label>
+  <label for="searchresultsource">Show below each Sidebar search result (search box required):</label>
   <select class="docsifythisurlbuilderoptionsline" id="searchresultsource" name="searchresultsource">
     <option value="" selected>Automatic (breadcrumb for multiple page sites)</option>
     <option disabled="disabled">──</option>
@@ -414,6 +420,8 @@ Page layout:
 </div></div>
 
 </div>
+
+<div class="docsifythisurlbuilderoptionsline" style="margin-top: calc(0.5rem + 2px);"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="pagination"/><label for="pagination">Enable Previous/Next page buttons (follows the page order in Sidebar)</label></div>
 
 </section>
 
@@ -431,7 +439,7 @@ Page layout:
 
 <div class="docsifythisurlbuilderoptionsline">Coverpage color:<br><input aria-label="Coverpage color" type="text" maxlength="7" size="8" value="#C1E1F6" id="coverpagecolor" style="text-transform:uppercase" oninput="validateColorAndUpdatePreview('coverpagecolor', 'coverpagecolorpreview');" data-coloris/><span id="coverpagecolorpreview"></span></div>
 
-<div class="docsifythisurlbuilderoptionsline">Coverpage color for dark theme:<br><input aria-label="Coverpage color for dark theme" type="text" maxlength="7" size="8" value="#20587D" id="coverpagecolordarkmode" style="text-transform:uppercase" oninput="validateColorAndUpdatePreview('coverpagecolordarkmode', 'coverpagecolordarkmodepreview');" data-coloris/><span id="coverpagecolordarkmodepreview"></span></div>
+<div class="docsifythisurlbuilderoptionsline">Coverpage color (dark theme):<br><input aria-label="Coverpage color for dark theme" type="text" maxlength="7" size="8" value="#20587D" id="coverpagecolordarkmode" style="text-transform:uppercase" oninput="validateColorAndUpdatePreview('coverpagecolordarkmode', 'coverpagecolordarkmodepreview');" data-coloris/><span id="coverpagecolordarkmodepreview"></span></div>
 
 </section>
 
@@ -463,6 +471,8 @@ Page layout:
 
 </div>
 
+<p style="margin:8px 0 0; padding-bottom:8px; font-size:0.9em;"><span style="opacity:0.75;">Questions or feedback? Feel free to </span><a href="/#/contact.md">get in touch</a><span style="opacity:0.75;">.</span></p>
+
 ### Quickstart ⚡
 
 1. **Have a Markdown file online?** GitHub, Codeberg, or any public Markdown file works
@@ -472,7 +482,7 @@ Page layout:
 1. Tap on the link  **Show More Page Appearance Options »** and select from available choices
 1. Tap on the button **Publish as Web Page**
 
-No online Markdown file handy? **Copy and paste this example URL** - an overview of the Markdown syntax:
+No online Markdown file handy? **Copy and paste this example URL** – an overview of the Markdown syntax:
 
 ```text
 https://github.com/hibbitts-design/markdown/blob/main/ReadMe.md
@@ -485,6 +495,8 @@ https://github.com/hibbitts-design/markdown/blob/main/ReadMe.md
 > **New to Docsify-This?** Try our interactive [Leap into Open Publishing with Docsify-This](https://docsify-this.net/?basePath=https://raw.githubusercontent.com/paulhibbitts/published-markdown-files/main&homepage=leap-into-open-publishing-standalone-guide.md&edit-link=https://github.com/paulhibbitts/published-markdown-files/blob/main/leap-into-open-publishing-standalone-guide.md&edit-link-text=View%20Source%20Markdown%20File&edit-link-emoji=:page_facing_up:&browser-tab-title=Leap%20into%20Open%20Publishing&sidebar=true&searchbox=true&maxLevel=2&font-family=Open%20Sans,sans-serif&header-weight=600&dark-mode=auto#/) guide with brief hands-on activities that can get you publishing styled web page in minutes!
 >
 > **Wanting more complete coverage?** Browse the full documentation below, or check out the [Markdown Publishing with Docsify-This](https://docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/publishing-with-docsify-this/main&sidebar=true&searchbox=true&edit-link=https://github.com/hibbitts-design/publishing-with-docsify-this/blob/main/README.md&maxLevel=3&browser-tab-title=Markdown%20Publishing%20with%20Docsify-This&header-weight=600&dark-mode=auto&code-copy=true#/) guide for step-by-step instructions and more advanced workflows.
+>
+> **Sharing or reading course notes on GitHub or Codeberg?** See [Creating GitHub Course Notes for Docsify-This](https://hibbittsdesign.org/creating-github-course-notes.html) if you're an instructor, or [Viewing an Instructor's GitHub Course Notes with Docsify-This](https://hibbittsdesign.org/viewing-github-course-notes.html) if you're a student.
 
 
 <div id="docs-zone">
@@ -542,9 +554,9 @@ https://github.com/hibbitts-design/markdown/blob/main/ReadMe.md
 
 </div>
 
-What do you think about Docsify-This so far? Help shape its direction by sharing your feedback in just a few minutes!
+What do you think about Docsify-This so far? Help shape its direction by sharing your experience in just a few minutes!
 
-[:fa fa-comment fa-fw: Share your Feedback](https://forms.gle/ViYu2ZdPmj6PeQ439 ":class=button-secondary-rounded")
+[:fa fa-comment fa-fw: Share your Docsify-This Experience](https://forms.gle/ViYu2ZdPmj6PeQ439 ":class=button-secondary-rounded")
 
 <div id='docsifythisdocscontent'>
 
@@ -595,6 +607,8 @@ With Docsify-This you can:
 - Want to share the same content across multiple platforms (LMS, websites, social media, etc.)
 - Need to publish materials, courses, documentation, or projects quickly without technical setup
 - Want to present existing Markdown content for workshops, presentations, or online sessions
+- Want a cleaner, more readable view of existing README or Markdown files on GitHub or Codeberg, without changing the source files
+- Are a student whose instructor shares course notes on GitHub, and want a better way to read them, including on mobile
 - Prefer simple, low-maintenance publishing (set it and forget it, no webserver needed)
 - Value keeping content in portable Markdown files with platform independence
 - Value open education resource (OER) principles and open publishing workflows
@@ -874,6 +888,8 @@ The following additional URL parameters are available for use in Docsify-This UR
 **Supplemental URL Parameters (included in the Advanced Web Page Builder)**
 
 - [back-link](/?id=back-linkconst-bthisconst-origbtextcontentbtextcontentcopiedsettimeoutbtextcontentorig1500copy)
+- [collapseSidebarGroups](/?id=collapseSidebarGroupsconst-bthisconst-origbtextcontentbtextcontentcopiedsettimeoutbtextcontentorig1500copy)
+- [collapsibleSidebarGroups](/?id=collapsibleSidebarGroupsconst-bthisconst-origbtextcontentbtextcontentcopiedsettimeoutbtextcontentorig1500copy)
 - [coverpage](/?id=coverpageconst-bthisconst-origbtextcontentbtextcontentcopiedsettimeoutbtextcontentorig1500copy)
 - [coverpage-color](/?id=coverpage-colorconst-bthisconst-origbtextcontentbtextcontentcopiedsettimeoutbtextcontentorig1500copy)
 - [coverpage-color-dark-mode](/?id=coverpage-color-dark-modeconst-bthisconst-origbtextcontentbtextcontentcopiedsettimeoutbtextcontentorig1500copy)
@@ -911,6 +927,16 @@ The following additional URL parameters are available for use in Docsify-This UR
 
 Add a custom back link to other sites at the top of your web pages with the optional back-link parameter, for example:  
 https://docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-one-page-article/main&homepage=home.md&back-link=https://docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-one-page-course/main+homepage=home.md+sidebar=true. Please note that since & is used to separate URL parameters, any & characters within the back-link URL must be replaced with + characters.
+
+##### collapseSidebarGroups<button type="button" class="copy-link" aria-label="Copy collapseSidebarGroups parameter" onclick="event.stopPropagation(); event.preventDefault(); navigator.clipboard.writeText('&collapseSidebarGroups=true').then(()=>{const b=this;const orig=b.textContent;b.textContent='copied!';setTimeout(()=>b.textContent=orig,1500)})">copy</button>
+
+Initially collapse all top-level Sidebar groups (Docsify custom Sidebar required) with the optional **collapseSidebarGroups** Docsify parameter, for example:  
+https://docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-multiple-page-open-publishing-site/main&homepage=home.md&sidebar=true&loadSidebar=_sidebar.md&collapsibleSidebarGroups=true&collapseSidebarGroups=true The **collapsibleSidebarGroups** parameter must also be included. Visitors can still expand and collapse each group, and their choices are remembered while moving between pages.
+
+##### collapsibleSidebarGroups<button type="button" class="copy-link" aria-label="Copy collapsibleSidebarGroups parameter" onclick="event.stopPropagation(); event.preventDefault(); navigator.clipboard.writeText('&collapsibleSidebarGroups=true').then(()=>{const b=this;const orig=b.textContent;b.textContent='copied!';setTimeout(()=>b.textContent=orig,1500)})">copy</button>
+
+Enable visitors to expand and collapse top-level Sidebar groups (Docsify custom Sidebar required) by selecting a group title (or using the Enter and Space keys) with the optional **collapsibleSidebarGroups** Docsify parameter, for example:  
+https://docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-multiple-page-open-publishing-site/main&homepage=home.md&sidebar=true&loadSidebar=_sidebar.md&collapsibleSidebarGroups=true Groups are displayed expanded by default. To have them initially collapsed, also include the **collapseSidebarGroups** parameter.
 
 ##### coverpage<button type="button" class="copy-link" aria-label="Copy coverpage parameter" onclick="event.stopPropagation(); event.preventDefault(); navigator.clipboard.writeText('&coverpage=').then(()=>{const b=this;const orig=b.textContent;b.textContent='copied!';setTimeout(()=>b.textContent=orig,1500)})">copy</button>
 
@@ -2340,7 +2366,7 @@ An overview to self-publishing with Markdown using the open source project Docsi
 #### Content Display Tips and Techniques
 
 - [Batch Styling with Markdown File URL Parameters](/?id=batch-styling-with-markdown-file-url-parameters)
-- [Understanding Path Handling in Docsify-This](/?id=understanding-path-handling-in-docsify-this)
+- [Understanding Path Handling in Docsify-This](/?id=understanding-path-handling-in-docsify-this) <!-- PATCH: relative-paths workaround docs; remove this line with the "Understanding Path Handling" section once fixed upstream -->
 - [Matching Fonts with Your Destination Platform Content](/?id=matching-fonts-with-your-destination-platform-content)
 - [Displaying Markdown Content During a Presentation](/?id=displaying-markdown-content-during-a-presentation)
 - [Reducing Content Shift When Toggling the Sidebar](/?id=reducing-content-shift-when-toggling-the-sidebar)
@@ -2373,11 +2399,14 @@ https://github.com/hibbitts-design/docsify-this-one-page-article/blob/main/home.
 
 This streamlined approach also enables authors to help other authors by sharing examples of Markdown file URLs to be styled based on provided URL parameters, all represented as shareable plain text.
 
+<!-- PATCH START: relative-paths workaround docs (Docsify link issue). Remove this heading and the next two paragraphs, plus the matching table-of-contents line above, once fixed upstream. Review the following sidebar/basePath paragraph at that time: it may still be needed and would need its own heading. -->
 ##### Understanding Path Handling in Docsify-This
 
 Docsify, the parent project of Docsify-This, currently handles paths inconsistently, which can cause links to break in nested directories. Until this issue is addressed, it is recommended to keep all content files at the root level and only nesting non-markdown assets. See [Docsify issue #1891](https://github.com/docsifyjs/docsify/issues/1891) for details.
 
-If nesting content files is required, add the URL parameter ?relative-paths=true to your Docsify-This URL. Use explicit relative path prefixes for all links — ./filename.md for same-directory links and ../ or ../../ for parent directories (e.g. ../readme.md, ../../readme.md). Note that this parameter is not compatible with full root-relative paths (e.g. level1/foo.md). This is an unlisted advanced parameter for this specific scenario.
+If nesting content files is required, add the URL parameter ?relative-paths=true to your Docsify-This URL. Write links relative to the current file's folder: `filename.md` or `./filename.md` for the same folder, `subfolder/filename.md` for a child folder, and `../filename.md` or `../../filename.md` for parent folders. A site can use either full (root-relative) paths or relative paths with this parameter, but not both, so paths from the repository root such as `level1/foo.md` are not supported from within a nested file. For GitHub and Codeberg files, relative HTML image paths are also resolved from each file's folder. In the Web Page Builder, choose **Links Within a Site** under **Advanced Web Page Builder Options**, or add `?relative-paths=true` to the Markdown File URL. This is a temporary workaround for an upstream Docsify issue ([#2430](https://github.com/docsifyjs/docsify/issues/2430)) and will be removed once it is fixed.
+
+<!-- PATCH END -->
 
 Similarly, if your homepage file is nested more deeply than its `_sidebar.md`/`_navbar.md` files, add explicit `basePath` and `homepage` parameters to the Markdown File URL field, restating `homepage` relative to that `basePath` — for example: `.../docs/section/page.md?basePath=.../docs&homepage=section/page.md&sidebar=true&loadSidebar=_sidebar.md`.
 
@@ -2674,6 +2703,7 @@ Docsify-This (as with Docsify itself) will only execute the first script include
 - Only this web page (containing the Web Page Builder) uses [Google Analytics in a GDPR manner](https://support.google.com/analytics/answer/9019185?hl=en#IP&zippy=%2Cin-this-article)
 - Web pages generated by remote Markdown files are not tracked in any manner by Google Analytics
 - The web service [H5P](https://h5p.org/privacy) is automatically loaded when displaying remote Markdown files
+- The <a href="/#/contact.md">Contact page</a> embeds a form from [Tally](https://tally.so/help/privacy-policy)
 - The open source JavaScript tools [Mermaid](https://mermaid.js.org/) and [MathJax](https://www.mathjax.org/) are automatically loaded via [jsDelivr](https://www.jsdelivr.com/terms) when displaying remote Markdown files
 - The web service [Hypothes.is](https://web.hypothes.is/privacy/) is only loaded if chosen when displaying remote Markdown files
 - The web service [Embed.ly](https://embed.ly/legal/privacy) is only loaded if [Embedly Card](https://embed.ly/cards) elements are present in remote Markdown files
@@ -2692,11 +2722,17 @@ Docsify-This (as with Docsify itself) will only execute the first script include
 - 👩🏻‍💻🧑🏻‍💻 Join the [Docsify Discord](https://discord.gg/docsify) and visit the **#Docsify-This** Channel
 - Add a ⭐️ [star on GitHub](https://github.com/hibbitts-design/docsify-this) to the Docsify-This project repository
 
-What do you think about Docsify-This so far? Help shape its direction by sharing your feedback in just a few minutes!
+What do you think about Docsify-This so far? Help shape its direction by sharing your experience in just a few minutes!
 
-[:fa fa-comment fa-fw: Share your Feedback](https://forms.gle/ViYu2ZdPmj6PeQ439 ":class=button-secondary-rounded")
+[:fa fa-comment fa-fw: Share your Docsify-This Experience](https://forms.gle/ViYu2ZdPmj6PeQ439 ":class=button-secondary-rounded")
 
-By leveraging his extensive UX design expertise and systems-oriented approach, Paul helps teams and individuals utilize open content in a range of education and publication settings, especially in connection with his Markdown-based [Docsify](https://docsify.js.org/#/) and [Grav CMS](https://getgrav.org/) open-source projects. Professional services include user experience and workflow consulting, premium support subscriptions, workshops, and custom development. Sound of interest? Send a note to [paul@hibbittsdesign.org](mailto:paul@hibbittsdesign.org).
+<blockquote class="announcement">
+  <h3 style="margin-top:0;">Curious about using Markdown for open education, open publishing, or OER?</h3>
+  <p>If you're deciding which tool fits, or working through a migration, questions are welcome.</p>
+  <p><a href="/#/contact.md">Get in touch →</a></p>
+</blockquote>
+
+By leveraging his extensive UX design expertise and systems-oriented approach, Paul helps teams and individuals utilize open content in a range of education and publication settings, especially in connection with his Markdown-based [Docsify](https://docsify.js.org/#/) and [Grav CMS](https://getgrav.org/) open-source projects. Professional services include user experience and workflow consulting, premium support subscriptions, workshops, and custom development. For team or organization support, feel free to send a note to [paul@hibbittsdesign.org](mailto:paul@hibbittsdesign.org).
 
 </div>
 
