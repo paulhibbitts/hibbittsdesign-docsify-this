@@ -916,6 +916,7 @@ To edit a file in GitHub, tap the **Pencil** icon (Edit file) in the upper-right
 - [Multiple Page Basic Site Template](#multiple-page-basic-site-template)
 - [Multiple Page Blog Style Site Template](#multiple-page-blog-style-site-template) <span class="badge" style="--badge-bg-color: #22c55e;">NEW</span>
 - [Multiple Page Open Publishing Site Template](#multiple-page-open-publishing-site-template) <span class="badge" style="--badge-bg-color: #22c55e;">NEW</span>
+- [Multiple Guides Site Template](#multiple-guides-site-template) <span class="badge" style="--badge-bg-color: #22c55e;">NEW</span>
 - [Multiple Page Course Site Template](#multiple-page-course-site-template)
 - [LMS Content Pages Template](#lms-content-pages-template)
 
@@ -981,6 +982,16 @@ To edit a file in GitHub, tap the **Pencil** icon (Edit file) in the upper-right
 - [Website with Docsify Sidebar, Pagination buttons, Search and website name](https://docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-multiple-page-open-publishing-site/main&homepage=home.md&sidebar=true&loadSidebar=_sidebar.md&pagination=true&searchbox=true&name=Open%20Publishing%20Space&hide-credits=true "Docsify-This Multiple Page Open Publishing Site - Website with Docsify Sidebar, Pagination buttons, Search and website name")
 - [Website with Docsify Sidebar, Search, 'Propose an Edit to this Site' link and a website name](https://docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-multiple-page-open-publishing-site/main&homepage=home.md&edit-link=https://github.com/hibbitts-design/docsify-this-multiple-page-open-publishing-site/blob/main&edit-link-text=Propose%20an%20Edit%20to%20this%20Site&sidebar=true&loadSidebar=_sidebar.md&searchbox=true&name=Open%20Publishing%20Space&hide-credits=true "Docsify-This Multiple Page Open Publishing Site - Website with Docsify Sidebar, 'Propose an Edit to this Site' link and a website name")
 - [Website with Docsify Sidebar, Search, 'Propose an Edit to this Site' link, website name and a Coverpage](https://docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-multiple-page-open-publishing-site/main&homepage=home.md&edit-link=https://github.com/hibbitts-design/docsify-this-multiple-page-open-publishing-site/blob/main&edit-link-text=Propose%20an%20Edit%20to%20this%20Site&sidebar=true&loadSidebar=_sidebar.md&searchbox=true&coverpage=_coverpage.md&name=Open%20Publishing%20Space&hide-credits=true "Docsify-This Multiple Page Open Publishing Site - Website with Docsify Sidebar, 'Propose an Edit to this Site' link , website name and a Coverpage")
+
+##### Multiple Guides Site Template
+
+![Docsify-This Multiple Guides Site](docs/images/docsify-this-multiple-guides-site-readme.jpg)
+
+[Multiple Guides Site Template](https://github.com/hibbitts-design/docsify-this-multiple-guides-site) with [home.md](https://github.com/hibbitts-design/docsify-this-multiple-guides-site/blob/main/home.md) file, including the use of the `card-list-guides` and `card-list-sections` card lists, and a Docsify custom Sidebar and Navbar for each guide (such as the [Sample Guide Sidebar](https://github.com/hibbitts-design/docsify-this-multiple-guides-site/blob/main/sample-guide/_sidebar.md)) with collapsible sidebar groups, displayed by Docsify-This as:
+
+- [Website with a Docsify Sidebar and Navbar for each guide](https://docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-multiple-guides-site/main&homepage=home.md&sidebar=true&loadSidebar=_sidebar.md&loadNavbar=_navbar.md&collapsibleSidebarGroups=true "Docsify-This Multiple Guides Site - Website with a Docsify Sidebar and Navbar for each guide")
+- [Website with a Docsify Sidebar and Navbar for each guide, Pagination buttons and Search](https://docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-multiple-guides-site/main&homepage=home.md&sidebar=true&loadSidebar=_sidebar.md&loadNavbar=_navbar.md&collapsibleSidebarGroups=true&pagination=true&searchbox=true "Docsify-This Multiple Guides Site - Website with Pagination buttons and Search")
+- [Website with a Docsify Sidebar and Navbar for each guide, Pagination buttons, Search, website name and a 'Source Markdown Files' link](https://docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-multiple-guides-site/main&homepage=home.md&sidebar=true&loadSidebar=_sidebar.md&loadNavbar=_navbar.md&collapsibleSidebarGroups=true&pagination=true&searchbox=true&name=Open%20Publishing%20Space%20Guides&edit-link=https://github.com/hibbitts-design/docsify-this-multiple-guides-site&edit-link-text=Source%20Markdown%20Files&edit-link-emoji=:file_folder: "Docsify-This Multiple Guides Site - Website with Pagination buttons, Search, website name and 'Source Markdown Files' link")
 
 ##### Multiple Page Course Site Template
 
@@ -1069,6 +1080,8 @@ For example, to edit GitHub Markdown files on your desktop you would do the foll
 - [button-secondary-rounded](#button-secondary-rounded)
 - [card](#card)
 - [card-list](#card-list)
+- [card-list-guides/card-list-sections](#card-list-guidescard-list-sections)
+- [card-lines-2/card-lines-3](#card-lines-2card-lines-3)
 - [card-rounded](#card-rounded)
 - [embedly-card](#embedly-card)
 - [header-image-fade](#header-image-fade)
@@ -1267,6 +1280,8 @@ Cropped to height of 350px on large screens, 175px on small screens.
 
 ##### card-list
 
+Cards in a list line up across each row, and a link button in its own paragraph at the end of a card sits at the bottom.
+
 ```html
 <div class="card-list">
  <div class="card">
@@ -1292,6 +1307,69 @@ Cropped to height of 350px on large screens, 175px on small screens.
 
  [Read More](# ":class=navpill")
     
+ </div>
+</div>
+```
+
+##### card-list-guides/card-list-sections
+
+A card list for guides: `card-list-guides` for a list of guides, and `card-list-sections` for a guide's sections. Both show three cards in a row (two on tablets, one on phones).
+
+```html
+<div class="card-list-guides">
+ <div class="card">
+
+ ![First Guide](images/example.jpg)
+
+ ## [First Guide](#)
+
+ A short guide to getting started.
+
+ </div>
+ <div class="card">
+
+ ![Second Guide With a Longer Title](images/example.jpg)
+
+ ## [Second Guide With a Longer Title](#)
+
+ Another guide, with its text lined up with the others.
+
+ </div>
+ <div class="card">
+
+ ![Third Guide](images/example.jpg)
+
+ ## [Third Guide](#)
+
+ One more guide.
+
+ </div>
+</div>
+```
+
+##### card-lines-2/card-lines-3
+
+Add to any card list to trim each card's text to two or three lines, so the cards stay a similar size. Leave it out to show the full text.
+
+```html
+<div class="card-list-guides card-lines-2">
+ <div class="card">
+
+ ![First Guide](images/example.jpg)
+
+ ## [First Guide](#)
+
+ A short guide to getting started.
+
+ </div>
+ <div class="card">
+
+ ![Second Guide](images/example.jpg)
+
+ ## [Second Guide](#)
+
+ A longer description that goes on for a while, to show how the text is trimmed to two lines so the cards stay a similar size.
+
  </div>
 </div>
 ```

@@ -36,7 +36,7 @@ body {
 <div style="margin-bottom:6px; margin-right:-6px; text-align:right;"><a class="navpill" href="https://docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this/main&homepage=README.md&sidebar=true&font-family=system-ui,sans-serif&searchbox=true&browser-tab-title=Docsify-This%20ReadMe&edit-link-text=Suggest%20an%20Edit%20on%20GitHub&maxLevel=4&zoom-images=true&dark-mode=auto&code-copy=true&page-copy-button=true" target="_blank"><i class="fas fa-book-open fa-fw" style="margin-right:2px;"></i>Docsify-This ReadMe Docs</a><a class="navpill" href="https://discord.gg/docsify" target="_blank"><i class="fab fa-discord fa-fw" style="margin-right:2px;"></i>Docsify Discord</a><a class="navpill" href="https://github.com/hibbitts-design/docsify-this" target="_blank"><i class="fab fa-github fa-fw" style="margin-right:2px;"></i>GitHub</a></div>
   <div class="logoandtext">
     <img src='https://raw.githubusercontent.com/paulhibbitts/test-docsify-this/main/docs/images/icon.svg' alt='Docsify Logo' />
-    <div class="title-with-version"><h1><span class="highlight">Docsify&#8288;&#8211;&#8288;This</span></h1><span class="version-tag">v2.1</span></div>
+    <div class="title-with-version"><h1><span class="highlight">Docsify&#8288;&#8211;&#8288;This</span></h1><span class="version-tag">v2.2</span></div>
   </div>
 </div>
 
@@ -1299,6 +1299,7 @@ To edit a file in GitHub, tap the **Pencil** icon (Edit file) in the upper-right
 - [Multiple Page Basic Site Template](#docsify-this-multiple-page-basic-site-template)
 - [Multiple Page Blog Style Site Template](#docsify-this-multiple-page-blog-style-site-template)  <span class="badge" style="--badge-bg-color: #22c55e;">NEW</span>
 - [Multiple Page Open Publishing Site Template](#docsify-this-multiple-page-open-publishing-site-template) <span class="badge" style="--badge-bg-color: #22c55e;">NEW</span>
+- [Multiple Guides Site Template](#docsify-this-multiple-guides-site-template) <span class="badge" style="--badge-bg-color: #22c55e;">NEW</span>
 - [Multiple Page Course Site Template](#docsify-this-multiple-page-course-site-template)
 - [LMS Content Pages Template](#docsify-this-lms-content-pages-template)
 
@@ -1424,6 +1425,28 @@ Multiple Page Open Publishing Site [home.md](https://github.com/hibbitts-design/
 
 </div>
 
+<div class="row" id="docsify-this-multiple-guides-site-template">
+
+<div class="docsifythiscolumn35" >
+
+[![Multiple Guides Site](images/docsify-this-multiple-guides-site.jpg ":class=docsify-this-screenshot")](https://docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-multiple-guides-site/main&homepage=home.md&sidebar=true&loadSidebar=_sidebar.md&loadNavbar=_navbar.md&collapsibleSidebarGroups=true&pagination=true&searchbox=true)
+
+</div>
+
+<div class="docsifythiscolumn65" >
+
+<h4><a href="https://github.com/hibbitts-design/docsify-this-multiple-guides-site">Multiple Guides Site Template</a></h4>
+
+Multiple Guides Site [home.md](https://github.com/hibbitts-design/docsify-this-multiple-guides-site/blob/main/home.md) file, including the use of the `card-list-guides` and `card-list-sections` card lists, and a Docsify custom Sidebar and Navbar for each guide (such as the [Sample Guide Sidebar](https://github.com/hibbitts-design/docsify-this-multiple-guides-site/blob/main/sample-guide/_sidebar.md)) with collapsible sidebar groups, displayed by Docsify-This as:
+
+- [Website with a Docsify Sidebar and Navbar for each guide](https://docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-multiple-guides-site/main&homepage=home.md&sidebar=true&loadSidebar=_sidebar.md&loadNavbar=_navbar.md&collapsibleSidebarGroups=true "Docsify-This Multiple Guides Site - Website with a Docsify Sidebar and Navbar for each guide")
+- [Website with a Docsify Sidebar and Navbar for each guide, Pagination buttons and Search](https://docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-multiple-guides-site/main&homepage=home.md&sidebar=true&loadSidebar=_sidebar.md&loadNavbar=_navbar.md&collapsibleSidebarGroups=true&pagination=true&searchbox=true "Docsify-This Multiple Guides Site - Website with Pagination buttons and Search")
+- [Website with a Docsify Sidebar and Navbar for each guide, Pagination buttons, Search, website name and a 'Source Markdown Files' link](https://docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-multiple-guides-site/main&homepage=home.md&sidebar=true&loadSidebar=_sidebar.md&loadNavbar=_navbar.md&collapsibleSidebarGroups=true&pagination=true&searchbox=true&name=Open%20Publishing%20Space%20Guides&edit-link=https://github.com/hibbitts-design/docsify-this-multiple-guides-site&edit-link-text=Source%20Markdown%20Files&edit-link-emoji=:file_folder: "Docsify-This Multiple Guides Site - Website with Pagination buttons, Search, website name and 'Source Markdown Files' link")
+
+</div>
+
+</div>
+
 <div class="row" id="docsify-this-multiple-page-course-site-template">
 
 <div class="docsifythiscolumn35" >
@@ -1535,6 +1558,8 @@ For example, to edit GitHub Markdown files on your desktop you would do the foll
 - [button-secondary-rounded](/?id=button-secondary-rounded)
 - [card](/?id=card)
 - [card-list](/?id=card-list)
+- [card-list-guides/card-list-sections](/?id=card-list-guidescard-list-sections)
+- [card-lines-2/card-lines-3](/?id=card-lines-2card-lines-3)
 - [card-rounded](/?id=card-rounded)
 - [embedly-card](/?id=embedly-card)
 - [header-image-fade](/?id=header-image-fade)
@@ -1826,6 +1851,8 @@ Cropped to height of 350px on large screens, 175px on small screens.
 
 ##### card-list
 
+Cards in a list line up across each row, and a link button in its own paragraph at the end of a card sits at the bottom.
+
 <div class="card-list">
  <div class="card">
 
@@ -1882,6 +1909,120 @@ Cropped to height of 350px on large screens, 175px on small screens.
 
  [Read More](# ":class=navpill")
     
+ </div>
+</div>
+```
+
+##### card-list-guides/card-list-sections
+
+A card list for guides: `card-list-guides` for a list of guides, and `card-list-sections` for a guide's sections. Both show three cards in a row (two on tablets, one on phones).
+
+<div class="card-list-guides">
+ <div class="card">
+
+ ![First Guide](images/mountain.jpg)
+
+ ## [First Guide](#)
+
+ A short guide to getting started.
+
+ </div>
+ <div class="card">
+
+ ![Second Guide With a Longer Title](images/mountain.jpg)
+
+ ## [Second Guide With a Longer Title](#)
+
+ Another guide, with its text lined up with the others.
+
+ </div>
+ <div class="card">
+
+ ![Third Guide](images/mountain.jpg)
+
+ ## [Third Guide](#)
+
+ One more guide.
+
+ </div>
+</div>
+
+```html
+<div class="card-list-guides">
+ <div class="card">
+
+ ![First Guide](images/example.jpg)
+
+ ## [First Guide](#)
+
+ A short guide to getting started.
+
+ </div>
+ <div class="card">
+
+ ![Second Guide With a Longer Title](images/example.jpg)
+
+ ## [Second Guide With a Longer Title](#)
+
+ Another guide, with its text lined up with the others.
+
+ </div>
+ <div class="card">
+
+ ![Third Guide](images/example.jpg)
+
+ ## [Third Guide](#)
+
+ One more guide.
+
+ </div>
+</div>
+```
+
+##### card-lines-2/card-lines-3
+
+Add to any card list to trim each card's text to two or three lines, so the cards stay a similar size. Leave it out to show the full text.
+
+<div class="card-list-guides card-lines-2">
+ <div class="card">
+
+ ![First Guide](images/mountain.jpg)
+
+ ## [First Guide](#)
+
+ A short guide to getting started.
+
+ </div>
+ <div class="card">
+
+ ![Second Guide](images/mountain.jpg)
+
+ ## [Second Guide](#)
+
+ A longer description that goes on for a while, to show how the text is trimmed to two lines so the cards stay a similar size.
+
+ </div>
+</div>
+
+```html
+<div class="card-list-guides card-lines-2">
+ <div class="card">
+
+ ![First Guide](images/example.jpg)
+
+ ## [First Guide](#)
+
+ A short guide to getting started.
+
+ </div>
+ <div class="card">
+
+ ![Second Guide](images/example.jpg)
+
+ ## [Second Guide](#)
+
+ A longer description that goes on for a while, to show how the text is trimmed to two lines so the cards stay a similar size.
+
  </div>
 </div>
 ```
