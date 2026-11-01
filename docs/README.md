@@ -1437,7 +1437,7 @@ Multiple Page Open Publishing Site [home.md](https://github.com/hibbitts-design/
 
 <h4><a href="https://github.com/hibbitts-design/docsify-this-multiple-guides-site">Multiple Guides Site Template</a></h4>
 
-Multiple Guides Site [home.md](https://github.com/hibbitts-design/docsify-this-multiple-guides-site/blob/main/home.md) file, including the use of the `card-list-guides` and `card-list-sections` card lists, and a Docsify custom Sidebar and Navbar for each guide (such as the [Sample Guide Sidebar](https://github.com/hibbitts-design/docsify-this-multiple-guides-site/blob/main/sample-guide/_sidebar.md)) with collapsible sidebar groups, displayed by Docsify-This as:
+Multiple Guides Site [home.md](https://github.com/hibbitts-design/docsify-this-multiple-guides-site/blob/main/home.md) file, including the use of the `card-list` and `card-list-sections` card lists, and a Docsify custom Sidebar and Navbar for each guide (such as the [Sample Guide Sidebar](https://github.com/hibbitts-design/docsify-this-multiple-guides-site/blob/main/sample-guide/_sidebar.md)) with collapsible sidebar groups, displayed by Docsify-This as:
 
 - [Website with a Docsify Sidebar and Navbar for each guide](https://docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-multiple-guides-site/main&homepage=home.md&sidebar=true&loadSidebar=_sidebar.md&loadNavbar=_navbar.md&collapsibleSidebarGroups=true "Docsify-This Multiple Guides Site - Website with a Docsify Sidebar and Navbar for each guide")
 - [Website with a Docsify Sidebar and Navbar for each guide, Pagination buttons and Search](https://docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-multiple-guides-site/main&homepage=home.md&sidebar=true&loadSidebar=_sidebar.md&loadNavbar=_navbar.md&collapsibleSidebarGroups=true&pagination=true&searchbox=true "Docsify-This Multiple Guides Site - Website with Pagination buttons and Search")
@@ -1915,7 +1915,7 @@ Cards in a list line up across each row, and a link button in its own paragraph 
 
 ##### card-list-guides/card-list-sections
 
-A card list for guides: `card-list-guides` for a list of guides, and `card-list-sections` for a guide's sections. Both show three cards in a row (two on tablets, one on phones).
+A card list for guides: `card-list-guides` for a list of guides, and `card-list-sections` for a guide's sections. Both show three cards in a row (two on tablets, one on phones). For just two cards, use `card-list`, which fills the row with two.
 
 <div class="card-list-guides">
  <div class="card">
@@ -1983,7 +1983,7 @@ A card list for guides: `card-list-guides` for a list of guides, and `card-list-
 
 Add to any card list to trim each card's text to two or three lines, so the cards stay a similar size. Leave it out to show the full text.
 
-<div class="card-list-guides card-lines-2">
+<div class="card-list card-lines-2">
  <div class="card">
 
  ![First Guide](images/mountain.jpg)
@@ -2005,7 +2005,7 @@ Add to any card list to trim each card's text to two or three lines, so the card
 </div>
 
 ```html
-<div class="card-list-guides card-lines-2">
+<div class="card-list card-lines-2">
  <div class="card">
 
  ![First Guide](images/example.jpg)

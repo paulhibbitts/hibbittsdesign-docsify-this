@@ -987,7 +987,7 @@ To edit a file in GitHub, tap the **Pencil** icon (Edit file) in the upper-right
 
 ![Docsify-This Multiple Guides Site](docs/images/docsify-this-multiple-guides-site-readme.jpg)
 
-[Multiple Guides Site Template](https://github.com/hibbitts-design/docsify-this-multiple-guides-site) with [home.md](https://github.com/hibbitts-design/docsify-this-multiple-guides-site/blob/main/home.md) file, including the use of the `card-list-guides` and `card-list-sections` card lists, and a Docsify custom Sidebar and Navbar for each guide (such as the [Sample Guide Sidebar](https://github.com/hibbitts-design/docsify-this-multiple-guides-site/blob/main/sample-guide/_sidebar.md)) with collapsible sidebar groups, displayed by Docsify-This as:
+[Multiple Guides Site Template](https://github.com/hibbitts-design/docsify-this-multiple-guides-site) with [home.md](https://github.com/hibbitts-design/docsify-this-multiple-guides-site/blob/main/home.md) file, including the use of the `card-list` and `card-list-sections` card lists, and a Docsify custom Sidebar and Navbar for each guide (such as the [Sample Guide Sidebar](https://github.com/hibbitts-design/docsify-this-multiple-guides-site/blob/main/sample-guide/_sidebar.md)) with collapsible sidebar groups, displayed by Docsify-This as:
 
 - [Website with a Docsify Sidebar and Navbar for each guide](https://docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-multiple-guides-site/main&homepage=home.md&sidebar=true&loadSidebar=_sidebar.md&loadNavbar=_navbar.md&collapsibleSidebarGroups=true "Docsify-This Multiple Guides Site - Website with a Docsify Sidebar and Navbar for each guide")
 - [Website with a Docsify Sidebar and Navbar for each guide, Pagination buttons and Search](https://docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-multiple-guides-site/main&homepage=home.md&sidebar=true&loadSidebar=_sidebar.md&loadNavbar=_navbar.md&collapsibleSidebarGroups=true&pagination=true&searchbox=true "Docsify-This Multiple Guides Site - Website with Pagination buttons and Search")
@@ -1313,7 +1313,7 @@ Cards in a list line up across each row, and a link button in its own paragraph 
 
 ##### card-list-guides/card-list-sections
 
-A card list for guides: `card-list-guides` for a list of guides, and `card-list-sections` for a guide's sections. Both show three cards in a row (two on tablets, one on phones).
+A card list for guides: `card-list-guides` for a list of guides, and `card-list-sections` for a guide's sections. Both show three cards in a row (two on tablets, one on phones). For just two cards, use `card-list`, which fills the row with two.
 
 ```html
 <div class="card-list-guides">
@@ -1352,7 +1352,7 @@ A card list for guides: `card-list-guides` for a list of guides, and `card-list-
 Add to any card list to trim each card's text to two or three lines, so the cards stay a similar size. Leave it out to show the full text.
 
 ```html
-<div class="card-list-guides card-lines-2">
+<div class="card-list card-lines-2">
  <div class="card">
 
  ![First Guide](images/example.jpg)
